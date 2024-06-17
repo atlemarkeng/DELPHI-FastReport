@@ -1,0 +1,50 @@
+object frxInheritErrorForm: TfrxInheritErrorForm
+  Left = 0
+  Top = 0
+  Caption = 'Error'
+  ClientHeight = 152
+  ClientWidth = 256
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  StyleLookup = 'backgroundstyle'
+  object MessageL: TLabel
+    Position.Point = '(60,16)'
+    Width = 185.000000000000000000
+    Height = 41.000000000000000000
+    TabOrder = 0
+  end
+  object PaintBox1: TPaintBox
+    Position.Point = '(12,16)'
+    Width = 32.000000000000000000
+    Height = 32.000000000000000000
+  end
+  object OkB: TButton
+    Position.Point = '(48,120)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 2
+    ModalResult = 1
+    Default = True
+  end
+  object CancelB: TButton
+    Position.Point = '(128,120)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 3
+    ModalResult = 2
+    Cancel = True
+  end
+  object DeleteRB: TRadioButton
+    Position.Point = '(12,68)'
+    Width = 229.000000000000000000
+    Height = 17.000000000000000000
+    TabOrder = 4
+  end
+  object RenameRB: TRadioButton
+    Position.Point = '(12,88)'
+    Width = 229.000000000000000000
+    Height = 17.000000000000000000
+    TabOrder = 5
+  end
+end

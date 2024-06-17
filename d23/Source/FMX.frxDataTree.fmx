@@ -1,0 +1,131 @@
+object frxDataTreeForm: TfrxDataTreeForm
+  Left = 0
+  Top = 0
+  Caption = 'Data Fields'
+  BorderStyle = bsNone
+  BorderIcons = []
+  ClientHeight = 697
+  ClientWidth = 254
+  Transparency = True
+  Visible = False
+  OnResize = FormResize
+  StyleLookup = 'backgroundstyle'
+  object MainDataPanel: TPanel
+    Align = alClient
+    Width = 254.000000000000000000
+    Height = 697.000000000000000000
+    OnDragEnd = MainDataPanelDragEnd
+    OnResize = FormResize
+    TabOrder = 0
+    object ClassesPn: TPanel
+      Position.Point = '(54,64)'
+      Width = 185.000000000000000000
+      Height = 261.000000000000000000
+      Visible = False
+      TabOrder = 0
+    end
+    object DataPn: TPanel
+      Position.Point = '(10,12)'
+      Width = 181.000000000000000000
+      Height = 301.000000000000000000
+      TabOrder = 1
+      object CBPanel: TPanel
+        Align = alBottom
+        Position.Point = '(0,248)'
+        Width = 181.000000000000000000
+        Height = 53.000000000000000000
+        Visible = False
+        TabOrder = 0
+        object InsFieldCB: TCheckBox
+          Position.Point = '(0,4)'
+          Width = 145.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 0
+          IsChecked = True
+        end
+        object InsCaptionCB: TCheckBox
+          Position.Point = '(0,20)'
+          Width = 145.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 1
+        end
+        object SortCB: TCheckBox
+          Position.Point = '(0,36)'
+          Width = 145.000000000000000000
+          Height = 17.000000000000000000
+          OnClick = SortCBClick
+          TabOrder = 2
+        end
+      end
+      object NoDataL: TLabel
+        Position.Point = '(8,8)'
+        Width = 101.000000000000000000
+        Height = 41.000000000000000000
+        OnDblClick = DataTreeDblClick
+        TabOrder = 1
+        VertTextAlign = taLeading
+      end
+    end
+    object FunctionsPn: TPanel
+      Position.Point = '(38,44)'
+      Width = 185.000000000000000000
+      Height = 265.000000000000000000
+      Visible = False
+      TabOrder = 2
+      object Splitter1: TSplitter
+        Align = alBottom
+        Cursor = crVSplit
+        Position.Point = '(0,166)'
+        Width = 185.000000000000000000
+        Height = 3.000000000000000000
+        TabOrder = 0
+        MinSize = 20.000000000000000000
+      end
+      object HintPanel: TScrollBox
+        Align = alBottom
+        Position.Point = '(0,169)'
+        Width = 185.000000000000000000
+        Height = 96.000000000000000000
+        TabOrder = 1
+        object FunctionDescL: TLabel
+          Align = alClient
+          Position.Point = '(0,42)'
+          Width = 185.000000000000000000
+          Height = 54.000000000000000000
+          TabOrder = 0
+        end
+        object FunctionNameL: TLabel
+          Align = alTop
+          Width = 185.000000000000000000
+          Height = 42.000000000000000000
+          TabOrder = 1
+          Font.Style = [fsBold]
+        end
+      end
+    end
+    object VariablesPn: TPanel
+      Position.Point = '(22,28)'
+      Width = 185.000000000000000000
+      Height = 269.000000000000000000
+      Visible = False
+      TabOrder = 3
+    end
+    object Rectangle1: TRectangle
+      Align = alTop
+      Width = 254.000000000000000000
+      Height = 18.000000000000000000
+      Margins.Rect = '(2,1,0,0)'
+      Stroke.Kind = bkNone
+      object Label1: TLabel
+        Align = alClient
+        Position.Point = '(2,1)'
+        Width = 252.000000000000000000
+        Height = 17.000000000000000000
+        TabOrder = 0
+        AutoSize = True
+        Text = 'Label1'
+        WordWrap = False
+      end
+    end
+  end
+end

@@ -1,0 +1,58 @@
+object frxTabOrderEditorForm: TfrxTabOrderEditorForm
+  Left = 0
+  Top = 0
+  Caption = 'Tab Order'
+  BorderStyle = bsSingle
+  BorderIcons = [biSystemMenu]
+  ClientHeight = 215
+  ClientWidth = 303
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  StyleLookup = 'backgroundstyle'
+  object Label1: TLabel
+    Position.Point = '(8,8)'
+    Width = 131.000000000000000000
+    Height = 13.000000000000000000
+    TabOrder = 0
+  end
+  object OkB: TButton
+    Position.Point = '(220,28)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 1
+    ModalResult = 1
+    Default = True
+  end
+  object CancelB: TButton
+    Position.Point = '(220,56)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 2
+    ModalResult = 2
+    Cancel = True
+  end
+  object UpB: TButton
+    Position.Point = '(220,100)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    OnClick = UpBClick
+    TabOrder = 3
+  end
+  object DownB: TButton
+    Position.Point = '(220,128)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    OnClick = DownBClick
+    TabOrder = 4
+  end
+  object ControlsLB: TListBox
+    Position.Point = '(8,28)'
+    Width = 201.000000000000000000
+    Height = 177.000000000000000000
+    TabOrder = 5
+    ItemHeight = 13.000000000000000000
+  end
+end

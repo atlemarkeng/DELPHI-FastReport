@@ -1,0 +1,274 @@
+object frxOptionsEditor: TfrxOptionsEditor
+  Left = 0
+  Top = 0
+  Caption = 'Designer Options'
+  BorderStyle = bsSingle
+  BorderIcons = [biSystemMenu]
+  ClientHeight = 443
+  ClientWidth = 349
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  StyleLookup = 'backgroundstyle'
+  object OkB: TButton
+    Position.Point = '(188,412)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 0
+    ModalResult = 1
+    Default = True
+  end
+  object CancelB: TButton
+    Position.Point = '(268,412)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 1
+    ModalResult = 2
+    Cancel = True
+  end
+  object RestoreDefaultsB: TButton
+    Position.Point = '(8,412)'
+    Width = 137.000000000000000000
+    Height = 25.000000000000000000
+    OnClick = RestoreDefaultsBClick
+    TabOrder = 2
+  end
+  object Label1: TGroupBox
+    Position.Point = '(4,4)'
+    Width = 341.000000000000000000
+    Height = 137.000000000000000000
+    TabOrder = 3
+    object Label2: TLabel
+      Position.Point = '(8,16)'
+      Width = 105.000000000000000000
+      Height = 18.000000000000000000
+      TabOrder = 0
+    end
+    object Label3: TLabel
+      Position.Point = '(128,16)'
+      Width = 89.000000000000000000
+      Height = 16.000000000000000000
+      TabOrder = 1
+    end
+    object Label4: TLabel
+      Position.Point = '(26,110)'
+      Width = 95.000000000000000000
+      Height = 14.000000000000000000
+      TabOrder = 2
+    end
+    object Label13: TLabel
+      Position.Point = '(168,37)'
+      Width = 25.000000000000000000
+      Height = 15.000000000000000000
+      TabOrder = 3
+    end
+    object Label14: TLabel
+      Position.Point = '(168,61)'
+      Width = 25.000000000000000000
+      Height = 16.000000000000000000
+      TabOrder = 4
+    end
+    object Label15: TLabel
+      Position.Point = '(168,85)'
+      Width = 33.000000000000000000
+      Height = 16.000000000000000000
+      TabOrder = 5
+    end
+    object Label16: TLabel
+      Position.Point = '(168,109)'
+      Width = 41.000000000000000000
+      Height = 15.000000000000000000
+      TabOrder = 6
+    end
+    object CMRB: TRadioButton
+      Position.Point = '(8,36)'
+      Width = 109.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 7
+    end
+    object InchesRB: TRadioButton
+      Position.Point = '(8,60)'
+      Width = 109.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 8
+    end
+    object PixelsRB: TRadioButton
+      Position.Point = '(8,84)'
+      Width = 109.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 9
+    end
+    object CME: TEdit
+      Position.Point = '(128,34)'
+      Width = 37.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 10
+      KeyboardType = vktDefault
+      Password = False
+    end
+    object InchesE: TEdit
+      Position.Point = '(128,58)'
+      Width = 37.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 11
+      KeyboardType = vktDefault
+      Password = False
+    end
+    object PixelsE: TEdit
+      Position.Point = '(128,82)'
+      Width = 37.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 12
+      KeyboardType = vktDefault
+      Password = False
+    end
+    object DialogFormE: TEdit
+      Position.Point = '(128,106)'
+      Width = 37.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 13
+      KeyboardType = vktDefault
+      Password = False
+    end
+    object ShowGridCB: TCheckBox
+      Position.Point = '(196,36)'
+      Width = 137.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 14
+    end
+    object AlignGridCB: TCheckBox
+      Position.Point = '(196,56)'
+      Width = 137.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 15
+    end
+  end
+  object Label6: TGroupBox
+    Position.Point = '(4,144)'
+    Width = 341.000000000000000000
+    Height = 93.000000000000000000
+    TabOrder = 4
+    object Label7: TLabel
+      Position.Point = '(8,20)'
+      Width = 97.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 0
+    end
+    object Label8: TLabel
+      Position.Point = '(8,48)'
+      Width = 97.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 1
+    end
+    object Label9: TLabel
+      Position.Point = '(240,20)'
+      Width = 39.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 2
+    end
+    object Label10: TLabel
+      Position.Point = '(240,48)'
+      Width = 39.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 3
+    end
+    object CodeWindowFontCB: TComboBox
+      Position.Point = '(112,18)'
+      Width = 121.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 4
+      ItemIndex = -1
+      ItemHeight = 13.000000000000000000
+      DropDownCount = 12
+    end
+    object CodeWindowSizeCB: TComboBox
+      Position.Point = '(288,18)'
+      Width = 44.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 5
+      ItemIndex = -1
+      ItemHeight = 13.000000000000000000
+    end
+    object MemoEditorFontCB: TComboBox
+      Position.Point = '(112,46)'
+      Width = 121.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 6
+      ItemIndex = -1
+      ItemHeight = 13.000000000000000000
+      DropDownCount = 12
+    end
+    object MemoEditorSizeCB: TComboBox
+      Position.Point = '(288,46)'
+      Width = 44.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 7
+      ItemIndex = -1
+      ItemHeight = 13.000000000000000000
+    end
+    object ObjectFontCB: TCheckBox
+      Position.Point = '(112,68)'
+      Width = 189.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 8
+    end
+  end
+  object Label5: TGroupBox
+    Position.Point = '(4,244)'
+    Width = 341.000000000000000000
+    Height = 153.000000000000000000
+    TabOrder = 5
+    object Label12: TLabel
+      Position.Point = '(8,127)'
+      Width = 140.000000000000000000
+      Height = 15.000000000000000000
+      TabOrder = 0
+    end
+    object Label17: TLabel
+      Position.Point = '(212,126)'
+      Width = 85.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 1
+    end
+    object EditAfterInsCB: TCheckBox
+      Position.Point = '(8,20)'
+      Width = 293.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 2
+    end
+    object FreeBandsCB: TCheckBox
+      Position.Point = '(8,80)'
+      Width = 293.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 3
+    end
+    object GapE: TEdit
+      Position.Point = '(172,124)'
+      Width = 37.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 4
+      KeyboardType = vktDefault
+      Password = False
+    end
+    object BandsCaptionsCB: TCheckBox
+      Position.Point = '(8,40)'
+      Width = 293.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 5
+    end
+    object DropFieldsCB: TCheckBox
+      Position.Point = '(8,60)'
+      Width = 293.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 6
+    end
+    object StartupCB: TCheckBox
+      Position.Point = '(8,100)'
+      Width = 293.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 7
+    end
+  end
+end

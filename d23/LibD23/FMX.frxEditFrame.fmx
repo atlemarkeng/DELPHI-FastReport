@@ -1,0 +1,232 @@
+object frxFrameEditorForm: TfrxFrameEditorForm
+  Left = 0
+  Top = 0
+  Caption = 'Edit Frame'
+  BorderStyle = bsSingle
+  BorderIcons = [biSystemMenu]
+  ClientHeight = 159
+  ClientWidth = 223
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyDown = FormKeyDown
+  StyleLookup = 'backgroundstyle'
+  object FrameL: TLabel
+    Position.Point = '(8,12)'
+    Width = 54.000000000000000000
+    Height = 13.000000000000000000
+    TabOrder = 0
+  end
+  object LineL: TLabel
+    Position.Point = '(8,64)'
+    Width = 57.000000000000000000
+    Height = 13.000000000000000000
+    TabOrder = 1
+  end
+  object ShadowL: TLabel
+    Position.Point = '(8,92)'
+    Width = 57.000000000000000000
+    Height = 13.000000000000000000
+    TabOrder = 2
+  end
+  object FLineL: TLabel
+    Position.Point = '(8,37)'
+    Width = 57.000000000000000000
+    Height = 13.000000000000000000
+    TabOrder = 3
+  end
+  object OkB: TButton
+    Position.Point = '(60,124)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 4
+    ModalResult = 1
+    Default = True
+  end
+  object CancelB: TButton
+    Position.Point = '(140,124)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 5
+    ModalResult = 2
+    Cancel = True
+  end
+  object ToolBar1: TToolBar
+    Align = alNone
+    Position.Point = '(72,8)'
+    Width = 149.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 6
+    object FrameTopB: TfrxToolButton
+      Tag = 1
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = BClick
+      TabOrder = 0
+    end
+    object FrameBottomB: TfrxToolButton
+      Tag = 2
+      Position.Point = '(22,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = BClick
+      TabOrder = 1
+    end
+    object FrameLeftB: TfrxToolButton
+      Tag = 3
+      Position.Point = '(44,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = BClick
+      TabOrder = 2
+    end
+    object FrameRightB: TfrxToolButton
+      Tag = 4
+      Position.Point = '(66,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = BClick
+      TabOrder = 3
+    end
+    object FrameAllB: TfrxToolButton
+      Tag = 5
+      Position.Point = '(96,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = BClick
+      TabOrder = 4
+    end
+    object FrameNoB: TfrxToolButton
+      Tag = 6
+      Position.Point = '(118,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = BClick
+      TabOrder = 5
+    end
+  end
+  object ToolBar2: TToolBar
+    Align = alNone
+    Position.Point = '(72,60)'
+    Width = 93.000000000000000000
+    Height = 23.000000000000000000
+    TabOrder = 7
+    object FrameColorB: TfrxToolButton
+      Tag = 7
+      Position.Point = '(50,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = BClick
+      TabOrder = 0
+    end
+    object FrameStyleB: TfrxToolButton
+      Tag = 8
+      Position.Point = '(70,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = BClick
+      TabOrder = 1
+    end
+    object Sep2: TPanel
+      Align = alLeft
+      Width = 47.000000000000000000
+      Height = 23.000000000000000000
+      TabOrder = 2
+      object FrameWidthCB: TComboEdit
+        Tag = 9
+        Cursor = crIBeam
+        Position.Point = '(5,2)'
+        Width = 40.000000000000000000
+        Height = 19.000000000000000000
+        OnClick = BClick
+        TabOrder = 0
+        KeyboardType = vktDefault
+        ItemHeight = 13.000000000000000000
+        ItemIndex = 0
+        Items.Strings = (
+          '0,1'
+          '0,5'
+          '1'
+          '1,5'
+          '2'
+          '3'
+          '4'
+          '5'
+          '6'
+          '7'
+          '8'
+          '9'
+          '10')
+        ListBoxResource = 'combolistboxstyle'
+        Text = '0,1'
+      end
+    end
+  end
+  object ToolBar3: TToolBar
+    Align = alNone
+    Position.Point = '(72,88)'
+    Width = 93.000000000000000000
+    Height = 23.000000000000000000
+    TabOrder = 8
+    object ShadowB: TfrxToolButton
+      Tag = 10
+      Position.Point = '(50,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = BClick
+      TabOrder = 0
+    end
+    object ShadowColorB: TfrxToolButton
+      Tag = 11
+      Position.Point = '(70,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = BClick
+      TabOrder = 1
+    end
+    object Sep3: TPanel
+      Align = alLeft
+      Width = 47.000000000000000000
+      Height = 23.000000000000000000
+      TabOrder = 2
+      object ShadowWidthCB: TComboEdit
+        Tag = 12
+        Cursor = crIBeam
+        Position.Point = '(5,2)'
+        Width = 40.000000000000000000
+        Height = 19.000000000000000000
+        OnClick = BClick
+        TabOrder = 0
+        KeyboardType = vktDefault
+        ItemHeight = 13.000000000000000000
+        ItemIndex = 0
+        Items.Strings = (
+          '1'
+          '2'
+          '3'
+          '4'
+          '5'
+          '6'
+          '7'
+          '8'
+          '9'
+          '10')
+        ListBoxResource = 'combolistboxstyle'
+        Text = '1'
+      end
+    end
+  end
+  object FrameLineCB: TComboEdit
+    Cursor = crIBeam
+    Position.Point = '(72,34)'
+    Width = 91.000000000000000000
+    Height = 19.000000000000000000
+    OnClick = BClick
+    TabOrder = 9
+    KeyboardType = vktDefault
+    ItemHeight = 13.000000000000000000
+    ItemIndex = -1
+    ListBoxResource = 'combolistboxstyle'
+  end
+end

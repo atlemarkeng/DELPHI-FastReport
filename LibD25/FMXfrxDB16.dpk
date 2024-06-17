@@ -1,0 +1,51 @@
+// Package file for Rad Studio XE2
+
+package FMXfrxDB16;
+
+{$R *.res}
+{$R *.otares}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  FMX,
+  dbrtl,
+  FMXfrx16,
+  FMXfs16,
+  FMXfsDB16;
+
+contains
+  FMX.frxDBSet in 'FMX.frxDBSet.pas',
+  FMX.frxCustomDB in 'FMX.frxCustomDB.pas',
+  FMX.frxCustomDBRTTI in 'FMX.frxCustomDBRTTI.pas',
+  FMX.frxCustomDBEditor in 'FMX.frxCustomDBEditor.pas',
+  FMX.frxConnWizard in 'FMX.frxConnWizard.pas' {frxConnectionWizardForm},
+  FMX.frxEditQueryParams in 'FMX.frxEditQueryParams.pas' {frxParamsEditorForm},
+  FMX.frxEditSQL in 'FMX.frxEditSQL.pas' {frxSQLEditorForm},
+  FMX.frxEditMD in 'FMX.frxEditMD.pas' {frxMDEditorForm};
+
+end.

@@ -1,0 +1,113 @@
+object frxODFExportDialog: TfrxODFExportDialog
+  Left = 0
+  Top = 0
+  Caption = 'Export to Open Document Spreadsheet'
+  ClientHeight = 263
+  ClientWidth = 277
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  ActiveControl = OkB
+  StyleLookup = 'backgroundstyle'
+  object OkB: TButton
+    Position.Point = '(118,232)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 0
+    ModalResult = 1
+    Default = True
+  end
+  object CancelB: TButton
+    Position.Point = '(198,232)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 1
+    ModalResult = 2
+    Cancel = True
+  end
+  object GroupPageRange: TGroupBox
+    Position.Point = '(4,4)'
+    Width = 269.000000000000000000
+    Height = 121.000000000000000000
+    TabOrder = 2
+    object DescrL: TLabel
+      Position.Point = '(12,82)'
+      Width = 249.000000000000000000
+      Height = 29.000000000000000000
+      TabOrder = 0
+    end
+    object AllRB: TRadioButton
+      Position.Point = '(12,20)'
+      Width = 153.000000000000000000
+      Height = 17.000000000000000000
+      HelpContext = 108
+      TabOrder = 1
+      IsChecked = True
+    end
+    object CurPageRB: TRadioButton
+      Position.Point = '(12,40)'
+      Width = 153.000000000000000000
+      Height = 17.000000000000000000
+      HelpContext = 118
+      TabOrder = 2
+    end
+    object PageNumbersRB: TRadioButton
+      Position.Point = '(12,60)'
+      Width = 77.000000000000000000
+      Height = 17.000000000000000000
+      HelpContext = 124
+      TabOrder = 3
+    end
+    object PageNumbersE: TEdit
+      Position.Point = '(92,58)'
+      Width = 165.000000000000000000
+      Height = 21.000000000000000000
+      HelpContext = 133
+      TabOrder = 4
+      KeyboardType = vktDefault
+      OnChange = PageNumbersEChange
+      Password = False
+    end
+  end
+  object GroupQuality: TGroupBox
+    Position.Point = '(4,128)'
+    Width = 269.000000000000000000
+    Height = 69.000000000000000000
+    TabOrder = 3
+    object WCB: TCheckBox
+      Position.Point = '(140,20)'
+      Width = 121.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 0
+    end
+    object ContinuousCB: TCheckBox
+      Position.Point = '(12,20)'
+      Width = 121.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 1
+    end
+    object PageBreaksCB: TCheckBox
+      Position.Point = '(12,40)'
+      Width = 121.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 2
+    end
+    object BackgrCB: TCheckBox
+      Position.Point = '(140,40)'
+      Width = 121.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 3
+    end
+  end
+  object OpenCB: TCheckBox
+    Position.Point = '(12,204)'
+    Width = 257.000000000000000000
+    Height = 17.000000000000000000
+    TabOrder = 4
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '.ods'
+    Filter = 'Open Document Spreadsheet file (*.ods)|*.ods||'#13#10
+    Options = [ofHideReadOnly, ofNoChangeDir, ofEnableSizing]
+  end
+end

@@ -1,0 +1,38 @@
+object frxReportDataForm: TfrxReportDataForm
+  Left = 0
+  Top = 0
+  Caption = 'Select Report Datasets'
+  BorderStyle = bsSingle
+  BorderIcons = []
+  ClientHeight = 239
+  ClientWidth = 229
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  StyleLookup = 'backgroundstyle'
+  object OKB: TButton
+    Position.Point = '(68,208)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 0
+    ModalResult = 1
+  end
+  object CancelB: TButton
+    Position.Point = '(148,208)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 1
+    ModalResult = 2
+    Cancel = True
+  end
+  object DatasetsLB: TListBox
+    Position.Point = '(4,4)'
+    Width = 221.000000000000000000
+    Height = 197.000000000000000000
+    TabOrder = 2
+    ItemHeight = 16.000000000000000000
+    ShowCheckboxes = True
+  end
+end

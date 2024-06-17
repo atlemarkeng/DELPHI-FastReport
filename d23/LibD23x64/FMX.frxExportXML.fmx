@@ -1,0 +1,210 @@
+object frxXMLExportDialog: TfrxXMLExportDialog
+  Left = 0
+  Top = 0
+  Caption = 'Export to Excel'
+  ClientHeight = 364
+  ClientWidth = 277
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  object OkB: TButton
+    Default = True
+    DisableFocusEffect = False
+    Height = 25.000000000000000000
+    ModalResult = 1
+    Position.X = 118.000000000000000000
+    Position.Y = 336.000000000000000000
+    Text = 'OK'
+    Width = 75.000000000000000000
+  end
+  object CancelB: TButton
+    Cancel = True
+    DisableFocusEffect = False
+    Height = 25.000000000000000000
+    ModalResult = 2
+    Position.X = 198.000000000000000000
+    Position.Y = 336.000000000000000000
+    Text = 'Cancel'
+    Width = 75.000000000000000000
+  end
+  object GroupPageRange: TGroupBox
+    Height = 121.000000000000000000
+    Position.X = 4.000000000000000000
+    Position.Y = 4.000000000000000000
+    Text = ' Page range  '
+    Width = 269.000000000000000000
+    object DescrL: TLabel
+      Height = 29.000000000000000000
+      Position.X = 12.000000000000000000
+      Position.Y = 82.000000000000000000
+      Text = 
+        'Enter page numbers and/or page ranges, separated by commas. For ' +
+        'example, 1,3,5-12'
+      Width = 249.000000000000000000
+    end
+    object AllRB: TRadioButton
+      DisableFocusEffect = False
+      GroupName = '1'
+      Height = 17.000000000000000000
+      HelpContext = 108
+      IsChecked = True
+      Position.X = 12.000000000000000000
+      Position.Y = 20.000000000000000000
+      TabOrder = 0
+      Text = 'All'
+      Width = 153.000000000000000000
+    end
+    object CurPageRB: TRadioButton
+      DisableFocusEffect = False
+      GroupName = '1'
+      Height = 17.000000000000000000
+      HelpContext = 118
+      Position.X = 12.000000000000000000
+      Position.Y = 40.000000000000000000
+      TabOrder = 1
+      Text = 'Current page'
+      Width = 245.000000000000000000
+    end
+    object PageNumbersRB: TRadioButton
+      DisableFocusEffect = False
+      GroupName = '1'
+      Height = 17.000000000000000000
+      HelpContext = 124
+      Position.X = 12.000000000000000000
+      Position.Y = 60.000000000000000000
+      TabOrder = 2
+      Text = 'Pages:'
+      Width = 77.000000000000000000
+    end
+    object PageNumbersE: TEdit
+      TabOrder = 3
+      DisableFocusEffect = False
+      KeyboardType = vktDefault
+      Password = False
+      Position.X = 92.000000000000000000
+      Position.Y = 58.000000000000000000
+      Width = 165.000000000000000000
+      Height = 21.000000000000000000
+      HelpContext = 133
+      OnChange = PageNumbersEChange
+      OnKeyDown = PageNumbersEKeyDown
+    end
+  end
+  object GroupQuality: TGroupBox
+    Height = 65.000000000000000000
+    Position.X = 4.000000000000000000
+    Position.Y = 128.000000000000000000
+    Text = ' Quality properties '
+    Width = 269.000000000000000000
+    object WCB: TCheckBox
+      DisableFocusEffect = False
+      Height = 17.000000000000000000
+      IsChecked = True
+      Position.X = 140.000000000000000000
+      Position.Y = 20.000000000000000000
+      Text = 'WYSIWYG'
+      Width = 121.000000000000000000
+    end
+    object ContinuousCB: TCheckBox
+      DisableFocusEffect = False
+      Height = 17.000000000000000000
+      IsChecked = True
+      Position.X = 12.000000000000000000
+      Position.Y = 20.000000000000000000
+      Text = 'Continuous'
+      Width = 121.000000000000000000
+    end
+    object PageBreaksCB: TCheckBox
+      DisableFocusEffect = False
+      Height = 17.000000000000000000
+      IsChecked = True
+      Position.X = 12.000000000000000000
+      Position.Y = 40.000000000000000000
+      Text = 'Page breaks'
+      Width = 121.000000000000000000
+    end
+    object BackgrCB: TCheckBox
+      DisableFocusEffect = False
+      Height = 17.000000000000000000
+      IsChecked = True
+      Position.X = 140.000000000000000000
+      Position.Y = 40.000000000000000000
+      Text = 'Background'
+      Width = 121.000000000000000000
+    end
+  end
+  object OpenExcelCB: TCheckBox
+    DisableFocusEffect = False
+    Height = 17.000000000000000000
+    IsChecked = True
+    Position.X = 12.000000000000000000
+    Position.Y = 308.000000000000000000
+    Text = 'Open Excel after export'
+    Width = 257.000000000000000000
+  end
+  object SplitToSheetGB: TGroupBox
+    Height = 110.000000000000000000
+    Position.X = 4.000000000000000000
+    Position.Y = 195.000000000000000000
+    Text = 'Split pages to sheets'
+    Width = 269.000000000000000000
+    object RPagesRB: TRadioButton
+      DisableFocusEffect = False
+      GroupName = '2'
+      Height = 17.000000000000000000
+      HelpContext = 108
+      Position.X = 12.000000000000000000
+      Position.Y = 40.000000000000000000
+      Text = 'Use report pages'
+      Width = 245.000000000000000000
+    end
+    object PrintOnPrevRB: TRadioButton
+      DisableFocusEffect = False
+      GroupName = '2'
+      Height = 17.000000000000000000
+      HelpContext = 118
+      Position.X = 12.000000000000000000
+      Position.Y = 60.000000000000000000
+      Text = 'Use print on previous page'
+      Width = 245.000000000000000000
+    end
+    object RowsCountRB: TRadioButton
+      DisableFocusEffect = False
+      GroupName = '2'
+      Height = 17.000000000000000000
+      HelpContext = 124
+      Position.X = 12.000000000000000000
+      Position.Y = 80.000000000000000000
+      Text = 'Rows count:'
+      Width = 133.000000000000000000
+    end
+    object ERows: TEdit
+      DisableFocusEffect = False
+      KeyboardType = vktDefault
+      Password = False
+      Position.X = 152.000000000000000000
+      Position.Y = 78.000000000000000000
+      Width = 105.000000000000000000
+      Height = 21.000000000000000000
+      HelpContext = 133
+      OnChange = ERowsChange
+      OnKeyDown = ERowsKeyDown
+    end
+    object NotSplitRB: TRadioButton
+      DisableFocusEffect = False
+      GroupName = '2'
+      Height = 17.000000000000000000
+      HelpContext = 108
+      IsChecked = True
+      Position.X = 12.000000000000000000
+      Position.Y = 20.000000000000000000
+      Text = 'Don'#39't split'
+      Width = 245.000000000000000000
+    end
+  end
+  object SaveDialog1: TSaveDialog
+    FilterIndex = 0
+    Options = [ofHideReadOnly, ofNoChangeDir, ofEnableSizing]
+    Top = 336
+  end
+end

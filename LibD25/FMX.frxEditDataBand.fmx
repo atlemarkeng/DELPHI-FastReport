@@ -1,0 +1,65 @@
+object frxDataBandEditorForm: TfrxDataBandEditorForm
+  Left = 0
+  Top = 0
+  Caption = 'Select DataSet'
+  BorderStyle = bsSingle
+  BorderIcons = [biSystemMenu]
+  ClientHeight = 221
+  ClientWidth = 261
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  StyleLookup = 'backgroundstyle'
+  object OkB: TButton
+    Position.Point = '(102,192)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    OnClick = OkBClick
+    HelpContext = 40
+    TabOrder = 0
+    ModalResult = 1
+    Default = True
+  end
+  object CancelB: TButton
+    Position.Point = '(182,192)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    HelpContext = 50
+    TabOrder = 1
+    ModalResult = 2
+    Cancel = True
+  end
+  object GroupBox1: TGroupBox
+    Position.Point = '(4,4)'
+    Width = 253.000000000000000000
+    Height = 177.000000000000000000
+    TabOrder = 2
+    object RecordsL: TLabel
+      Position.Point = '(16,148)'
+      Width = 151.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 0
+    end
+    object DatasetsLB: TListBox
+      Position.Point = '(8,12)'
+      Width = 237.000000000000000000
+      Height = 121.000000000000000000
+      OnClick = DatasetsLBClick
+      OnDblClick = DatasetsLBDblClick
+      HelpContext = 88
+      TabOrder = 1
+      ItemHeight = 18.000000000000000000
+    end
+    object RecordsS: TSpinBox
+      Position.Point = '(179,144)'
+      Width = 65.000000000000000000
+      Height = 22.000000000000000000
+      TabOrder = 2
+      KeyboardType = vktDefault
+      Max = 10000.000000000000000000
+      Increment = 1.000000000000000000
+    end
+  end
+end

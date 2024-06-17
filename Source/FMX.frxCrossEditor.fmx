@@ -1,0 +1,342 @@
+object frxCrossEditorForm: TfrxCrossEditorForm
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Cross-tab Editor'
+  ClientHeight = 535
+  ClientWidth = 703
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  ActiveControl = OkB
+  StyleLookup = 'backgroundstyle'
+  object DatasetL: TGroupBox
+    Position.Point = '(4,4)'
+    Width = 165.000000000000000000
+    Height = 205.000000000000000000
+    Visible = False
+    TabOrder = 0
+    object DatasetCB: TComboBox
+      Position.Point = '(12,20)'
+      Width = 141.000000000000000000
+      Height = 22.000000000000000000
+      TabOrder = 0
+      ItemIndex = -1
+      ItemHeight = 16.000000000000000000
+      OnChange = DatasetCBClick
+    end
+    object FieldsLB: TfrxListBox
+      DragMode = dmAutomatic
+      Position.Point = '(12,48)'
+      Width = 141.000000000000000000
+      Height = 145.000000000000000000
+      OnDragOver = LBDragOver
+      OnDragDrop = LBDragDrop
+      OnClick = LBClick
+      TabOrder = 1
+      AutoHide = False
+      DisableMouseWheel = True
+      AllowDrag = True
+      ItemHeight = 16.000000000000000000
+    end
+  end
+  object DimensionsL: TGroupBox
+    Position.Point = '(4,4)'
+    Width = 165.000000000000000000
+    Height = 205.000000000000000000
+    Visible = False
+    TabOrder = 1
+    object RowsL: TLabel
+      Position.Point = '(12,20)'
+      Width = 66.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 0
+    end
+    object ColumnsL: TLabel
+      Position.Point = '(12,48)'
+      Width = 66.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 1
+    end
+    object CellsL: TLabel
+      Position.Point = '(12,76)'
+      Width = 66.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 2
+    end
+    object RowsE: TEdit
+      Position.Point = '(100,16)'
+      Width = 33.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 3
+      KeyboardType = vktDefault
+      OnChange = DimensionsChange
+      Password = False
+      Text = '0'
+    end
+    object ColumnsE: TEdit
+      Tag = 1
+      Position.Point = '(100,44)'
+      Width = 33.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 4
+      KeyboardType = vktDefault
+      OnChange = DimensionsChange
+      Password = False
+      Text = '0'
+    end
+    object CellsE: TEdit
+      Tag = 2
+      Position.Point = '(100,72)'
+      Width = 33.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 5
+      KeyboardType = vktDefault
+      OnChange = DimensionsChange
+      Password = False
+      Text = '1'
+    end
+  end
+  object StructureL: TGroupBox
+    Position.Point = '(176,4)'
+    Width = 521.000000000000000000
+    Height = 205.000000000000000000
+    TabOrder = 2
+    object Shape1: TLine
+      Position.Point = '(12,104)'
+      Width = 497.000000000000000000
+      Height = 1.000000000000000000
+    end
+    object Shape2: TLine
+      Position.Point = '(260,16)'
+      Width = 1.000000000000000000
+      Height = 177.000000000000000000
+    end
+    object SwapB: TSpeedButton
+      Position.Point = '(226,70)'
+      Width = 27.000000000000000000
+      Height = 26.000000000000000000
+      OnClick = SwapBClick
+      Text = '<->'
+    end
+    object ColumnsLB: TfrxListBox
+      DragMode = dmAutomatic
+      Position.Point = '(268,16)'
+      Width = 241.000000000000000000
+      Height = 81.000000000000000000
+      OnDragEnter = RowsLBDragEnter
+      OnDragLeave = RowsLBDragLeave
+      OnDragOver = LBDragOver
+      OnDragDrop = LBDragDrop
+      OnClick = LBClick
+      OnDblClick = LBDblClick
+      OnMouseDown = LBMouseDown
+      TabOrder = 4
+      AutoHide = False
+      MouseTracking = True
+      AllowDrag = True
+      ItemHeight = 16.000000000000000000
+      ShowButtons = False
+    end
+    object CellsLB: TfrxListBox
+      DragMode = dmAutomatic
+      Position.Point = '(268,112)'
+      Width = 241.000000000000000000
+      Height = 81.000000000000000000
+      OnDragEnter = RowsLBDragEnter
+      OnDragLeave = RowsLBDragLeave
+      OnDragOver = LBDragOver
+      OnDragDrop = LBDragDrop
+      OnClick = LBClick
+      OnDblClick = LBDblClick
+      TabOrder = 5
+      AutoHide = False
+      MouseTracking = True
+      AllowDrag = True
+      ItemHeight = 16.000000000000000000
+      ShowButtons = False
+    end
+    object RowsLB: TfrxListBox
+      DragMode = dmAutomatic
+      Position.Point = '(12,112)'
+      Width = 241.000000000000000000
+      Height = 81.000000000000000000
+      OnDragEnter = RowsLBDragEnter
+      OnDragLeave = RowsLBDragLeave
+      OnDragOver = LBDragOver
+      OnDragDrop = LBDragDrop
+      OnClick = LBClick
+      OnDblClick = LBDblClick
+      OnMouseDown = LBMouseDown
+      TabOrder = 3
+      AutoHide = False
+      MouseTracking = True
+      AllowDrag = True
+      ItemHeight = 16.000000000000000000
+      ShowButtons = False
+    end
+  end
+  object OptionsL: TGroupBox
+    Position.Point = '(4,216)'
+    Width = 693.000000000000000000
+    Height = 281.000000000000000000
+    TabOrder = 3
+    object RowHeaderCB: TCheckBox
+      Position.Point = '(440,76)'
+      Width = 237.000000000000000000
+      Height = 17.000000000000000000
+
+      TabOrder = 0
+      OnChange = CBClick
+    end
+    object ColumnHeaderCB: TCheckBox
+      Position.Point = '(440,56)'
+      Width = 237.000000000000000000
+      Height = 17.000000000000000000
+
+      TabOrder = 1
+      OnChange = CBClick
+    end
+    object RowTotalCB: TCheckBox
+      Position.Point = '(440,116)'
+      Width = 237.000000000000000000
+      Height = 17.000000000000000000
+
+      TabOrder = 2
+      OnChange = CBClick
+    end
+    object ColumnTotalCB: TCheckBox
+      Position.Point = '(440,96)'
+      Width = 237.000000000000000000
+      Height = 17.000000000000000000
+
+      TabOrder = 3
+      OnChange = CBClick
+    end
+    object TitleCB: TCheckBox
+      Position.Point = '(440,16)'
+      Width = 237.000000000000000000
+      Height = 17.000000000000000000
+
+      TabOrder = 4
+      OnChange = CBClick
+    end
+    object CornerCB: TCheckBox
+      Position.Point = '(440,36)'
+      Width = 237.000000000000000000
+      Height = 17.000000000000000000
+
+      TabOrder = 5
+      OnChange = CBClick
+    end
+    object AutoSizeCB: TCheckBox
+      Position.Point = '(440,152)'
+      Width = 237.000000000000000000
+      Height = 17.000000000000000000
+
+      TabOrder = 6
+      OnChange = CBClick
+    end
+    object BorderCB: TCheckBox
+      Position.Point = '(440,172)'
+      Width = 237.000000000000000000
+      Height = 17.000000000000000000
+
+      TabOrder = 7
+      OnChange = CBClick
+    end
+    object DownAcrossCB: TCheckBox
+      Position.Point = '(440,192)'
+      Width = 237.000000000000000000
+      Height = 17.000000000000000000
+
+      TabOrder = 8
+      OnChange = CBClick
+    end
+    object PlainCB: TCheckBox
+      Position.Point = '(440,232)'
+      Width = 237.000000000000000000
+      Height = 17.000000000000000000
+
+      TabOrder = 9
+      OnChange = CBClick
+    end
+    object JoinCB: TCheckBox
+      Position.Point = '(440,252)'
+      Width = 237.000000000000000000
+      Height = 17.000000000000000000
+
+      TabOrder = 10
+      OnChange = CBClick
+    end
+    object Box: TScrollBox
+      Position.Point = '(12,16)'
+      Width = 413.000000000000000000
+      Height = 253.000000000000000000
+      TabOrder = 11
+      object PaintBox: TPaintBox
+        Position.Point = '(16,24)'
+        Width = 393.000000000000000000
+        Height = 225.000000000000000000
+        OnPaint = PaintBoxPaint
+      end
+      object ToolBar: TToolBar
+        Width = 413.000000000000000000
+        Height = 22.000000000000000000
+        TabOrder = 1
+        object StyleB: TfrxToolButton
+          Position.Point = '(16,0)'
+          Width = 89.000000000000000000
+          Height = 22.000000000000000000
+          TabOrder = 0
+        end
+      end
+    end
+    object RepeatCB: TCheckBox
+      Position.Point = '(440,212)'
+      Width = 237.000000000000000000
+      Height = 17.000000000000000000
+
+      TabOrder = 12
+      OnChange = CBClick
+    end
+  end
+  object OkB: TButton
+    Position.Point = '(540,504)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 4
+    ModalResult = 1
+    Default = True
+  end
+  object CancelB: TButton
+    Position.Point = '(620,504)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 5
+    ModalResult = 2
+    Cancel = True
+  end
+  object FuncPopup: TPopupMenu
+  end
+  object SortPopup: TPopupMenu
+  end
+  object StylePopup: TPopupMenu
+    object Sep1: TMenuItem
+      Width = 50.000000000000000000
+      Height = 50.000000000000000000
+      TabOrder = 0
+      ShortCut = 0
+    end
+    object SaveStyleMI: TMenuItem
+      Width = 50.000000000000000000
+      Height = 50.000000000000000000
+      OnClick = SaveStyleMIClick
+      TabOrder = 1
+      ShortCut = 0
+    end
+  end
+end

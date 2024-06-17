@@ -1,0 +1,171 @@
+object frxHTMLExportDialog: TfrxHTMLExportDialog
+  Left = 0
+  Top = 0
+  Caption = 'Export to HTML'
+  ClientHeight = 302
+  ClientWidth = 290
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  StyleLookup = 'backgroundstyle'
+  object GroupQuality: TGroupBox
+    Position.Point = '(4,128)'
+    Width = 281.000000000000000000
+    Height = 109.000000000000000000
+    TabOrder = 0
+    object PicturesL: TLabel
+      Position.Point = '(12,84)'
+      Width = 73.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 0
+    end
+    object StylesCB: TCheckBox
+      Position.Point = '(12,20)'
+      Width = 129.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 1
+    end
+    object PicsSameCB: TCheckBox
+      Position.Point = '(12,40)'
+      Width = 129.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 2
+    end
+    object FixWidthCB: TCheckBox
+      Position.Point = '(144,20)'
+      Width = 129.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 3
+    end
+    object NavigatorCB: TCheckBox
+      Position.Point = '(12,60)'
+      Width = 129.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 4
+    end
+    object MultipageCB: TCheckBox
+      Position.Point = '(144,40)'
+      Width = 129.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 5
+    end
+    object BackgrCB: TCheckBox
+      Position.Point = '(144,60)'
+      Width = 129.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 6
+    end
+    object PFormatCB: TComboBox
+      Position.Point = '(88,80)'
+      Width = 181.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 7
+      ItemIndex = -1
+      ItemHeight = 13.000000000000000000
+      object ListBoxItem1: TListBoxItem
+        Position.Point = '(5000,5000)'
+        Width = 19.000000000000000000
+        Height = 19.000000000000000000
+        HitTest = False
+        TabOrder = 0
+        Text = 'None'
+      end
+      object ListBoxItem2: TListBoxItem
+        Position.Point = '(5000,5000)'
+        Width = 19.000000000000000000
+        Height = 19.000000000000000000
+        HitTest = False
+        TabOrder = 1
+        Text = 'JPEG'
+      end
+      object ListBoxItem3: TListBoxItem
+        Position.Point = '(5000,5000)'
+        Width = 19.000000000000000000
+        Height = 19.000000000000000000
+        HitTest = False
+        TabOrder = 2
+        Text = 'BMP'
+      end
+      object ListBoxItem4: TListBoxItem
+        Position.Point = '(5000,5000)'
+        Width = 19.000000000000000000
+        Height = 19.000000000000000000
+        HitTest = False
+        TabOrder = 3
+        Text = 'GIF'
+      end
+    end
+  end
+  object GroupPageRange: TGroupBox
+    Position.Point = '(4,4)'
+    Width = 281.000000000000000000
+    Height = 121.000000000000000000
+    TabOrder = 1
+    object DescrL: TLabel
+      Position.Point = '(12,82)'
+      Width = 249.000000000000000000
+      Height = 29.000000000000000000
+      TabOrder = 0
+    end
+    object AllRB: TRadioButton
+      Position.Point = '(12,20)'
+      Width = 153.000000000000000000
+      Height = 17.000000000000000000
+      HelpContext = 108
+      TabOrder = 1
+      IsChecked = True
+    end
+    object CurPageRB: TRadioButton
+      Position.Point = '(12,40)'
+      Width = 153.000000000000000000
+      Height = 17.000000000000000000
+      HelpContext = 118
+      TabOrder = 2
+    end
+    object PageNumbersRB: TRadioButton
+      Position.Point = '(12,60)'
+      Width = 77.000000000000000000
+      Height = 17.000000000000000000
+      HelpContext = 124
+      TabOrder = 3
+    end
+    object PageNumbersE: TEdit
+      Position.Point = '(92,58)'
+      Width = 177.000000000000000000
+      Height = 21.000000000000000000
+      HelpContext = 133
+      TabOrder = 4
+      KeyboardType = vktDefault
+      OnChange = PageNumbersEChange
+      Password = False
+    end
+  end
+  object OpenAfterCB: TCheckBox
+    Position.Point = '(12,244)'
+    Width = 257.000000000000000000
+    Height = 17.000000000000000000
+    Visible = False
+    TabOrder = 2
+  end
+  object OkB: TButton
+    Position.Point = '(130,272)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 3
+    ModalResult = 1
+    Default = True
+  end
+  object CancelB: TButton
+    Position.Point = '(210,272)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 4
+    ModalResult = 2
+    Cancel = True
+  end
+  object SaveDialog1: TSaveDialog
+    FilterIndex = 0
+    Options = [ofHideReadOnly, ofNoChangeDir, ofEnableSizing]
+  end
+end

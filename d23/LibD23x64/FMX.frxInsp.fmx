@@ -1,0 +1,485 @@
+object frxObjectInspector: TfrxObjectInspector
+  Left = 0
+  Top = 0
+  BorderStyle = bsSizeToolWin
+  Caption = 'Object Inspector'
+  ClientHeight = 628
+  ClientWidth = 207
+  StyleBook = StyleBook1
+  OnDeactivate = FormDeactivate
+  OnKeyDown = FormKeyDown
+  OnResize = FormResize
+  object PopupMenu1: TPopupMenu
+    Left = 48
+    Top = 424
+    object N11: TMenuItem
+      Height = 50.000000000000000000
+      ShortCut = 16472
+      Width = 50.000000000000000000
+      OnClick = N11Click
+    end
+    object N21: TMenuItem
+      Height = 50.000000000000000000
+      ShortCut = 16470
+      Width = 50.000000000000000000
+      OnClick = N21Click
+    end
+    object N31: TMenuItem
+      Height = 50.000000000000000000
+      ShortCut = 16451
+      Width = 50.000000000000000000
+      OnClick = N31Click
+    end
+    object N41: TMenuItem
+      Height = 50.000000000000000000
+      ShortCut = 8238
+      Width = 50.000000000000000000
+      OnClick = N11Click
+    end
+    object N51: TMenuItem
+      Height = 50.000000000000000000
+      ShortCut = 8237
+      Width = 50.000000000000000000
+      OnClick = N21Click
+    end
+    object N61: TMenuItem
+      Height = 50.000000000000000000
+      ShortCut = 16429
+      Width = 50.000000000000000000
+      OnClick = N31Click
+    end
+  end
+  object MainPanel: TPanel
+    Align = alClient
+    Height = 628.000000000000000000
+    Width = 207.000000000000000000
+    OnResize = FormResize
+    object BackPanel: TPanel
+      Height = 309.000000000000000000
+      Position.Y = 45.000000000000000000
+      Width = 185.000000000000000000
+      object Splitter1: TSplitter
+        Align = alBottom
+        Cursor = crVSplit
+        Height = 3.000000000000000000
+        MinSize = 20.000000000000000000
+        Position.Y = 241.000000000000000000
+        Width = 185.000000000000000000
+      end
+      object Box: TFramedScrollBox
+        Align = alClient
+        Height = 241.000000000000000000
+        StyleLookup = 'BoxStyle1'
+        Width = 185.000000000000000000
+        object PB: TPaintBox
+          Align = alClient
+          Height = 237.000000000000000000
+          Width = 181.000000000000000000
+          OnDblClick = PBDblClick
+          OnMouseDown = PBMouseDown
+          OnMouseMove = PBMouseMove
+          OnMouseUp = PBMouseUp
+          OnPaint = PBPaint
+        end
+        object Edit1: TEdit
+          StyleLookup = 'Edit1Style1'
+          DisableFocusEffect = False
+          Font.Size = 8.000000000000000000
+          KeyboardType = vktDefault
+          Password = False
+          Text = 'Edit1'
+          Position.X = 9.000000000000000000
+          Position.Y = 30.000000000000000000
+          Width = 113.000000000000000000
+          Height = 15.000000000000000000
+          Visible = False
+          OnKeyDown = Edit1KeyDown
+          OnDblClick = EditBtnClick
+        end
+        object EditPanel: TPanel
+          Height = 15.000000000000000000
+          Position.X = 123.000000000000000000
+          Position.Y = 30.000000000000000000
+          Visible = False
+          Width = 15.000000000000000000
+          object EditBtn: TSpeedButton
+            Height = 15.000000000000000000
+            StyleLookup = 'EditBtnStyle1'
+            Width = 15.000000000000000000
+            OnClick = EditBtnClick
+          end
+        end
+        object ComboPanel: TPanel
+          Height = 15.000000000000000000
+          Position.X = 139.000000000000000000
+          Position.Y = 30.000000000000000000
+          Visible = False
+          Width = 15.000000000000000000
+          object ComboBtn: TSpeedButton
+            Height = 15.000000000000000000
+            StyleLookup = 'ComboBtnStyle1'
+            Text = 'v'
+            Width = 15.000000000000000000
+            OnClick = ComboBtnClick
+          end
+        end
+      end
+      object HintPanel: TPanel
+        Align = alBottom
+        Height = 65.000000000000000000
+        Position.Y = 244.000000000000000000
+        Width = 185.000000000000000000
+        object PropL: TLabel
+          Align = alTop
+          Font.Style = [fsBold]
+          Height = 16.000000000000000000
+          Width = 185.000000000000000000
+        end
+        object DescrL: TLabel
+          Align = alClient
+          Height = 49.000000000000000000
+          Position.Y = 16.000000000000000000
+          VertTextAlign = taLeading
+          Width = 185.000000000000000000
+        end
+      end
+    end
+    object ObjectsCB: TComboBox
+      DisableFocusEffect = False
+      Height = 21.000000000000000000
+      ItemIndex = -1
+      ItemHeight = 15.000000000000000000
+      ListBoxResource = 'transparentlistboxstyle'
+      Position.Y = 20.000000000000000000
+      Width = 182.000000000000000000
+      OnChange = ObjectsCBClick
+    end
+    object Rectangle1: TRectangle
+      Align = alTop
+      Height = 18.000000000000000000
+      Margins.Left = 2.000000000000000000
+      Margins.Top = 1.000000000000000000
+      Stroke.Kind = bkNone
+      Width = 207.000000000000000000
+      object Label1: TLabel
+        Align = alClient
+        AutoSize = True
+        Height = 17.000000000000000000
+        Position.X = 2.000000000000000000
+        Position.Y = 1.000000000000000000
+        Text = 'Object Inspector'
+        Width = 205.000000000000000000
+        WordWrap = False
+      end
+    end
+  end
+  object StyleBook1: TStyleBook
+    Resource.Strings = (
+      'object _1: TLayout'
+      '  Align = alClient'
+      '  Position.Point = '#39'(0,33)'#39
+      '  Width = 452.000000000000000000'
+      '  Height = 815.000000000000000000'
+      '  object TLayout'
+      '    StyleName = '#39'Edit1Style1'#39
+      '    Position.Point = '#39'(180,395)'#39
+      '    Width = 91.000000000000000000'
+      '    Height = 24.000000000000000000'
+      '    DesignVisible = False'
+      '    object TRectangle'
+      '      StyleName = '#39'background'#39
+      '      Align = alContents'
+      '      Locked = True'
+      '      Width = 91.000000000000000000'
+      '      Height = 24.000000000000000000'
+      '      HitTest = False'
+      '      Visible = False'
+      '      Fill.Color = xFFFEFEFE'
+      '      Stroke.Color = claSilver'
+      '      XRadius = 1.000000000000000000'
+      '      YRadius = 1.000000000000000000'
+      '      Sides = []'
+      '      object TColorAnimation'
+      '        Duration = 0.200000002980232200'
+      '        Trigger = '#39'IsMouseOver = true'#39
+      '        StartValue = claSilver'
+      '        StopValue = xFFA5D9FF'
+      '        PropertyName = '#39'Stroke.Color'#39
+      '      end'
+      '      object TColorAnimation'
+      '        Duration = 0.200000002980232200'
+      '        Inverse = True'
+      '        Trigger = '#39'IsMouseOver = false'#39
+      '        StartValue = claSilver'
+      '        StopValue = xFFA5D9FF'
+      '        PropertyName = '#39'Stroke.Color'#39
+      '      end'
+      '    end'
+      '    object TLayout'
+      '      StyleName = '#39'content'#39
+      '      Align = alContents'
+      '      Locked = True'
+      '      Width = 91.000000000000000000'
+      '      Height = 24.000000000000000000'
+      '    end'
+      '    object TBrushObject'
+      '      StyleName = '#39'foreground'#39
+      '      Brush.Color = claBlack'
+      '    end'
+      '    object TBrushObject'
+      '      StyleName = '#39'selection'#39
+      '      Brush.Color = x802A8ADF'
+      '    end'
+      '    object TGlowEffect'
+      '      Trigger = '#39'IsFocused=true'#39
+      '      Enabled = False'
+      '      Softness = 0.200000002980232200'
+      '      GlowColor = x82005ACC'
+      '      Opacity = 0.899999976158142100'
+      '    end'
+      '  end'
+      '  object TLayout'
+      '    StyleName = '#39'EditBtnStyle1'#39
+      '    Position.Point = '#39'(218,377)'#39
+      '    Width = 16.000000000000000000'
+      '    Height = 60.000000000000000000'
+      '    DesignVisible = False'
+      '    object TRectangle'
+      '      StyleName = '#39'background'#39
+      '      Align = alContents'
+      '      Width = 16.000000000000000000'
+      '      Height = 60.000000000000000000'
+      '      Opacity = 0.000099999997473788'
+      '      HitTest = False'
+      '      Fill.Color = xFFEFEFEF'
+      '      Stroke.Kind = bkNone'
+      '      XRadius = 2.000000000000000000'
+      '      YRadius = 2.000000000000000000'
+      '      object TRectangle'
+      '        Align = alContents'
+      '        Width = 16.000000000000000000'
+      '        Height = 60.000000000000000000'
+      '        HitTest = False'
+      '        Fill.Kind = bkGradient'
+      '        Fill.Gradient.Points = <'
+      '          item'
+      '            Color = x24F4F4F4'
+      '          end'
+      '          item'
+      '            Color = x24EAEAEA'
+      '            Offset = 0.499000012874603300'
+      '          end'
+      '          item'
+      '            Color = x4E868686'
+      '            Offset = 0.500000000000000000'
+      '          end>'
+      '        Stroke.Color = x484F4F4F'
+      '        XRadius = 2.000000000000000000'
+      '        YRadius = 2.000000000000000000'
+      '      end'
+      '      object TFloatAnimation'
+      '        Duration = 0.200000002980232200'
+      '        Trigger = '#39'IsMouseOver=true'#39
+      '        TriggerInverse = '#39'IsMouseOver=false'#39
+      '        StopValue = 1.000000000000000000'
+      '        PropertyName = '#39'Opacity'#39
+      '      end'
+      '      object TColorAnimation'
+      '        Duration = 0.200000002980232200'
+      '        Trigger = '#39'IsMouseOver=true;IsPressed=false'#39
+      '        StartValue = xFFEFEFEF'
+      '        StopValue = xFFFFD541'
+      '        PropertyName = '#39'Fill.Color'#39
+      '      end'
+      '      object TColorAnimation'
+      '        Duration = 0.200000002980232200'
+      '        Trigger = '#39'IsMouseOver=false;IsPressed=false'#39
+      '        StartValue = xFFFFD541'
+      '        StopValue = xFFEFEFEF'
+      '        PropertyName = '#39'Fill.Color'#39
+      '      end'
+      '      object TColorAnimation'
+      '        Duration = 0.200000002980232200'
+      '        Inverse = True'
+      '        Trigger = '#39'IsMouseOver=false;IsPressed=true'#39
+      '        StartValue = xFFDCAE0D'
+      '        StopValue = xFFFFD541'
+      '        PropertyName = '#39'Fill.Color'#39
+      '      end'
+      '      object TColorAnimation'
+      '        Duration = 0.200000002980232200'
+      '        Trigger = '#39'IsMouseOver=true;IsPressed=true'#39
+      '        StartValue = xFFDCAE0D'
+      '        StopValue = xFFFFD541'
+      '        PropertyName = '#39'Fill.Color'#39
+      '      end'
+      '      object TRectangle'
+      '        Align = alClient'
+      '        Position.Point = '#39'(1,1)'#39
+      '        Locked = True'
+      '        Width = 14.000000000000000000'
+      '        Height = 58.000000000000000000'
+      '        Padding.Rect = '#39'(1,1,1,1)'#39
+      '        HitTest = False'
+      '        Fill.Kind = bkNone'
+      '        Stroke.Color = x96FCFCFC'
+      '        XRadius = 2.000000000000000000'
+      '        YRadius = 2.000000000000000000'
+      '      end'
+      '    end'
+      '    object TGridLayout'
+      '      StyleName = '#39'GridLayout1'#39
+      '      Align = alCenter'
+      '      Position.Point = '#39'(3,29)'#39
+      '      Width = 12.000000000000000000'
+      '      Height = 2.000000000000000000'
+      '      Padding.Rect = '#39'(3,1,0,0)'#39
+      '      HitTest = False'
+      '      ItemHeight = 2.000000000000000000'
+      '      ItemWidth = 4.000000000000000000'
+      '      Orientation = orHorizontal'
+      '      object TRectangle'
+      '        StyleName = '#39'Rectangle2'#39
+      '        Width = 2.000000000000000000'
+      '        Height = 2.000000000000000000'
+      '        Margins.Rect = '#39'(0,0,5,0)'#39
+      '        Padding.Rect = '#39'(0,0,2,0)'#39
+      '        HitTest = False'
+      '        Fill.Color = claDimgray'
+      '        Stroke.Kind = bkNone'
+      '      end'
+      '      object TRectangle'
+      '        StyleName = '#39'Rectangle2'#39
+      '        Position.Point = '#39'(4,0)'#39
+      '        Width = 2.000000000000000000'
+      '        Height = 2.000000000000000000'
+      '        Padding.Rect = '#39'(0,0,2,0)'#39
+      '        HitTest = False'
+      '        Fill.Color = claDimgray'
+      '        Stroke.Kind = bkNone'
+      '      end'
+      '      object TRectangle'
+      '        StyleName = '#39'Rectangle2'#39
+      '        Position.Point = '#39'(8,0)'#39
+      '        Width = 2.000000000000000000'
+      '        Height = 2.000000000000000000'
+      '        Padding.Rect = '#39'(0,0,2,0)'#39
+      '        HitTest = False'
+      '        Fill.Color = claDimgray'
+      '        Stroke.Kind = bkNone'
+      '      end'
+      '    end'
+      '  end'
+      '  object TLayout'
+      '    StyleName = '#39'ComboBtnStyle1'#39
+      '    Position.Point = '#39'(189,394)'#39
+      '    Width = 73.000000000000000000'
+      '    Height = 26.000000000000000000'
+      '    DesignVisible = False'
+      '    object TRectangle'
+      '      StyleName = '#39'background'#39
+      '      Align = alContents'
+      '      Width = 73.000000000000000000'
+      '      Height = 26.000000000000000000'
+      '      Opacity = 0.000099999997473788'
+      '      HitTest = False'
+      '      Fill.Color = xFFEFEFEF'
+      '      Stroke.Kind = bkNone'
+      '      XRadius = 2.000000000000000000'
+      '      YRadius = 2.000000000000000000'
+      '      object TRectangle'
+      '        Align = alContents'
+      '        Width = 73.000000000000000000'
+      '        Height = 26.000000000000000000'
+      '        HitTest = False'
+      '        Fill.Kind = bkGradient'
+      '        Fill.Gradient.Points = <'
+      '          item'
+      '            Color = x24F4F4F4'
+      '          end'
+      '          item'
+      '            Color = x24EAEAEA'
+      '            Offset = 0.499000012874603300'
+      '          end'
+      '          item'
+      '            Color = x4E868686'
+      '            Offset = 0.500000000000000000'
+      '          end>'
+      '        Stroke.Color = x484F4F4F'
+      '        XRadius = 2.000000000000000000'
+      '        YRadius = 2.000000000000000000'
+      '      end'
+      '      object TFloatAnimation'
+      '        Duration = 0.200000002980232200'
+      '        Trigger = '#39'IsMouseOver=true'#39
+      '        TriggerInverse = '#39'IsMouseOver=false'#39
+      '        StopValue = 1.000000000000000000'
+      '        PropertyName = '#39'Opacity'#39
+      '      end'
+      '      object TColorAnimation'
+      '        Duration = 0.200000002980232200'
+      '        Trigger = '#39'IsMouseOver=true;IsPressed=false'#39
+      '        StartValue = xFFEFEFEF'
+      '        StopValue = xFFFFD541'
+      '        PropertyName = '#39'Fill.Color'#39
+      '      end'
+      '      object TColorAnimation'
+      '        Duration = 0.200000002980232200'
+      '        Trigger = '#39'IsMouseOver=false;IsPressed=false'#39
+      '        StartValue = xFFFFD541'
+      '        StopValue = xFFEFEFEF'
+      '        PropertyName = '#39'Fill.Color'#39
+      '      end'
+      '      object TColorAnimation'
+      '        Duration = 0.200000002980232200'
+      '        Inverse = True'
+      '        Trigger = '#39'IsMouseOver=false;IsPressed=true'#39
+      '        StartValue = xFFDCAE0D'
+      '        StopValue = xFFFFD541'
+      '        PropertyName = '#39'Fill.Color'#39
+      '      end'
+      '      object TColorAnimation'
+      '        Duration = 0.200000002980232200'
+      '        Trigger = '#39'IsMouseOver=true;IsPressed=true'#39
+      '        StartValue = xFFDCAE0D'
+      '        StopValue = xFFFFD541'
+      '        PropertyName = '#39'Fill.Color'#39
+      '      end'
+      '      object TRectangle'
+      '        Align = alClient'
+      '        Position.Point = '#39'(1,1)'#39
+      '        Locked = True'
+      '        Width = 71.000000000000000000'
+      '        Height = 24.000000000000000000'
+      '        Padding.Rect = '#39'(1,1,1,1)'#39
+      '        HitTest = False'
+      '        Fill.Kind = bkNone'
+      '        Stroke.Color = x96FCFCFC'
+      '        XRadius = 2.000000000000000000'
+      '        YRadius = 2.000000000000000000'
+      '      end'
+      '    end'
+      '    object TPath'
+      '      StyleName = '#39'Path1'#39
+      '      Align = alCenter'
+      '      Position.Point = '#39'(33,11)'#39
+      '      Width = 7.000000000000000000'
+      '      Height = 5.000000000000000000'
+      '      Padding.Rect = '#39'(0,1,0,0)'#39
+      '      HitTest = False'
+      '      Fill.Color = claDimgray'
+      '      Stroke.Color = claDimgray'
+      '      Data.Path = {'
+      
+        '        05000000000000000000000000000000010000000000204100000000' +
+        '01000000'
+      
+        '        0000A0400000A0400100000000000000000000000300000000000000' +
+        '00000000}'
+      '    end'
+      '  end'
+      'end')
+    Left = 120
+    Top = 424
+  end
+end

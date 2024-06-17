@@ -1,0 +1,98 @@
+object frxHighlightEditorForm: TfrxHighlightEditorForm
+  Left = 0
+  Top = 0
+  Caption = 'Highlight'
+  BorderStyle = bsSingle
+  BorderIcons = [biSystemMenu]
+  ClientHeight = 263
+  ClientWidth = 294
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  StyleLookup = 'backgroundstyle'
+  object OKB: TButton
+    Position.Point = '(134,232)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 0
+    ModalResult = 1
+    Default = True
+  end
+  object CancelB: TButton
+    Position.Point = '(214,232)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 1
+    ModalResult = 2
+    Cancel = True
+  end
+  object ConditionL: TGroupBox
+    Position.Point = '(4,4)'
+    Width = 285.000000000000000000
+    Height = 53.000000000000000000
+    TabOrder = 2
+    object ConditionE: TfrxEditWithButton
+      Position.Point = '(8,20)'
+      Width = 269.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 0
+      OnButtonClick = ConditionEButtonClick
+    end
+  end
+  object FontL: TGroupBox
+    Position.Point = '(4,64)'
+    Width = 285.000000000000000000
+    Height = 85.000000000000000000
+    TabOrder = 3
+    object FontColorB: TColorComboBox
+      Position.Point = '(144,48)'
+      Width = 129.000000000000000000
+      Height = 25.000000000000000000
+    end
+    object BoldCB: TCheckBox
+      Position.Point = '(8,20)'
+      Width = 105.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 1
+    end
+    object ItalicCB: TCheckBox
+      Position.Point = '(8,40)'
+      Width = 105.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 2
+    end
+    object UnderlineCB: TCheckBox
+      Position.Point = '(8,60)'
+      Width = 105.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 3
+    end
+  end
+  object BackgroundL: TGroupBox
+    Position.Point = '(4,156)'
+    Width = 285.000000000000000000
+    Height = 65.000000000000000000
+    TabOrder = 4
+    object BackColorB: TColorComboBox
+      Position.Point = '(144,28)'
+      Width = 129.000000000000000000
+      Height = 25.000000000000000000
+    end
+    object TransparentRB: TRadioButton
+      Position.Point = '(8,20)'
+      Width = 113.000000000000000000
+      Height = 17.000000000000000000
+      OnChange = TransparentRBClick
+      TabOrder = 1
+    end
+    object OtherRB: TRadioButton
+      Position.Point = '(8,40)'
+      Width = 113.000000000000000000
+      Height = 17.000000000000000000
+      OnChange = TransparentRBClick
+      TabOrder = 2
+    end
+  end
+end

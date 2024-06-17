@@ -1,0 +1,1788 @@
+object frxDesignerForm: TfrxDesignerForm
+  Left = 0
+  Top = 0
+  Caption = 'Designer'
+  ClientHeight = 610
+  ClientWidth = 988
+  StyleBook = StyleBook1
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnKeyDown = FormKeyDown
+  OnMouseWheel = FormMouseWheel
+  OnResize = FormResize
+  object StatusBar: TStatusBar
+    Height = 19.000000000000000000
+    Position.Y = 591.000000000000000000
+    ShowSizeGrip = True
+    Width = 988.000000000000000000
+    OnDblClick = StatusBarDblClick
+    OnMouseDown = StatusBarMouseDown
+  end
+  object ObjectsTB1: TToolBar
+    Align = alLeft
+    Height = 513.000000000000000000
+    Position.Y = 78.000000000000000000
+    Width = 27.000000000000000000
+  end
+  object PagePopup: TPopupMenu
+    Left = 760
+    Top = 104
+  end
+  object MainMenu: TMenuBar
+    Align = alMostTop
+    Height = 24.000000000000000000
+    Width = 988.000000000000000000
+    object FileMenu: TMenuItem
+      Height = 24.000000000000000000
+      StyleLookup = 'menubaritemstyle'
+      Width = 16.000000000000000000
+      object NewMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 1
+        Width = 50.000000000000000000
+        OnClick = NewItemCmdExecute
+      end
+      object NewReportMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 1
+        Width = 50.000000000000000000
+        OnClick = NewReportCmdExecute
+      end
+      object NewPageMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 1
+        Width = 50.000000000000000000
+        OnClick = NewPageCmdExecute
+      end
+      object NewDialogMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 1
+        Width = 50.000000000000000000
+        OnClick = NewDialogCmdExecute
+      end
+      object OpenMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 2
+        Width = 50.000000000000000000
+        OnClick = OpenCmdExecute
+      end
+      object SaveMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 2
+        Width = 50.000000000000000000
+        OnClick = SaveCmdExecute
+      end
+      object SaveAsMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 2
+        Width = 50.000000000000000000
+        OnClick = SaveAsCmdExecute
+      end
+      object PreviewMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 3
+        Width = 50.000000000000000000
+        OnClick = PreviewCmdExecute
+      end
+      object PageSettingsMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 3
+        Width = 50.000000000000000000
+        OnClick = PageSettingsCmdExecute
+      end
+      object ExitMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 3
+        Width = 50.000000000000000000
+        OnClick = ExitCmdExecute
+      end
+    end
+    object EditMenu: TMenuItem
+      Height = 24.000000000000000000
+      Position.X = 16.000000000000000000
+      StyleLookup = 'menubaritemstyle'
+      Width = 16.000000000000000000
+      object UndoMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 4
+        Width = 50.000000000000000000
+        OnClick = UndoCmdExecute
+      end
+      object RedoMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 4
+        Width = 50.000000000000000000
+        OnClick = RedoCmdExecute
+      end
+      object CutMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 6
+        Width = 50.000000000000000000
+        OnClick = CutCmdExecute
+      end
+      object CopyMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 6
+        Width = 50.000000000000000000
+        OnClick = CopyCmdExecute
+      end
+      object PasteMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 6
+        Width = 50.000000000000000000
+        OnClick = PasteCmdExecute
+      end
+      object DeleteMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 6
+        Width = 50.000000000000000000
+        OnClick = DeleteCmdExecute
+      end
+      object DeletePageMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 6
+        Width = 50.000000000000000000
+        OnClick = DeletePageCmdExecute
+      end
+      object SelectAllMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 6
+        Width = 50.000000000000000000
+        OnClick = SelectAllCmdExecute
+      end
+      object GroupMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 7
+        Width = 50.000000000000000000
+        OnClick = GroupCmdExecute
+      end
+      object UngroupMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 7
+        Width = 50.000000000000000000
+        OnClick = UngroupCmdExecute
+      end
+      object EditMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 7
+        Width = 50.000000000000000000
+        OnClick = EditCmdExecute
+      end
+      object N2: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 7
+        Width = 50.000000000000000000
+      end
+      object FindMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 8
+        Width = 50.000000000000000000
+        OnClick = FindCmdExecute
+      end
+      object ReplaceMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 8
+        Width = 50.000000000000000000
+        OnClick = ReplaceCmdExecute
+      end
+      object FindNextMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 8
+        Width = 50.000000000000000000
+        OnClick = FindNextCmdExecute
+      end
+      object BringtoFrontMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 9
+        Width = 50.000000000000000000
+        OnClick = BringToFrontCmdExecute
+      end
+      object SendtoBackMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        GroupIndex = 9
+        Width = 50.000000000000000000
+        OnClick = SendToBackCmdExecute
+      end
+    end
+    object ReportMenu: TMenuItem
+      Height = 24.000000000000000000
+      Position.X = 32.000000000000000000
+      StyleLookup = 'menubaritemstyle'
+      Width = 16.000000000000000000
+      object ReportDataMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        Width = 50.000000000000000000
+        OnClick = ReportDataCmdExecute
+      end
+      object VariablesMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        Width = 50.000000000000000000
+        OnClick = VariablesCmdExecute
+      end
+      object ReportStylesMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        Width = 50.000000000000000000
+        OnClick = ReportStylesCmdExecute
+      end
+      object ReportSettingsMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        Width = 50.000000000000000000
+        OnClick = ReportOptionsCmdExecute
+      end
+    end
+    object ViewMenu: TMenuItem
+      Height = 24.000000000000000000
+      Position.X = 48.000000000000000000
+      StyleLookup = 'menubaritemstyle'
+      Width = 16.000000000000000000
+      object ShowRulersMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        AutoCheck = True
+        Width = 50.000000000000000000
+        OnClick = ShowRulersCmdExecute
+      end
+      object ShowGuidesMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        AutoCheck = True
+        Width = 50.000000000000000000
+        OnClick = ShowGuidesCmdExecute
+      end
+      object DeleteGuidesMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        Width = 50.000000000000000000
+        OnClick = DeleteGuidesCmdExecute
+      end
+      object OptionsMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        Width = 50.000000000000000000
+        OnClick = OptionsCmdExecute
+      end
+    end
+    object HelpMenu: TMenuItem
+      Height = 24.000000000000000000
+      Position.X = 64.000000000000000000
+      StyleLookup = 'menubaritemstyle'
+      Width = 16.000000000000000000
+      object AboutMI: TMenuItem
+        Height = 50.000000000000000000
+        Locked = True
+        Width = 50.000000000000000000
+        OnClick = AboutCmdExecute
+      end
+    end
+  end
+  object OpenDialog: TOpenDialog
+    Left = 304
+    Top = 104
+  end
+  object SaveDialog: TSaveDialog
+    Options = [ofOverwritePrompt, ofHideReadOnly, ofEnableSizing]
+    Left = 264
+    Top = 104
+  end
+  object TabPopup: TPopupMenu
+    Left = 832
+    Top = 120
+    object NewPageMI1: TMenuItem
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+    end
+    object NewDialogMI1: TMenuItem
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+    end
+    object DeletePageMI1: TMenuItem
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+    end
+    object PageSettingsMI1: TMenuItem
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+    end
+  end
+  object BandsPopup: TPopupMenu
+    Left = 936
+    Top = 208
+    object ReportTitleMI: TMenuItem
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = InsertBandClick
+    end
+    object ReportSummaryMI: TMenuItem
+      Tag = 1
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = InsertBandClick
+    end
+    object PageHeaderMI: TMenuItem
+      Tag = 2
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = InsertBandClick
+    end
+    object PageFooterMI: TMenuItem
+      Tag = 3
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = InsertBandClick
+    end
+    object HeaderMI: TMenuItem
+      Tag = 4
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = InsertBandClick
+    end
+    object FooterMI: TMenuItem
+      Tag = 5
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = InsertBandClick
+    end
+    object MasterDataMI: TMenuItem
+      Tag = 6
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = InsertBandClick
+    end
+    object DetailDataMI: TMenuItem
+      Tag = 7
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = InsertBandClick
+    end
+    object SubdetailDataMI: TMenuItem
+      Tag = 8
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = InsertBandClick
+    end
+    object Data4levelMI: TMenuItem
+      Tag = 9
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = InsertBandClick
+    end
+    object Data5levelMI: TMenuItem
+      Tag = 10
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = InsertBandClick
+    end
+    object Data6levelMI: TMenuItem
+      Tag = 11
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = InsertBandClick
+    end
+    object GroupHeaderMI: TMenuItem
+      Tag = 12
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = InsertBandClick
+    end
+    object GroupFooterMI: TMenuItem
+      Tag = 13
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = InsertBandClick
+    end
+    object ChildMI: TMenuItem
+      Tag = 14
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = InsertBandClick
+    end
+    object ColumnHeaderMI: TMenuItem
+      Tag = 15
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = InsertBandClick
+    end
+    object ColumnFooterMI: TMenuItem
+      Tag = 16
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = InsertBandClick
+    end
+    object OverlayMI: TMenuItem
+      Tag = 17
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = InsertBandClick
+    end
+    object N3: TMenuItem
+      Height = 50.000000000000000000
+      Text = '-'
+      Width = 50.000000000000000000
+    end
+    object VerticalbandsMI: TMenuItem
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      object HeaderMI1: TMenuItem
+        Tag = 104
+        Height = 50.000000000000000000
+        Locked = True
+        Width = 50.000000000000000000
+        OnClick = InsertBandClick
+      end
+      object FooterMI1: TMenuItem
+        Tag = 105
+        Height = 50.000000000000000000
+        Locked = True
+        Width = 50.000000000000000000
+        OnClick = InsertBandClick
+      end
+      object MasterDataMI1: TMenuItem
+        Tag = 106
+        Height = 50.000000000000000000
+        Locked = True
+        Width = 50.000000000000000000
+        OnClick = InsertBandClick
+      end
+      object DetailDataMI1: TMenuItem
+        Tag = 107
+        Height = 50.000000000000000000
+        Locked = True
+        Width = 50.000000000000000000
+        OnClick = InsertBandClick
+      end
+      object SubdetailDataMI1: TMenuItem
+        Tag = 108
+        Height = 50.000000000000000000
+        Locked = True
+        Width = 50.000000000000000000
+        OnClick = InsertBandClick
+      end
+      object GroupHeaderMI1: TMenuItem
+        Tag = 112
+        Height = 50.000000000000000000
+        Locked = True
+        Width = 50.000000000000000000
+        OnClick = InsertBandClick
+      end
+      object GroupFooterMI1: TMenuItem
+        Tag = 113
+        Height = 50.000000000000000000
+        Locked = True
+        Width = 50.000000000000000000
+        OnClick = InsertBandClick
+      end
+      object ChildMI1: TMenuItem
+        Tag = 114
+        Height = 50.000000000000000000
+        Locked = True
+        Width = 50.000000000000000000
+        OnClick = InsertBandClick
+      end
+    end
+  end
+  object Timer: TTimer
+    Enabled = False
+    OnTimer = TimerTimer
+    Left = 488
+    Top = 96
+  end
+  object RotationPopup: TPopupMenu
+    Left = 632
+    Top = 96
+    object R0MI: TMenuItem
+      Tag = 30
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = ToolButtonClick
+    end
+    object R45MI: TMenuItem
+      Tag = 30
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = ToolButtonClick
+    end
+    object R90MI: TMenuItem
+      Tag = 30
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = ToolButtonClick
+    end
+    object R180MI: TMenuItem
+      Tag = 30
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = ToolButtonClick
+    end
+    object R270MI: TMenuItem
+      Tag = 30
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = ToolButtonClick
+    end
+  end
+  object OpenScriptDialog: TOpenDialog
+    Left = 392
+    Top = 104
+  end
+  object SaveScriptDialog: TSaveDialog
+    Options = [ofOverwritePrompt, ofHideReadOnly, ofEnableSizing]
+    Left = 344
+    Top = 104
+  end
+  object ObjectsPopup: TPopupMenu
+    Left = 880
+    Top = 176
+  end
+  object DMPPopup: TPopupMenu
+    Left = 928
+    Top = 120
+    object BoldMI: TMenuItem
+      Tag = 34
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = ToolButtonClick
+    end
+    object ItalicMI: TMenuItem
+      Tag = 35
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = ToolButtonClick
+    end
+    object UnderlineMI: TMenuItem
+      Tag = 36
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = ToolButtonClick
+    end
+    object SuperScriptMI: TMenuItem
+      Tag = 37
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = ToolButtonClick
+    end
+    object SubScriptMI: TMenuItem
+      Tag = 38
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = ToolButtonClick
+    end
+    object CondensedMI: TMenuItem
+      Tag = 39
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = ToolButtonClick
+    end
+    object WideMI: TMenuItem
+      Tag = 40
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = ToolButtonClick
+    end
+    object N12cpiMI: TMenuItem
+      Tag = 41
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = ToolButtonClick
+    end
+    object N15cpiMI: TMenuItem
+      Tag = 42
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = ToolButtonClick
+    end
+  end
+  object BackPanel: TPanel
+    Align = alClient
+    Height = 513.000000000000000000
+    Position.X = 27.000000000000000000
+    Position.Y = 78.000000000000000000
+    Width = 961.000000000000000000
+    object ScrollBoxPanel: TPanel
+      Height = 297.000000000000000000
+      Position.X = 65.000000000000000000
+      Position.Y = 95.000000000000000000
+      Width = 297.000000000000000000
+      object ScrollBox: TfrxScrollBox
+        Align = alClient
+        Height = 274.000000000000000000
+        Position.X = 23.000000000000000000
+        Position.Y = 23.000000000000000000
+        StyleLookup = 'ScrollBoxStyle1'
+        Width = 274.000000000000000000
+        OnResize = ScrollBoxResize
+        OnPositionChanged = ScrollBoxResize
+      end
+      object LeftRuler: TfrxRuler
+        Align = alLeft
+        Cursor = crHandPoint
+        DragMode = dmAutomatic
+        Height = 274.000000000000000000
+        Position.Y = 23.000000000000000000
+        Scale = 1.000000000000000000
+        StyleLookup = 'backgroundstyle'
+        Width = 23.000000000000000000
+        OnDragOver = TopRulerDragOver
+        Offset = 0
+        Start = 0
+        Units = ruCM
+        RulerSize = 0
+      end
+      object TopRuler: TfrxRuler
+        Align = alTop
+        Cursor = crHandPoint
+        DragMode = dmAutomatic
+        Height = 23.000000000000000000
+        Scale = 1.000000000000000000
+        StyleLookup = 'backgroundstyle'
+        Width = 297.000000000000000000
+        OnDragOver = TopRulerDragOver
+        Offset = 22
+        Start = 0
+        Units = ruCM
+        RulerSize = 0
+      end
+    end
+    object CodePanel: TPanel
+      Height = 289.000000000000000000
+      Position.X = 394.000000000000000000
+      Position.Y = 98.000000000000000000
+      Width = 377.000000000000000000
+      object CodeTB: TToolBar
+        Height = 25.000000000000000000
+        Width = 377.000000000000000000
+        object OpenScriptB: TfrxToolButton
+          Height = 22.000000000000000000
+          Position.X = 169.000000000000000000
+          Visible = False
+          Width = 22.000000000000000000
+          OnClick = OpenScriptBClick
+          OnMouseEnter = NewPageBMouseEnter
+          OnMouseLeave = NewPageBMouseLeave
+          Hint = ''
+        end
+        object SaveScriptB: TfrxToolButton
+          Height = 22.000000000000000000
+          Position.X = 192.000000000000000000
+          Visible = False
+          Width = 22.000000000000000000
+          OnClick = SaveScriptBClick
+          OnMouseEnter = NewPageBMouseEnter
+          OnMouseLeave = NewPageBMouseLeave
+          Hint = ''
+        end
+        object RunScriptB: TfrxToolButton
+          Height = 22.000000000000000000
+          Position.X = 223.000000000000000000
+          Visible = False
+          Width = 22.000000000000000000
+          OnClick = RunScriptBClick
+          OnMouseEnter = NewPageBMouseEnter
+          OnMouseLeave = NewPageBMouseLeave
+          Hint = ''
+        end
+        object RunToCursorB: TfrxToolButton
+          Height = 22.000000000000000000
+          Position.X = 246.000000000000000000
+          Visible = False
+          Width = 22.000000000000000000
+          OnClick = RunToCursorBClick
+          OnMouseEnter = NewPageBMouseEnter
+          OnMouseLeave = NewPageBMouseLeave
+          Hint = ''
+        end
+        object StepScriptB: TfrxToolButton
+          Height = 22.000000000000000000
+          Position.X = 269.000000000000000000
+          Visible = False
+          Width = 22.000000000000000000
+          OnClick = RunScriptBClick
+          OnMouseEnter = NewPageBMouseEnter
+          OnMouseLeave = NewPageBMouseLeave
+          Hint = ''
+        end
+        object StopScriptB: TfrxToolButton
+          Height = 22.000000000000000000
+          Position.X = 292.000000000000000000
+          Visible = False
+          Width = 22.000000000000000000
+          OnClick = StopScriptBClick
+          OnMouseEnter = NewPageBMouseEnter
+          OnMouseLeave = NewPageBMouseLeave
+          Hint = ''
+        end
+        object EvaluateB: TfrxToolButton
+          Height = 22.000000000000000000
+          Position.X = 315.000000000000000000
+          Visible = False
+          Width = 22.000000000000000000
+          OnClick = EvaluateBClick
+          OnMouseEnter = NewPageBMouseEnter
+          OnMouseLeave = NewPageBMouseLeave
+          Hint = ''
+        end
+        object BreakPointB: TfrxToolButton
+          Height = 22.000000000000000000
+          Position.X = 338.000000000000000000
+          Visible = False
+          Width = 22.000000000000000000
+          OnClick = BreakPointBClick
+          OnMouseEnter = NewPageBMouseEnter
+          OnMouseLeave = NewPageBMouseLeave
+          Hint = ''
+        end
+        object LangCB: TComboEdit
+          Cursor = crIBeam
+          DisableFocusEffect = False
+          KeyboardType = vktDefault
+          ItemHeight = 19.000000000000000000
+          ItemIndex = -1
+          ListBoxResource = 'combolistboxstyle'
+          Position.X = 48.000000000000000000
+          Position.Y = 3.000000000000000000
+          Width = 100.000000000000000000
+          Height = 20.000000000000000000
+          OnChange = LangCBClick
+        end
+      end
+    end
+    object TabPanel: TPanel
+      Align = alTop
+      Height = 24.000000000000000000
+      Width = 961.000000000000000000
+    end
+    object RightDockTB: TToolBar
+      Align = alRight
+      Height = 489.000000000000000000
+      Position.X = 816.000000000000000000
+      Position.Y = 24.000000000000000000
+      Width = 145.000000000000000000
+      OnResize = RightDockTBResize
+    end
+    object Splitter1: TSplitter
+      Align = alRight
+      Cursor = crHSplit
+      Height = 489.000000000000000000
+      MinSize = 20.000000000000000000
+      Position.X = 811.000000000000000000
+      Position.Y = 24.000000000000000000
+      Width = 5.000000000000000000
+    end
+    object LeftDockTB: TToolBar
+      Align = alLeft
+      Height = 489.000000000000000000
+      Position.Y = 24.000000000000000000
+      Width = 177.000000000000000000
+      OnResize = LeftDockTBResize
+    end
+    object Splitter2: TSplitter
+      Align = alLeft
+      Cursor = crHSplit
+      Height = 489.000000000000000000
+      MinSize = 20.000000000000000000
+      Position.X = 177.000000000000000000
+      Position.Y = 24.000000000000000000
+      Width = 5.000000000000000000
+    end
+  end
+  object TopToolBox: TToolBar
+    Align = alMostTop
+    Height = 54.000000000000000000
+    Position.Y = 24.000000000000000000
+    TabOrder = 3
+    Width = 988.000000000000000000
+    object AlignTB: TToolBar
+      Align = alNone
+      Height = 27.000000000000000000
+      Position.X = 526.000000000000000000
+      Width = 318.000000000000000000
+      object Grip1: TfrxToolGrip
+        Position.X = 4.000000000000000000
+        Position.Y = 6.000000000000000000
+        Width = 4.000000000000000000
+        Height = 14.000000000000000000
+      end
+      object AlignLeftsB: TfrxToolButton
+        Tag = 60
+        Height = 22.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = AlignLeftsBClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 0
+      end
+      object AlignHorzCentersB: TfrxToolButton
+        Tag = 60
+        Height = 22.000000000000000000
+        Position.X = 31.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = AlignHorzCentersBClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 1
+      end
+      object AlignRightsB: TfrxToolButton
+        Tag = 60
+        Height = 22.000000000000000000
+        Position.X = 54.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = AlignRightsBClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 2
+      end
+      object Sep7: TfrxToolSeparator
+        Position.X = 80.000000000000000000
+        Position.Y = 5.000000000000000000
+        Width = 4.000000000000000000
+        Height = 16.000000000000000000
+      end
+      object AlignTopsB: TfrxToolButton
+        Tag = 60
+        Height = 22.000000000000000000
+        Position.X = 85.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = AlignTopsBClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 3
+      end
+      object AlignVertCentersB: TfrxToolButton
+        Tag = 60
+        Height = 22.000000000000000000
+        Position.X = 109.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = AlignVertCentersBClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 4
+      end
+      object AlignBottomsB: TfrxToolButton
+        Tag = 60
+        Height = 22.000000000000000000
+        Position.X = 131.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = AlignBottomsBClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 5
+      end
+      object Sep8: TfrxToolSeparator
+        Position.X = 157.000000000000000000
+        Position.Y = 5.000000000000000000
+        Width = 4.000000000000000000
+        Height = 16.000000000000000000
+      end
+      object SpaceHorzB: TfrxToolButton
+        Tag = 60
+        Height = 22.000000000000000000
+        Position.X = 162.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = SpaceHorzBClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 6
+      end
+      object SpaceVertB: TfrxToolButton
+        Tag = 60
+        Height = 22.000000000000000000
+        Position.X = 185.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = SpaceVertBClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 7
+      end
+      object Sep9: TfrxToolSeparator
+        Position.X = 211.000000000000000000
+        Position.Y = 5.000000000000000000
+        Width = 4.000000000000000000
+        Height = 16.000000000000000000
+      end
+      object CenterHorzB: TfrxToolButton
+        Tag = 60
+        Height = 22.000000000000000000
+        Position.X = 216.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = CenterHorzBClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 8
+      end
+      object CenterVertB: TfrxToolButton
+        Tag = 60
+        Height = 22.000000000000000000
+        Position.X = 239.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = CenterVertBClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 9
+      end
+      object Sep10: TfrxToolSeparator
+        Position.X = 265.000000000000000000
+        Position.Y = 5.000000000000000000
+        Width = 4.000000000000000000
+        Height = 16.000000000000000000
+      end
+      object SameWidthB: TfrxToolButton
+        Height = 22.000000000000000000
+        Position.X = 270.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = SameWidthBClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 10
+      end
+      object SameHeightB: TfrxToolButton
+        Height = 22.000000000000000000
+        Position.X = 293.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = SameHeightBClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 11
+      end
+    end
+    object ExtraToolsTB: TToolBar
+      Align = alNone
+      Height = 27.000000000000000000
+      Position.X = 877.000000000000000000
+      Visible = False
+      Width = 19.000000000000000000
+    end
+    object FrameTB: TToolBar
+      Align = alNone
+      Height = 27.000000000000000000
+      Position.X = 639.000000000000000000
+      Position.Y = 27.000000000000000000
+      Width = 308.000000000000000000
+      object Grip2: TfrxToolGrip
+        Position.X = 4.000000000000000000
+        Position.Y = 6.000000000000000000
+        Width = 4.000000000000000000
+        Height = 14.000000000000000000
+      end
+      object FrameTopB: TfrxToolButton
+        Tag = 20
+        Height = 22.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 2.000000000000000000
+        StaysPressed = True
+        Width = 22.000000000000000000
+        OnClick = ToolButtonClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 0
+      end
+      object FrameBottomB: TfrxToolButton
+        Tag = 21
+        Height = 22.000000000000000000
+        Position.X = 31.000000000000000000
+        Position.Y = 2.000000000000000000
+        StaysPressed = True
+        Width = 22.000000000000000000
+        OnClick = ToolButtonClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 1
+      end
+      object FrameLeftB: TfrxToolButton
+        Tag = 22
+        Height = 22.000000000000000000
+        Position.X = 54.000000000000000000
+        Position.Y = 2.000000000000000000
+        StaysPressed = True
+        Width = 22.000000000000000000
+        OnClick = ToolButtonClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 2
+      end
+      object FrameRightB: TfrxToolButton
+        Tag = 23
+        Height = 22.000000000000000000
+        Position.X = 77.000000000000000000
+        Position.Y = 2.000000000000000000
+        StaysPressed = True
+        Width = 22.000000000000000000
+        OnClick = ToolButtonClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 3
+      end
+      object Sep14: TfrxToolSeparator
+        Position.X = 103.000000000000000000
+        Position.Y = 5.000000000000000000
+        Width = 4.000000000000000000
+        Height = 16.000000000000000000
+      end
+      object FrameAllB: TfrxToolButton
+        Tag = 24
+        Height = 22.000000000000000000
+        Position.X = 108.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = ToolButtonClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 4
+      end
+      object FrameNoB: TfrxToolButton
+        Tag = 25
+        Height = 22.000000000000000000
+        Position.X = 131.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 21.000000000000000000
+        OnClick = ToolButtonClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 5
+      end
+      object ShadowB: TfrxToolButton
+        Tag = 32
+        Height = 22.000000000000000000
+        Position.X = 154.000000000000000000
+        Position.Y = 2.000000000000000000
+        StaysPressed = True
+        Width = 22.000000000000000000
+        OnClick = ToolButtonClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 6
+      end
+      object Sep15: TfrxToolSeparator
+        Position.X = 180.000000000000000000
+        Position.Y = 5.000000000000000000
+        Width = 4.000000000000000000
+        Height = 16.000000000000000000
+      end
+      object FillColorB: TfrxToolButton
+        Tag = 26
+        Height = 22.000000000000000000
+        Position.X = 185.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = FontColorBClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 7
+      end
+      object FrameColorB: TfrxToolButton
+        Tag = 27
+        Height = 22.000000000000000000
+        Position.X = 208.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = FontColorBClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 8
+      end
+      object FrameStyleB: TfrxToolButton
+        Tag = 28
+        Height = 22.000000000000000000
+        Position.X = 231.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = FrameStyleBClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 9
+      end
+      object FrameWidthCB: TComboEdit
+        Tag = 29
+        TabOrder = 10
+        Cursor = crIBeam
+        DisableFocusEffect = False
+        KeyboardType = vktDefault
+        ItemHeight = 19.000000000000000000
+        ItemIndex = -1
+        Items.Strings = (
+          '0,1'
+          '0,5'
+          '1'
+          '1,5'
+          '2'
+          '3'
+          '4'
+          '5'
+          '6'
+          '7'
+          '8'
+          '9'
+          '10')
+        ListBoxResource = 'combolistboxstyle'
+        Position.X = 256.000000000000000000
+        Position.Y = 3.000000000000000000
+        Width = 49.000000000000000000
+        Height = 20.000000000000000000
+        OnChange = ToolButtonClick
+        OnKeyDown = FrameWidthCBKeyDown
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+      end
+    end
+    object StandardTB: TToolBar
+      Align = alNone
+      Height = 27.000000000000000000
+      Width = 526.000000000000000000
+      object Grip3: TfrxToolGrip
+        Position.X = 4.000000000000000000
+        Position.Y = 6.000000000000000000
+        Width = 4.000000000000000000
+        Height = 14.000000000000000000
+      end
+      object NewB: TfrxToolButton
+        Tag = 40
+        Height = 22.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = NewReportCmdExecute
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 0
+      end
+      object OpenB: TfrxToolButton
+        Tag = 41
+        Height = 22.000000000000000000
+        Position.X = 31.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = OpenCmdExecute
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 1
+      end
+      object SaveB: TfrxToolButton
+        Tag = 42
+        Height = 22.000000000000000000
+        Position.X = 54.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = SaveCmdExecute
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 2
+      end
+      object PreviewB: TfrxToolButton
+        Tag = 43
+        Height = 22.000000000000000000
+        Position.X = 77.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = PreviewCmdExecute
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 3
+      end
+      object Sep1: TfrxToolSeparator
+        Position.X = 103.000000000000000000
+        Position.Y = 5.000000000000000000
+        Width = 4.000000000000000000
+        Height = 16.000000000000000000
+      end
+      object NewPageB: TfrxToolButton
+        Tag = 52
+        Height = 22.000000000000000000
+        Position.X = 108.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = NewPageCmdExecute
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 4
+      end
+      object NewDialogB: TfrxToolButton
+        Tag = 70
+        Height = 22.000000000000000000
+        Position.X = 131.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = NewDialogCmdExecute
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 5
+      end
+      object DeletePageB: TfrxToolButton
+        Tag = 53
+        Height = 22.000000000000000000
+        Position.X = 154.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = DeletePageCmdExecute
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 6
+      end
+      object PageSettingsB: TfrxToolButton
+        Tag = 54
+        Height = 22.000000000000000000
+        Position.X = 177.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = PageSettingsCmdExecute
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 7
+      end
+      object Sep2: TfrxToolSeparator
+        Position.X = 203.000000000000000000
+        Position.Y = 5.000000000000000000
+        Width = 4.000000000000000000
+        Height = 16.000000000000000000
+      end
+      object CutB: TfrxToolButton
+        Tag = 44
+        Height = 22.000000000000000000
+        Position.X = 208.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = CutCmdExecute
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 9
+      end
+      object CopyB: TfrxToolButton
+        Tag = 45
+        Height = 22.000000000000000000
+        Position.X = 231.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = CopyCmdExecute
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 10
+      end
+      object PasteB: TfrxToolButton
+        Tag = 46
+        Height = 22.000000000000000000
+        Position.X = 254.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = PasteCmdExecute
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 11
+      end
+      object Sep4: TfrxToolSeparator
+        Position.X = 280.000000000000000000
+        Position.Y = 5.000000000000000000
+        Width = 4.000000000000000000
+        Height = 16.000000000000000000
+      end
+      object UndoB: TfrxToolButton
+        Tag = 47
+        Height = 22.000000000000000000
+        Position.X = 285.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = UndoCmdExecute
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 12
+      end
+      object RedoB: TfrxToolButton
+        Tag = 48
+        Height = 22.000000000000000000
+        Position.X = 308.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = RedoCmdExecute
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 13
+      end
+      object Sep5: TfrxToolSeparator
+        Position.X = 334.000000000000000000
+        Position.Y = 5.000000000000000000
+        Width = 4.000000000000000000
+        Height = 16.000000000000000000
+      end
+      object GroupB: TfrxToolButton
+        Height = 22.000000000000000000
+        Position.X = 339.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = GroupCmdExecute
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 14
+      end
+      object UngroupB: TfrxToolButton
+        Height = 22.000000000000000000
+        Position.X = 362.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = UngroupCmdExecute
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 15
+      end
+      object Sep6: TfrxToolSeparator
+        Position.X = 388.000000000000000000
+        Position.Y = 5.000000000000000000
+        Width = 4.000000000000000000
+        Height = 16.000000000000000000
+      end
+      object ShowGridB: TfrxToolButton
+        Tag = 55
+        Height = 22.000000000000000000
+        Position.X = 393.000000000000000000
+        Position.Y = 2.000000000000000000
+        StaysPressed = True
+        Width = 22.000000000000000000
+        OnClick = ShowGridBClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 16
+      end
+      object AlignToGridB: TfrxToolButton
+        Tag = 56
+        Height = 22.000000000000000000
+        Position.X = 416.000000000000000000
+        Position.Y = 2.000000000000000000
+        StaysPressed = True
+        Width = 22.000000000000000000
+        OnClick = AlignToGridBClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 17
+      end
+      object SetToGridB: TfrxToolButton
+        Tag = 31
+        Height = 22.000000000000000000
+        Position.X = 439.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = ToolButtonClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 18
+      end
+      object ScaleCB: TComboEdit
+        TabOrder = 19
+        Cursor = crIBeam
+        DisableFocusEffect = False
+        KeyboardType = vktDefault
+        ItemHeight = 19.000000000000000000
+        ItemIndex = -1
+        ListBoxResource = 'combolistboxstyle'
+        Position.X = 465.000000000000000000
+        Position.Y = 3.000000000000000000
+        Width = 59.000000000000000000
+        Height = 20.000000000000000000
+        OnClick = ScaleCBClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+      end
+    end
+    object TextTB: TToolBar
+      Align = alNone
+      Height = 27.000000000000000000
+      Position.Y = 27.000000000000000000
+      Width = 639.000000000000000000
+      object Grip4: TfrxToolGrip
+        Position.X = 4.000000000000000000
+        Position.Y = 6.000000000000000000
+        Width = 4.000000000000000000
+        Height = 14.000000000000000000
+      end
+      object StyleCB: TComboEdit
+        Tag = 33
+        Cursor = crIBeam
+        DisableFocusEffect = False
+        KeyboardType = vktDefault
+        ItemHeight = 19.000000000000000000
+        ItemIndex = -1
+        ListBoxResource = 'combolistboxstyle'
+        Position.X = 8.000000000000000000
+        Position.Y = 3.000000000000000000
+        Width = 97.000000000000000000
+        Height = 20.000000000000000000
+        OnChange = ToolButtonClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+      end
+      object FontNameCB: TComboEdit
+        Cursor = crIBeam
+        DisableFocusEffect = False
+        KeyboardType = vktDefault
+        ItemHeight = 19.000000000000000000
+        ItemIndex = -1
+        ListBoxResource = 'combolistboxstyle'
+        Position.X = 107.000000000000000000
+        Position.Y = 3.000000000000000000
+        Width = 138.000000000000000000
+        Height = 20.000000000000000000
+        OnChange = ToolButtonClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+      end
+      object FontSizeCB: TComboEdit
+        Tag = 1
+        Cursor = crIBeam
+        DisableFocusEffect = False
+        KeyboardType = vktDefault
+        ItemHeight = 19.000000000000000000
+        ItemIndex = -1
+        Items.Strings = (
+          '5'
+          '6'
+          '7'
+          '8'
+          '9'
+          '10'
+          '11'
+          '12'
+          '14'
+          '16'
+          '18'
+          '20'
+          '22'
+          '24'
+          '26'
+          '28'
+          '36'
+          '48'
+          '72')
+        ListBoxResource = 'combolistboxstyle'
+        Position.X = 247.000000000000000000
+        Position.Y = 3.000000000000000000
+        Width = 43.000000000000000000
+        Height = 20.000000000000000000
+        OnChange = ToolButtonClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+      end
+      object BoldB: TfrxToolButton
+        Tag = 2
+        Height = 22.000000000000000000
+        Position.X = 293.000000000000000000
+        Position.Y = 2.000000000000000000
+        StaysPressed = True
+        Width = 22.000000000000000000
+        OnClick = ToolButtonClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 0
+      end
+      object ItalicB: TfrxToolButton
+        Tag = 3
+        Height = 22.000000000000000000
+        Position.X = 316.000000000000000000
+        Position.Y = 2.000000000000000000
+        StaysPressed = True
+        Width = 22.000000000000000000
+        OnClick = ToolButtonClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 1
+      end
+      object UnderlineB: TfrxToolButton
+        Tag = 4
+        Height = 22.000000000000000000
+        Position.X = 339.000000000000000000
+        Position.Y = 2.000000000000000000
+        StaysPressed = True
+        Width = 22.000000000000000000
+        OnClick = ToolButtonClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 2
+      end
+      object Sep11: TfrxToolSeparator
+        Position.X = 365.000000000000000000
+        Position.Y = 5.000000000000000000
+        Width = 4.000000000000000000
+        Height = 16.000000000000000000
+      end
+      object FontB: TfrxToolButton
+        Tag = 43
+        Height = 22.000000000000000000
+        Position.X = 370.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 3
+      end
+      object FontColorB: TfrxToolButton
+        Tag = 5
+        Height = 22.000000000000000000
+        Position.X = 393.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = FontColorBClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 4
+      end
+      object HighlightB: TfrxToolButton
+        Tag = 6
+        Height = 22.000000000000000000
+        Position.X = 416.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = HighlightBClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 5
+      end
+      object RotateB: TfrxToolButton
+        Height = 22.000000000000000000
+        Position.X = 439.000000000000000000
+        Position.Y = 2.000000000000000000
+        Width = 22.000000000000000000
+        OnClick = RotateBClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 6
+      end
+      object Sep12: TfrxToolSeparator
+        Position.X = 465.000000000000000000
+        Position.Y = 5.000000000000000000
+        Width = 4.000000000000000000
+        Height = 16.000000000000000000
+      end
+      object TextAlignLeftB: TfrxToolButton
+        Tag = 7
+        Height = 22.000000000000000000
+        Position.X = 470.000000000000000000
+        Position.Y = 2.000000000000000000
+        StaysPressed = True
+        Width = 22.000000000000000000
+        OnClick = ToolButtonClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 7
+      end
+      object TextAlignCenterB: TfrxToolButton
+        Tag = 8
+        Height = 22.000000000000000000
+        Position.X = 493.000000000000000000
+        Position.Y = 2.000000000000000000
+        StaysPressed = True
+        Width = 22.000000000000000000
+        OnClick = ToolButtonClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 8
+      end
+      object TextAlignRightB: TfrxToolButton
+        Tag = 9
+        Height = 22.000000000000000000
+        Position.X = 516.000000000000000000
+        Position.Y = 2.000000000000000000
+        StaysPressed = True
+        Width = 22.000000000000000000
+        OnClick = ToolButtonClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 9
+      end
+      object TextAlignBlockB: TfrxToolButton
+        Tag = 10
+        Height = 22.000000000000000000
+        Position.X = 539.000000000000000000
+        Position.Y = 2.000000000000000000
+        StaysPressed = True
+        Width = 22.000000000000000000
+        OnClick = ToolButtonClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 10
+      end
+      object Sep13: TfrxToolSeparator
+        Position.X = 565.000000000000000000
+        Position.Y = 5.000000000000000000
+        Width = 4.000000000000000000
+        Height = 16.000000000000000000
+      end
+      object TextAlignTopB: TfrxToolButton
+        Tag = 11
+        Height = 22.000000000000000000
+        Position.X = 570.000000000000000000
+        Position.Y = 2.000000000000000000
+        StaysPressed = True
+        Width = 22.000000000000000000
+        OnClick = ToolButtonClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 11
+      end
+      object TextAlignMiddleB: TfrxToolButton
+        Tag = 12
+        Height = 22.000000000000000000
+        Position.X = 593.000000000000000000
+        Position.Y = 2.000000000000000000
+        StaysPressed = True
+        Width = 22.000000000000000000
+        OnClick = ToolButtonClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 12
+      end
+      object TextAlignBottomB: TfrxToolButton
+        Tag = 13
+        Height = 22.000000000000000000
+        Position.X = 616.000000000000000000
+        Position.Y = 2.000000000000000000
+        StaysPressed = True
+        Width = 22.000000000000000000
+        OnClick = ToolButtonClick
+        OnMouseEnter = NewPageBMouseEnter
+        OnMouseLeave = NewPageBMouseLeave
+        Hint = ''
+        TabOrder = 13
+      end
+    end
+  end
+  object StyleBook1: TStyleBook
+    Styles = <
+      item
+        ResourcesBin = {
+          464D585F5354594C4520322E35010611546162436F6E74726F6C315374796C65
+          31034901060F48696E7450616E656C5374796C6531030A01005450463007544C
+          61796F757400095374796C654E616D650611546162436F6E74726F6C31537479
+          6C65310A506F736974696F6E2E5805000000000000008B07400A506F73697469
+          6F6E2E5905000000000000809007400A53697A652E5769647468050000000000
+          00008E06400B53697A652E4865696768740500000000000000CA05401453697A
+          652E506C6174666F726D44656661756C7408000A5452656374616E676C650005
+          416C69676E0708436F6E74656E74730A46696C6C2E436F6C6F720708636C6157
+          686974650748697454657374080553696465730B03546F70044C656674055269
+          676874000A53697A652E576964746805000000000000008E06400B53697A652E
+          4865696768740500000000000000CA05401453697A652E506C6174666F726D44
+          656661756C74080C5374726F6B652E436F6C6F72070978464638453845384500
+          000054504630115443616C6C6F757452656374616E676C6500095374796C654E
+          616D65060F48696E7450616E656C5374796C65310A46696C6C2E436F6C6F7207
+          08636C6142656967650748697454657374080A506F736974696F6E2E58050000
+          00000000008B08400A506F736974696F6E2E590500000000000000A607400A53
+          697A652E57696474680500000000000000C804400B53697A652E486569676874
+          0500000000000000C804401453697A652E506C6174666F726D44656661756C74
+          080C5374726F6B652E436F6C6F7207097846463937393739370C43616C6C6F75
+          7457696474680500000000000000B803400D43616C6C6F75744C656E67746805
+          00000000000000B002400000}
+      end>
+    Left = 32
+    Top = 120
+  end
+  object HintPanel: TCalloutPanel
+    Height = 57.000000000000000000
+    Margins.Top = 11.000000000000000000
+    Position.X = 520.000000000000000000
+    Position.Y = 400.000000000000000000
+    StyleLookup = 'HintPanelStyle1'
+    Visible = False
+    Width = 97.000000000000000000
+    CalloutWidth = 23.000000000000000000
+    CalloutLength = 11.000000000000000000
+    object Label1: TLabel
+      Align = alClient
+      Height = 46.000000000000000000
+      Position.Y = 11.000000000000000000
+      Text = 'Label1'
+      TextAlign = taCenter
+      Width = 97.000000000000000000
+    end
+  end
+end

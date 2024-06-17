@@ -1,0 +1,235 @@
+object frxPageSettingsForm: TfrxPageSettingsForm
+  Left = 0
+  Top = 0
+  Caption = 'Page Settings'
+  BorderStyle = bsSingle
+  BorderIcons = [biSystemMenu]
+  ClientHeight = 359
+  ClientWidth = 286
+  Position = poScreenCenter
+  Visible = False
+  OnClose = FormClose
+  OnActivate = FormShow
+  StyleLookup = 'backgroundstyle'
+  object OKB: TButton
+    Position.Point = '(126,328)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    HelpContext = 40
+    TabOrder = 0
+    ModalResult = 1
+    Default = True
+  end
+  object CancelB: TButton
+    Position.Point = '(206,328)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    HelpContext = 50
+    TabOrder = 1
+    ModalResult = 2
+    Cancel = True
+  end
+  object SizeL: TGroupBox
+    Position.Point = '(4,4)'
+    Width = 277.000000000000000000
+    Height = 101.000000000000000000
+    TabOrder = 2
+    object WidthL: TLabel
+      Position.Point = '(8,48)'
+      Width = 41.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 0
+    end
+    object HeightL: TLabel
+      Position.Point = '(8,72)'
+      Width = 49.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 1
+    end
+    object UnitL1: TLabel
+      Position.Point = '(112,48)'
+      Width = 41.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 2
+    end
+    object UnitL2: TLabel
+      Position.Point = '(112,72)'
+      Width = 49.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 3
+    end
+    object WidthE: TEdit
+      Position.Point = '(64,46)'
+      Width = 45.000000000000000000
+      Height = 21.000000000000000000
+      HelpContext = 140
+      TabOrder = 4
+      KeyboardType = vktDefault
+      OnChange = WidthEChange
+      Password = False
+    end
+    object HeightE: TEdit
+      Position.Point = '(64,70)'
+      Width = 45.000000000000000000
+      Height = 21.000000000000000000
+      HelpContext = 150
+      TabOrder = 5
+      KeyboardType = vktDefault
+      OnChange = WidthEChange
+      Password = False
+    end
+    object SizeCB: TComboBox
+      Position.Point = '(8,18)'
+      Width = 261.000000000000000000
+      Height = 21.000000000000000000
+      OnClick = SizeCBClick
+      TabOrder = 6
+      ItemIndex = -1
+    end
+  end
+  object OrientationL: TGroupBox
+    Position.Point = '(4,108)'
+    Width = 277.000000000000000000
+    Height = 65.000000000000000000
+    TabOrder = 3
+    object PortraitImg: TImage
+      Position.Point = '(148,21)'
+      Width = 26.000000000000000000
+      Height = 32.000000000000000000
+    end
+    object LandscapeImg: TImage
+      Position.Point = '(145,25)'
+      Width = 32.000000000000000000
+      Height = 26.000000000000000000
+    end
+    object PortraitRB: TRadioButton
+      Position.Point = '(8,20)'
+      Width = 109.000000000000000000
+      Height = 17.000000000000000000
+      OnClick = PortraitRBClick
+      HelpContext = 111
+      TabOrder = 2
+      GroupName = 'Orientation'
+    end
+    object LandscapeRB: TRadioButton
+      Position.Point = '(8,40)'
+      Width = 109.000000000000000000
+      Height = 17.000000000000000000
+      OnClick = PortraitRBClick
+      HelpContext = 120
+      TabOrder = 3
+      GroupName = 'Orientation'
+    end
+  end
+  object MarginsL: TGroupBox
+    Position.Point = '(4,176)'
+    Width = 277.000000000000000000
+    Height = 73.000000000000000000
+    TabOrder = 4
+    object LeftL: TLabel
+      Position.Point = '(8,20)'
+      Width = 49.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 0
+    end
+    object TopL: TLabel
+      Position.Point = '(8,44)'
+      Width = 49.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 1
+    end
+    object RightL: TLabel
+      Position.Point = '(156,20)'
+      Width = 53.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 2
+    end
+    object BottomL: TLabel
+      Position.Point = '(156,44)'
+      Width = 53.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 3
+    end
+    object UnitL3: TLabel
+      Position.Point = '(108,20)'
+      Width = 37.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 4
+    end
+    object UnitL4: TLabel
+      Position.Point = '(108,44)'
+      Width = 37.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 5
+    end
+    object UnitL5: TLabel
+      Position.Point = '(248,20)'
+      Width = 25.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 6
+    end
+    object UnitL6: TLabel
+      Position.Point = '(248,44)'
+      Width = 25.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 7
+    end
+    object MarginLeftE: TEdit
+      Position.Point = '(64,18)'
+      Width = 40.000000000000000000
+      Height = 21.000000000000000000
+      HelpContext = 72
+      TabOrder = 8
+      KeyboardType = vktDefault
+      Password = False
+    end
+    object MarginTopE: TEdit
+      Position.Point = '(64,42)'
+      Width = 40.000000000000000000
+      Height = 21.000000000000000000
+      HelpContext = 81
+      TabOrder = 9
+      KeyboardType = vktDefault
+      Password = False
+    end
+    object MarginRightE: TEdit
+      Position.Point = '(203,18)'
+      Width = 40.000000000000000000
+      Height = 21.000000000000000000
+      HelpContext = 91
+      TabOrder = 10
+      KeyboardType = vktDefault
+      Password = False
+    end
+    object MarginBottomE: TEdit
+      Position.Point = '(203,42)'
+      Width = 40.000000000000000000
+      Height = 21.000000000000000000
+      HelpContext = 101
+      TabOrder = 11
+      KeyboardType = vktDefault
+      Password = False
+    end
+  end
+  object OtherL: TGroupBox
+    Position.Point = '(4,252)'
+    Width = 277.000000000000000000
+    Height = 65.000000000000000000
+    TabOrder = 5
+    object ApplyToCurRB: TRadioButton
+      Position.Point = '(8,20)'
+      Width = 261.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 0
+      GroupName = 'Changes'
+    end
+    object ApplyToAllRB: TRadioButton
+      Position.Point = '(8,40)'
+      Width = 261.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 1
+      IsChecked = True
+      GroupName = 'Changes'
+    end
+  end
+end

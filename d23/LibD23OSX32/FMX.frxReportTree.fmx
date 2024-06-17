@@ -1,0 +1,33 @@
+object frxReportTreeForm: TfrxReportTreeForm
+  Left = 0
+  Top = 0
+  BorderStyle = bsSizeToolWin
+  Caption = 'Report Tree'
+  ClientHeight = 347
+  ClientWidth = 179
+  OnCreate = FormCreate
+  object MainPanel: TPanel
+    Align = alClient
+    Height = 347.000000000000000000
+    StyleLookup = 'backgroundstyle'
+    Width = 179.000000000000000000
+    object Rectangle1: TRectangle
+      Align = alTop
+      Height = 18.000000000000000000
+      Margins.Left = 2.000000000000000000
+      Margins.Top = 1.000000000000000000
+      Stroke.Kind = bkNone
+      Width = 179.000000000000000000
+      object Label1: TLabel
+        Align = alClient
+        AutoSize = True
+        Height = 17.000000000000000000
+        Position.X = 2.000000000000000000
+        Position.Y = 1.000000000000000000
+        Text = 'Report Tree'
+        Width = 177.000000000000000000
+        WordWrap = False
+      end
+    end
+  end
+end

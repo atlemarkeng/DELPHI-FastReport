@@ -1,0 +1,113 @@
+object frxGroupEditorForm: TfrxGroupEditorForm
+  Left = 0
+  Top = 0
+  Caption = 'Group'
+  BorderStyle = bsSingle
+  BorderIcons = [biSystemMenu]
+  ClientHeight = 307
+  ClientWidth = 365
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  StyleLookup = 'backgroundstyle'
+  object OKB: TButton
+    Position.Point = '(205,276)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    HelpContext = 40
+    TabOrder = 0
+    ModalResult = 1
+    Default = True
+  end
+  object CancelB: TButton
+    Position.Point = '(285,276)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    HelpContext = 50
+    TabOrder = 1
+    ModalResult = 2
+    Cancel = True
+  end
+  object BreakOnL: TGroupBox
+    Position.Point = '(4,4)'
+    Width = 357.000000000000000000
+    Height = 125.000000000000000000
+    TabOrder = 2
+    object DataFieldCB: TComboBox
+      Position.Point = '(188,40)'
+      Width = 161.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 0
+      ItemIndex = -1
+      ItemHeight = 13.000000000000000000
+    end
+    object DataSetCB: TComboBox
+      Position.Point = '(8,40)'
+      Width = 173.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 1
+      ItemIndex = -1
+      ItemHeight = 13.000000000000000000
+      OnChange = DataSetCBChange
+    end
+    object ExpressionE: TfrxEditWithButton
+      Position.Point = '(8,92)'
+      Width = 341.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 2
+      OnButtonClick = ExpressionEButtonClick
+    end
+    object DataFieldRB: TRadioButton
+      Position.Point = '(8,20)'
+      Width = 173.000000000000000000
+      Height = 17.000000000000000000
+      OnChange = DataFieldRBClick
+      TabOrder = 3
+    end
+    object ExpressionRB: TRadioButton
+      Position.Point = '(8,72)'
+      Width = 173.000000000000000000
+      Height = 17.000000000000000000
+      OnChange = DataFieldRBClick
+      TabOrder = 4
+    end
+  end
+  object OptionsL: TGroupBox
+    Position.Point = '(4,136)'
+    Width = 357.000000000000000000
+    Height = 129.000000000000000000
+    TabOrder = 3
+    object KeepGroupTogetherCB: TCheckBox
+      Position.Point = '(8,20)'
+      Width = 237.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 0
+    end
+    object StartNewPageCB: TCheckBox
+      Position.Point = '(8,40)'
+      Width = 237.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 1
+    end
+    object OutlineCB: TCheckBox
+      Position.Point = '(8,60)'
+      Width = 237.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 2
+    end
+    object DrillCB: TCheckBox
+      Position.Point = '(8,80)'
+      Width = 237.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 3
+    end
+    object ResetCB: TCheckBox
+      Position.Point = '(8,100)'
+      Width = 237.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 4
+    end
+  end
+end

@@ -1,0 +1,15 @@
+object frxPopupForm: TfrxPopupForm
+  Left = 0
+  Top = 0
+  Caption = ' '
+  BorderStyle = bsNone
+  ClientHeight = 97
+  ClientWidth = 658
+  ShowActivated = False
+  StaysOpen = False
+  Transparency = True
+  TopMost = True
+  Visible = False
+  OnClose = FormClose
+  StyleLookup = 'backgroundstyle'
+end

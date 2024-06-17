@@ -1,0 +1,69 @@
+object frxParamsEditorForm: TfrxParamsEditorForm
+  Left = 0
+  Top = 0
+  Caption = 'Parameters editor'
+  BorderStyle = bsSingle
+  BorderIcons = [biSystemMenu]
+  ClientHeight = 381
+  ClientWidth = 392
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  StyleLookup = 'backgroundstyle'
+  object OkB: TButton
+    Position.Point = '(232,348)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    OnClick = OkBClick
+    TabOrder = 0
+    ModalResult = 1
+  end
+  object CancelB: TButton
+    Position.Point = '(312,348)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 1
+    ModalResult = 2
+    Cancel = True
+  end
+  object ParamGrid: TStringGrid
+    Position.Point = '(8,8)'
+    Width = 377.000000000000000000
+    Height = 329.000000000000000000
+    OnDragOver = ParamGridDragOver
+    OnDragEnd = ParamGridResize
+    OnMouseUp = ParamGridMouseUp
+    OnResize = ParamGridResize
+    StyleLookup = 'gridstyle'
+    TabOrder = 2
+    AlternatingRowBackground = True
+    RowHeight = 21.000000000000000000
+    OnSelChanged = ParamGridResize
+    RowCount = 100
+  end
+  object TypeCB: TComboBox
+    Position.Point = '(104,23)'
+    Width = 84.000000000000000000
+    Height = 19.000000000000000000
+    Visible = False
+    TabOrder = 3
+    ItemIndex = -1
+    ItemHeight = 13.000000000000000000
+    ListBoxResource = 'transparentlistboxstyle'
+    OnChange = TypeCBChange
+  end
+  object ButtonPanel: TPanel
+    Position.Point = '(360,24)'
+    Width = 17.000000000000000000
+    Height = 17.000000000000000000
+    TabOrder = 4
+    object ExpressionB: TSpeedButton
+      Width = 17.000000000000000000
+      Height = 17.000000000000000000
+      OnClick = ValueEButtonClick
+      Text = '...'
+    end
+  end
+end

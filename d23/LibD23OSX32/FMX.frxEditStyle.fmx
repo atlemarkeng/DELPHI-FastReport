@@ -1,0 +1,138 @@
+object frxStyleEditorForm: TfrxStyleEditorForm
+  Left = 0
+  Top = 0
+  Caption = 'Style Editor'
+  BorderStyle = bsSingle
+  BorderIcons = [biSystemMenu]
+  ClientHeight = 251
+  ClientWidth = 389
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  StyleLookup = 'backgroundstyle'
+  object PaintBox: TPaintBox
+    Position.Point = '(164,150)'
+    Width = 216.000000000000000000
+    Height = 78.000000000000000000
+    OnPaint = PaintBoxPaint
+  end
+  object ToolBar: TToolBar
+    Width = 389.000000000000000000
+    Height = 35.000000000000000000
+    TabOrder = 1
+    object AddB: TfrxToolButton
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = AddBClick
+      TabOrder = 0
+    end
+    object DeleteB: TfrxToolButton
+      Position.Point = '(23,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = DeleteBClick
+      TabOrder = 1
+    end
+    object EditB: TfrxToolButton
+      Position.Point = '(46,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = EditBClick
+      TabOrder = 2
+    end
+    object LoadB: TfrxToolButton
+      Position.Point = '(77,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = LoadBClick
+      TabOrder = 3
+    end
+    object SaveB: TfrxToolButton
+      Position.Point = '(100,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = SaveBClick
+      TabOrder = 4
+    end
+    object CancelB: TfrxToolButton
+      Position.Point = '(131,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = CancelBClick
+      TabOrder = 5
+    end
+    object OkB: TfrxToolButton
+      Position.Point = '(154,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = OkBClick
+      TabOrder = 6
+    end
+  end
+  object ColorB: TButton
+    Tag = 2
+    Position.Point = '(164,46)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    OnClick = BClick
+    TabOrder = 2
+  end
+  object FontB: TButton
+    Tag = 3
+    Position.Point = '(164,78)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    OnClick = BClick
+    TabOrder = 3
+  end
+  object FrameB: TButton
+    Tag = 4
+    Position.Point = '(164,110)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    OnClick = BClick
+    TabOrder = 4
+  end
+  object OpenDialog: TOpenDialog
+    Left = 72
+    Top = 104
+  end
+  object SaveDialog: TSaveDialog
+    Left = 40
+    Top = 88
+  end
+  object StylesTV: TfrxTreeView
+    Align = alLeft
+    Position.Point = '(0,35)'
+    Width = 161.000000000000000000
+    Height = 216.000000000000000000
+    OnClick = StylesTVClick
+    TabOrder = 5
+    object TEdit
+      Width = 100.000000000000000000
+      Height = 22.000000000000000000
+      Visible = False
+      TabOrder = 0
+      KeyboardType = vktDefault
+      Password = False
+    end
+    object TEdit
+      Width = 100.000000000000000000
+      Height = 22.000000000000000000
+      Visible = False
+      TabOrder = 1
+      KeyboardType = vktDefault
+      Password = False
+    end
+    object TEdit
+      Width = 100.000000000000000000
+      Height = 22.000000000000000000
+      Visible = False
+      TabOrder = 2
+      KeyboardType = vktDefault
+      Password = False
+    end
+  end
+end

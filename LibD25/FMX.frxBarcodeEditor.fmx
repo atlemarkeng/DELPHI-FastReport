@@ -1,0 +1,151 @@
+object frxBarcodeEditorForm: TfrxBarcodeEditorForm
+  Left = 0
+  Top = 0
+  Caption = 'Barcode editor'
+  ClientHeight = 255
+  ClientWidth = 539
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  StyleLookup = 'backgroundstyle'
+  object CodeLbl: TLabel
+    Position.Point = '(8,8)'
+    Width = 185.000000000000000000
+    Height = 13.000000000000000000
+    TabOrder = 0
+  end
+  object TypeLbl: TLabel
+    Position.Point = '(8,52)'
+    Width = 201.000000000000000000
+    Height = 13.000000000000000000
+    TabOrder = 1
+  end
+  object ExamplePB: TPaintBox
+    Position.Point = '(276,12)'
+    Width = 253.000000000000000000
+    Height = 233.000000000000000000
+    OnPaint = ExamplePB2Paint
+  end
+  object CancelB: TButton
+    Position.Point = '(184,225)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    HelpContext = 50
+    TabOrder = 3
+    ModalResult = 2
+    Cancel = True
+  end
+  object OkB: TButton
+    Position.Point = '(104,225)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    HelpContext = 40
+    TabOrder = 4
+    ModalResult = 1
+    Default = True
+  end
+  object CodeE: TComboEdit
+    Cursor = crIBeam
+    Position.Point = '(8,24)'
+    Width = 253.000000000000000000
+    Height = 21.000000000000000000
+    HelpContext = 260
+    TabOrder = 5
+    KeyboardType = vktDefault
+    OnChange = Rotation0RBClick
+    ItemHeight = 13.000000000000000000
+    ItemIndex = -1
+    ListBoxResource = 'combolistboxstyle'
+    Text = '0'
+  end
+  object TypeCB: TComboBox
+    Position.Point = '(8,68)'
+    Width = 253.000000000000000000
+    Height = 21.000000000000000000
+    HelpContext = 261
+    TabOrder = 6
+    ItemIndex = -1
+    ItemHeight = 13.000000000000000000
+    ListBoxResource = 'transparentlistboxstyle'
+    OnChange = Rotation0RBClick
+  end
+  object OptionsLbl: TGroupBox
+    Position.Point = '(8,100)'
+    Width = 253.000000000000000000
+    Height = 65.000000000000000000
+    TabOrder = 7
+    object ZoomLbl: TLabel
+      Position.Point = '(155,22)'
+      Width = 38.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 0
+    end
+    object CalcCheckSumCB: TCheckBox
+      Position.Point = '(8,20)'
+      Width = 133.000000000000000000
+      Height = 17.000000000000000000
+      HelpContext = 262
+      TabOrder = 1
+      OnChange = Rotation0RBClick
+    end
+    object ViewTextCB: TCheckBox
+      Position.Point = '(8,40)'
+      Width = 133.000000000000000000
+      Height = 17.000000000000000000
+      HelpContext = 263
+      TabOrder = 2
+      OnChange = Rotation0RBClick
+    end
+    object ZoomE: TEdit
+      Position.Point = '(196,18)'
+      Width = 33.000000000000000000
+      Height = 21.000000000000000000
+      HelpContext = 149
+      TabOrder = 3
+      KeyboardType = vktDefault
+      OnChange = Rotation0RBClick
+      Password = False
+      Text = '1'
+    end
+  end
+  object RotationLbl: TGroupBox
+    Position.Point = '(8,172)'
+    Width = 253.000000000000000000
+    Height = 45.000000000000000000
+    TabOrder = 8
+    object Rotation0RB: TRadioButton
+      Position.Point = '(8,20)'
+      Width = 37.000000000000000000
+      Height = 17.000000000000000000
+      OnClick = Rotation0RBClick
+      HelpContext = 264
+      TabOrder = 0
+    end
+    object Rotation90RB: TRadioButton
+      Position.Point = '(72,20)'
+      Width = 37.000000000000000000
+      Height = 17.000000000000000000
+      OnClick = Rotation0RBClick
+      HelpContext = 264
+      TabOrder = 1
+    end
+    object Rotation180RB: TRadioButton
+      Position.Point = '(136,20)'
+      Width = 45.000000000000000000
+      Height = 17.000000000000000000
+      OnClick = Rotation0RBClick
+      HelpContext = 264
+      TabOrder = 2
+    end
+    object Rotation270RB: TRadioButton
+      Position.Point = '(200,20)'
+      Width = 45.000000000000000000
+      Height = 17.000000000000000000
+      OnClick = Rotation0RBClick
+      HelpContext = 264
+      TabOrder = 3
+    end
+  end
+end

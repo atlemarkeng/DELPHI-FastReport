@@ -1,0 +1,49 @@
+// Package file for Rad Studio 10 Seattle
+
+package FMXfrxTee26;
+{$I tee.inc}
+{$I fmx.inc}
+{$I frx.inc}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  FMX,
+  dbrtl,
+{$IFDEF TeeChartStd} FMXTEE, FMXTEEUI, {$ENDIF}
+{$IFDEF TeeChart9}FMXTeePro926, FmxTeeUI926, {$ENDIF}
+{$IFDEF TeeChartStd9}FMXTee926, FMXTEEUI926, {$ENDIF}
+  FMXfs26,
+  FMXfsTee26,
+  FMXfrx26;
+
+contains
+  FMX.frxChart in 'FMX.frxChart.pas',
+  FMX.frxChartEditor in 'FMX.frxChartEditor.pas',
+  FMX.frxChartGallery in 'FMX.frxChartGallery.pas',
+  FMX.frxChartHelpers in 'FMX.frxChartHelpers.pas',
+  FMX.frxChartRTTI in 'FMX.frxChartRTTI.pas';
+
+end.

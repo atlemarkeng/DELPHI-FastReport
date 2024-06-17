@@ -1,0 +1,189 @@
+object frxVarEditorForm: TfrxVarEditorForm
+  Left = 0
+  Top = 0
+  Caption = 'Edit Variables'
+  BorderIcons = [biSystemMenu, biMinimize, biMaximize, biHelp]
+  ClientHeight = 548
+  ClientWidth = 532
+  Visible = False
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnActivate = FormActivate
+  OnKeyDown = FormKeyDown
+  OnResize = Splitter2Moved
+  StyleLookup = 'backgroundstyle'
+  object Splitter1: TSplitter
+    Align = alBottom
+    Cursor = crVSplit
+    Position.Point = '(0,469)'
+    Width = 532.000000000000000000
+    Height = 3.000000000000000000
+    TabOrder = 0
+    MinSize = 20.000000000000000000
+  end
+  object Splitter2: TSplitter
+    Align = alRight
+    Cursor = crHSplit
+    Position.Point = '(129,31)'
+    Width = 3.000000000000000000
+    Height = 421.000000000000000000
+    TabOrder = 1
+    MinSize = 20.000000000000000000
+  end
+  object ToolBar: TToolBar
+    Width = 532.000000000000000000
+    Height = 31.000000000000000000
+    TabOrder = 2
+    object NewCategoryB: TfrxToolButton
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = NewCategoryBClick
+      TabOrder = 0
+    end
+    object NewVarB: TfrxToolButton
+      Position.Point = '(23,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = NewVarBClick
+      TabOrder = 1
+    end
+    object EditB: TfrxToolButton
+      Position.Point = '(46,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = EditBClick
+      TabOrder = 2
+    end
+    object DeleteB: TfrxToolButton
+      Position.Point = '(69,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = DeleteBClick
+      TabOrder = 3
+    end
+    object EditListB: TfrxToolButton
+      Position.Point = '(92,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = EditListBClick
+      TabOrder = 4
+    end
+    object LoadB: TfrxToolButton
+      Position.Point = '(123,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = LoadBClick
+      TabOrder = 5
+    end
+    object SaveB: TfrxToolButton
+      Position.Point = '(146,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = SaveBClick
+      TabOrder = 6
+    end
+    object CancelB: TfrxToolButton
+      Position.Point = '(177,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = CancelBClick
+      TabOrder = 7
+      ModalResult = 2
+    end
+    object OkB: TfrxToolButton
+      Position.Point = '(200,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = OkBClick
+      TabOrder = 8
+      ModalResult = 1
+    end
+  end
+  object ExprMemo: TMemo
+    Align = alBottom
+    Position.Point = '(0,472)'
+    Width = 532.000000000000000000
+    Height = 76.000000000000000000
+    OnChange = ExprMemoChange
+    OnDragOver = ExprMemoDragOver
+    OnDragDrop = ExprMemoDragDrop
+    OnEnter = ExprMemoEnter
+    TabOrder = 3
+    KeyboardType = vktDefault
+  end
+  object ExprPanel: TPanel
+    Align = alBottom
+    Position.Point = '(0,452)'
+    Width = 532.000000000000000000
+    Height = 17.000000000000000000
+    TabOrder = 4
+  end
+  object Panel: TPanel
+    Align = alRight
+    Position.Point = '(132,31)'
+    Width = 400.000000000000000000
+    Height = 421.000000000000000000
+    TabOrder = 5
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '.fd3'
+    Left = 368
+    Top = 104
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '.fd3'
+    Left = 232
+    Top = 112
+  end
+  object VarTree: TfrxTreeView
+    Align = alClient
+    Position.Point = '(0,31)'
+    Width = 129.000000000000000000
+    Height = 421.000000000000000000
+    OnResize = VarTreeResize
+    TabOrder = 6
+    OnChange = VarTreeChange
+    OnBeforeChange = VarTreeChanging
+    Editable = False
+    object TEdit
+      Width = 100.000000000000000000
+      Height = 22.000000000000000000
+      Visible = False
+      TabOrder = 0
+      KeyboardType = vktDefault
+      Password = False
+    end
+    object TEdit
+      Width = 100.000000000000000000
+      Height = 22.000000000000000000
+      Visible = False
+      TabOrder = 1
+      KeyboardType = vktDefault
+      Password = False
+    end
+    object TEdit
+      Width = 100.000000000000000000
+      Height = 22.000000000000000000
+      Visible = False
+      TabOrder = 2
+      KeyboardType = vktDefault
+      Password = False
+    end
+    object TEdit
+      Width = 100.000000000000000000
+      Height = 22.000000000000000000
+      Visible = False
+      TabOrder = 3
+      KeyboardType = vktDefault
+      Password = False
+    end
+    object TEdit
+      Width = 100.000000000000000000
+      Height = 22.000000000000000000
+      Visible = False
+      TabOrder = 4
+      KeyboardType = vktDefault
+      Password = False
+    end
+  end
+end

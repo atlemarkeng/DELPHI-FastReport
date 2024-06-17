@@ -1,0 +1,43 @@
+object frxProgress: TfrxProgress
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  ClientHeight = 147
+  ClientWidth = 271
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  StyleLookup = 'backgroundstyle'
+  object Panel1: TPanel
+    Align = alClient
+    Width = 271.000000000000000000
+    Height = 147.000000000000000000
+    TabOrder = 0
+    object LMessage: TLabel
+      Position.Point = '(16,11)'
+      Width = 237.000000000000000000
+      Height = 20.000000000000000000
+      TabOrder = 0
+      TextAlign = taCenter
+      Text = 'LMessage'
+    end
+    object Bar: TProgressBar
+      Position.Point = '(16,37)'
+      Width = 237.000000000000000000
+      Height = 17.000000000000000000
+      TabOrder = 1
+      Max = 100.000000000000000000
+      Orientation = orHorizontal
+    end
+    object CancelB: TButton
+      Position.Point = '(100,64)'
+      Width = 75.000000000000000000
+      Height = 25.000000000000000000
+      OnClick = CancelBClick
+      TabOrder = 2
+      ModalResult = 2
+      Text = 'Cancel'
+      Cancel = True
+    end
+  end
+end

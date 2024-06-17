@@ -1,0 +1,96 @@
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" FMXfs25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" FMXfsDB25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" FMXfsADO25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" FMXfsIBX25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" FMXfsTee25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" FMXfrx25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" FMXfrxDB25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" FMXfrxADO25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" FMXfrxIBX25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" FMXfrxDBX25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" FMXfrxTee25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" FMXfrxe25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" dclFMXfs25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" dclFMXfsDB25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" dclFMXfsADO25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" dclFMXfsIBX25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" dclFMXfsTee25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" dclFMXfrx25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" dclFMXfrxDB25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" dclFMXfrxADO25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" dclFMXfrxIBX25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" dclFMXfrxDBX25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" dclFMXfrxTee25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 
+
+F:\FastReport>cd /d "F:\FastReport\LibD25\" 
+
+F:\FastReport\LibD25>"\Bin\dcc32.exe" dclFMXfrxe25.dpk -M -Z -$D- -JPHNE -JL -DTeeChartStd 

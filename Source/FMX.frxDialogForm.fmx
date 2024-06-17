@@ -1,0 +1,10 @@
+object frxDialogForm: TfrxDialogForm
+  Left = 0
+  Top = 0
+  Caption = ' '
+  ClientHeight = 59
+  ClientWidth = 115
+  Visible = False
+  OnCloseQuery = FormCloseQuery
+  StyleLookup = 'backgroundstyle'
+end

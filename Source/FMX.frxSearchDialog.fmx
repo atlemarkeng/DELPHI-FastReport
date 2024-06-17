@@ -1,0 +1,104 @@
+object frxSearchDialog: TfrxSearchDialog
+  Left = 0
+  Top = 0
+  Caption = 'Find text'
+  BorderStyle = bsSingle
+  BorderIcons = [biSystemMenu]
+  ClientHeight = 206
+  ClientWidth = 252
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnActivate = FormActivate
+  OnKeyDown = FormKeyDown
+  StyleLookup = 'backgroundstyle'
+  object ReplacePanel: TPanel
+    Align = alTop
+    Position.Point = '(0,49)'
+    Width = 252.000000000000000000
+    Height = 52.000000000000000000
+    Visible = False
+    TabOrder = 0
+    object ReplaceL: TLabel
+      Position.Point = '(8,4)'
+      Width = 61.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 0
+    end
+    object ReplaceE: TEdit
+      Position.Point = '(8,20)'
+      Width = 237.000000000000000000
+      Height = 21.000000000000000000
+      HelpContext = 98
+      TabOrder = 1
+      KeyboardType = vktDefault
+      Password = False
+    end
+  end
+  object Panel2: TPanel
+    Align = alTop
+    Width = 252.000000000000000000
+    Height = 49.000000000000000000
+    TabOrder = 1
+    object TextL: TLabel
+      Position.Point = '(8,4)'
+      Width = 169.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 0
+    end
+    object TextE: TEdit
+      Position.Point = '(8,20)'
+      Width = 237.000000000000000000
+      Height = 21.000000000000000000
+      HelpContext = 98
+      TabOrder = 1
+      KeyboardType = vktDefault
+      Password = False
+    end
+  end
+  object Panel3: TPanel
+    Align = alTop
+    Position.Point = '(0,49)'
+    Width = 252.000000000000000000
+    Height = 105.000000000000000000
+    TabOrder = 2
+    object OkB: TButton
+      Position.Point = '(90,76)'
+      Width = 75.000000000000000000
+      Height = 25.000000000000000000
+      HelpContext = 40
+      TabOrder = 0
+      ModalResult = 1
+      Default = True
+    end
+    object CancelB: TButton
+      Position.Point = '(170,76)'
+      Width = 75.000000000000000000
+      Height = 25.000000000000000000
+      HelpContext = 50
+      TabOrder = 1
+      ModalResult = 2
+      Cancel = True
+    end
+    object SearchL: TGroupBox
+      Position.Point = '(8,0)'
+      Width = 237.000000000000000000
+      Height = 65.000000000000000000
+      TabOrder = 2
+      object CaseCB: TCheckBox
+        Position.Point = '(8,40)'
+        Width = 177.000000000000000000
+        Height = 17.000000000000000000
+        HelpContext = 107
+        TabOrder = 0
+      end
+      object TopCB: TCheckBox
+        Position.Point = '(8,20)'
+        Width = 177.000000000000000000
+        Height = 17.000000000000000000
+        TabOrder = 1
+      end
+    end
+  end
+end

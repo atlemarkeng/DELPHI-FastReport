@@ -1,0 +1,178 @@
+object frxSysMemoEditorForm: TfrxSysMemoEditorForm
+  Left = 0
+  Top = 0
+  Caption = 'System Memo'
+  BorderStyle = bsSingle
+  BorderIcons = [biSystemMenu]
+  ClientHeight = 435
+  ClientWidth = 290
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  StyleLookup = 'backgroundstyle'
+  object OKB: TButton
+    Position.Point = '(129,404)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    HelpContext = 40
+    TabOrder = 0
+    ModalResult = 1
+    Default = True
+  end
+  object CancelB: TButton
+    Position.Point = '(209,404)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    HelpContext = 50
+    TabOrder = 1
+    ModalResult = 2
+    Cancel = True
+  end
+  object AggregateRB: TRadioButton
+    Position.Point = '(4,80)'
+    Width = 173.000000000000000000
+    Height = 17.000000000000000000
+    TabOrder = 2
+  end
+  object SysVariableRB: TRadioButton
+    Position.Point = '(4,4)'
+    Width = 173.000000000000000000
+    Height = 17.000000000000000000
+    TabOrder = 3
+  end
+  object TextRB: TRadioButton
+    Position.Point = '(4,324)'
+    Width = 173.000000000000000000
+    Height = 17.000000000000000000
+    TabOrder = 4
+  end
+  object AggregatePanel: TGroupBox
+    Position.Point = '(4,100)'
+    Width = 281.000000000000000000
+    Height = 217.000000000000000000
+    TabOrder = 5
+    object DataBandL: TLabel
+      Position.Point = '(8,44)'
+      Width = 89.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 0
+    end
+    object DataSetL: TLabel
+      Position.Point = '(8,76)'
+      Width = 89.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 1
+    end
+    object DataFieldL: TLabel
+      Position.Point = '(8,100)'
+      Width = 89.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 2
+    end
+    object FunctionL: TLabel
+      Position.Point = '(8,20)'
+      Width = 89.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 3
+    end
+    object ExpressionL: TLabel
+      Position.Point = '(8,124)'
+      Width = 89.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 4
+    end
+    object SampleL: TLabel
+      Position.Point = '(8,196)'
+      Width = 265.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 5
+    end
+    object DataFieldCB: TComboBox
+      Position.Point = '(100,96)'
+      Width = 173.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 6
+      ItemIndex = -1
+      ItemHeight = 13.000000000000000000
+      OnChange = DataFieldCBChange
+    end
+    object DataSetCB: TComboBox
+      Position.Point = '(100,72)'
+      Width = 173.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 7
+      ItemIndex = -1
+      ItemHeight = 13.000000000000000000
+      OnChange = DataSetCBChange
+    end
+    object DataBandCB: TComboBox
+      Position.Point = '(100,40)'
+      Width = 173.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 8
+      ItemIndex = -1
+      ItemHeight = 13.000000000000000000
+      OnChange = DataBandCBChange
+    end
+    object CountInvisibleCB: TCheckBox
+      Position.Point = '(8,148)'
+      Width = 265.000000000000000000
+      Height = 17.000000000000000000
+      OnClick = FunctionCBChange
+      TabOrder = 9
+    end
+    object FunctionCB: TComboBox
+      Position.Point = '(100,16)'
+      Width = 173.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 10
+      ItemIndex = -1
+      ItemHeight = 13.000000000000000000
+      OnChange = FunctionCBChange
+    end
+    object ExpressionE: TfrxEditWithButton
+      Position.Point = '(100,120)'
+      Width = 173.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 11
+      OnButtonClick = ExpressionEButtonClick
+    end
+    object RunningTotalCB: TCheckBox
+      Position.Point = '(8,168)'
+      Width = 265.000000000000000000
+      Height = 17.000000000000000000
+      OnClick = FunctionCBChange
+      TabOrder = 12
+    end
+  end
+  object GroupBox1: TGroupBox
+    Position.Point = '(4,24)'
+    Width = 281.000000000000000000
+    Height = 49.000000000000000000
+    TabOrder = 6
+    object SysVariableCB: TComboBox
+      Position.Point = '(8,16)'
+      Width = 173.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 0
+      ItemIndex = -1
+      ItemHeight = 13.000000000000000000
+    end
+  end
+  object GroupBox2: TGroupBox
+    Position.Point = '(4,344)'
+    Width = 281.000000000000000000
+    Height = 49.000000000000000000
+    TabOrder = 7
+    object TextE: TEdit
+      Position.Point = '(8,16)'
+      Width = 265.000000000000000000
+      Height = 21.000000000000000000
+      TabOrder = 0
+      KeyboardType = vktDefault
+      Password = False
+    end
+  end
+end

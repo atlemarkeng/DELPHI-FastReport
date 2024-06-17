@@ -1,0 +1,249 @@
+object frxConnectionWizardForm: TfrxConnectionWizardForm
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Connection Wizard'
+  ClientHeight = 307
+  ClientWidth = 300
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnClose = FormClose
+  object OKB: TButton
+    Default = True
+    DisableFocusEffect = False
+    Height = 25.000000000000000000
+    ModalResult = 1
+    Position.X = 140.000000000000000000
+    Position.Y = 276.000000000000000000
+    Width = 75.000000000000000000
+    OnClick = OKBClick
+  end
+  object CancelB: TButton
+    DisableFocusEffect = False
+    Height = 25.000000000000000000
+    ModalResult = 2
+    Position.X = 220.000000000000000000
+    Position.Y = 276.000000000000000000
+    Width = 75.000000000000000000
+  end
+  object PageControl1: TTabControl
+    Height = 265.000000000000000000
+    Position.X = 4.000000000000000000
+    Position.Y = 4.000000000000000000
+    TabIndex = 0
+    Width = 293.000000000000000000
+    object ConnTS: TTabItem
+      WordWrap = False
+      Height = 24.000000000000000000
+      Position.X = 1.000000000000000000
+      Text = 'ConnTS'
+      Width = 57.000000000000000000
+      object ConnL1: TLabel
+        Height = 13.000000000000000000
+        Position.X = 4.000000000000000000
+        Position.Y = 4.000000000000000000
+        Width = 205.000000000000000000
+      end
+      object DBL: TLabel
+        Height = 13.000000000000000000
+        Position.X = 4.000000000000000000
+        Position.Y = 60.000000000000000000
+        Width = 269.000000000000000000
+      end
+      object LoginL: TLabel
+        Height = 13.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 164.000000000000000000
+        Width = 93.000000000000000000
+      end
+      object PasswordL: TLabel
+        Height = 13.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 188.000000000000000000
+        Width = 93.000000000000000000
+      end
+      object ChooseB: TSpeedButton
+        Height = 22.000000000000000000
+        Position.X = 256.000000000000000000
+        Position.Y = 80.000000000000000000
+        Text = '...'
+        Width = 23.000000000000000000
+        OnClick = ChooseBClick
+      end
+      object ConnCB: TComboBox
+        DisableFocusEffect = False
+        Height = 21.000000000000000000
+        ItemIndex = -1
+        ItemHeight = 13.000000000000000000
+        ListBoxResource = 'transparentlistboxstyle'
+        Position.X = 16.000000000000000000
+        Position.Y = 24.000000000000000000
+        TabOrder = 0
+        Width = 157.000000000000000000
+        OnClick = ConnCBClick
+      end
+      object DatabaseE: TEdit
+        TabOrder = 1
+        DisableFocusEffect = False
+        KeyboardType = vktDefault
+        Password = False
+        Position.X = 16.000000000000000000
+        Position.Y = 80.000000000000000000
+        Width = 237.000000000000000000
+        Height = 21.000000000000000000
+      end
+      object LoginE: TEdit
+        TabOrder = 2
+        DisableFocusEffect = False
+        KeyboardType = vktDefault
+        Password = False
+        Position.X = 116.000000000000000000
+        Position.Y = 160.000000000000000000
+        Width = 121.000000000000000000
+        Height = 21.000000000000000000
+      end
+      object PasswordE: TEdit
+        TabOrder = 3
+        DisableFocusEffect = False
+        KeyboardType = vktDefault
+        Password = False
+        Position.X = 116.000000000000000000
+        Position.Y = 184.000000000000000000
+        Width = 121.000000000000000000
+        Height = 21.000000000000000000
+      end
+      object PromptRB: TRadioButton
+        DisableFocusEffect = False
+        Height = 17.000000000000000000
+        IsChecked = True
+        Position.X = 4.000000000000000000
+        Position.Y = 116.000000000000000000
+        TabOrder = 4
+        Width = 245.000000000000000000
+      end
+      object LoginRB: TRadioButton
+        DisableFocusEffect = False
+        Height = 17.000000000000000000
+        Position.X = 4.000000000000000000
+        Position.Y = 136.000000000000000000
+        TabOrder = 5
+        Width = 245.000000000000000000
+      end
+    end
+    object TableTS: TTabItem
+      WordWrap = False
+      Height = 24.000000000000000000
+      Text = 'TableTS'
+      Width = 58.000000000000000000
+      object ConnL2: TLabel
+        Height = 13.000000000000000000
+        Position.X = 4.000000000000000000
+        Position.Y = 4.000000000000000000
+        Width = 205.000000000000000000
+      end
+      object TableL: TLabel
+        Height = 13.000000000000000000
+        Position.X = 4.000000000000000000
+        Position.Y = 60.000000000000000000
+        Width = 189.000000000000000000
+      end
+      object ConnCB1: TComboBox
+        DisableFocusEffect = False
+        Height = 21.000000000000000000
+        ItemIndex = -1
+        ItemHeight = 13.000000000000000000
+        ListBoxResource = 'transparentlistboxstyle'
+        Position.X = 16.000000000000000000
+        Position.Y = 24.000000000000000000
+        TabOrder = 0
+        Width = 157.000000000000000000
+        OnClick = ConnCB1Click
+      end
+      object TableCB: TComboBox
+        DisableFocusEffect = False
+        Height = 21.000000000000000000
+        ItemIndex = -1
+        ItemHeight = 13.000000000000000000
+        ListBoxResource = 'transparentlistboxstyle'
+        Position.X = 16.000000000000000000
+        Position.Y = 80.000000000000000000
+        TabOrder = 1
+        Width = 157.000000000000000000
+      end
+      object FilterCB: TCheckBox
+        DisableFocusEffect = False
+        Height = 17.000000000000000000
+        Position.X = 4.000000000000000000
+        Position.Y = 116.000000000000000000
+        TabOrder = 2
+        Width = 225.000000000000000000
+      end
+      object FilterE: TEdit
+        TabOrder = 3
+        DisableFocusEffect = False
+        KeyboardType = vktDefault
+        Password = False
+        Position.X = 16.000000000000000000
+        Position.Y = 140.000000000000000000
+        Width = 157.000000000000000000
+        Height = 21.000000000000000000
+      end
+    end
+    object QueryTS: TTabItem
+      WordWrap = False
+      Height = 24.000000000000000000
+      Text = 'QueryTS'
+      Width = 61.000000000000000000
+      object ConnL3: TLabel
+        Height = 13.000000000000000000
+        Position.X = 4.000000000000000000
+        Position.Y = 4.000000000000000000
+        Width = 173.000000000000000000
+      end
+      object QueryL: TLabel
+        Height = 13.000000000000000000
+        Position.X = 4.000000000000000000
+        Position.Y = 60.000000000000000000
+        Width = 75.000000000000000000
+      end
+      object ConnCB2: TComboBox
+        DisableFocusEffect = False
+        Height = 21.000000000000000000
+        ItemIndex = -1
+        ItemHeight = 13.000000000000000000
+        ListBoxResource = 'transparentlistboxstyle'
+        Position.X = 16.000000000000000000
+        Position.Y = 24.000000000000000000
+        TabOrder = 0
+        Width = 157.000000000000000000
+        OnClick = ConnCB2Click
+      end
+      object ToolBar1: TToolBar
+        Align = alNone
+        Height = 29.000000000000000000
+        Position.X = 232.000000000000000000
+        Position.Y = 48.000000000000000000
+        TabOrder = 1
+        Width = 53.000000000000000000
+        object BuildSQLB: TfrxToolButton
+          Height = 24.000000000000000000
+          Position.X = 3.000000000000000000
+          Position.Y = 4.000000000000000000
+          Text = 'BuildSQLB'
+          Width = 24.000000000000000000
+          Hint = ''
+        end
+        object ParamsB: TfrxToolButton
+          Height = 24.000000000000000000
+          Position.X = 27.000000000000000000
+          Position.Y = 4.000000000000000000
+          Text = 'ParamsB'
+          Width = 24.000000000000000000
+          Hint = ''
+        end
+      end
+    end
+  end
+end

@@ -1,0 +1,57 @@
+object frxEvaluateForm: TfrxEvaluateForm
+  Left = 0
+  Top = 0
+  Caption = 'Evaluate'
+  ClientHeight = 163
+  ClientWidth = 281
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  StyleLookup = 'backgroundstyle'
+  object Label1: TLabel
+    Position.Point = '(4,4)'
+    Width = 52.000000000000000000
+    Height = 13.000000000000000000
+    TabOrder = 0
+  end
+  object Label2: TLabel
+    Position.Point = '(4,52)'
+    Width = 30.000000000000000000
+    Height = 13.000000000000000000
+    TabOrder = 1
+  end
+  object ExpressionE: TEdit
+    Position.Point = '(4,20)'
+    Width = 273.000000000000000000
+    Height = 21.000000000000000000
+    TabOrder = 2
+    KeyboardType = vktDefault
+    Password = False
+  end
+  object ResultM: TMemo
+    Position.Point = '(4,68)'
+    Width = 273.000000000000000000
+    Height = 89.000000000000000000
+    TabOrder = 3
+    KeyboardType = vktDefault
+  end
+  object OkB: TButton
+    Position.Point = '(120,56)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    Visible = False
+    TabOrder = 4
+    ModalResult = 1
+    Default = True
+  end
+  object CancelB: TButton
+    Position.Point = '(200,56)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    Visible = False
+    TabOrder = 5
+    ModalResult = 2
+    Cancel = True
+  end
+end

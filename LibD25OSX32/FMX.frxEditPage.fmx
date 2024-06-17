@@ -1,0 +1,367 @@
+object frxPageEditorForm: TfrxPageEditorForm
+  Left = 0
+  Top = 0
+  Caption = 'Page options'
+  BorderStyle = bsSingle
+  BorderIcons = []
+  ClientHeight = 410
+  ClientWidth = 302
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  StyleLookup = 'backgroundstyle'
+  object OKB: TButton
+    Position.Point = '(138,380)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 0
+    ModalResult = 1
+    Default = True
+  end
+  object CancelB: TButton
+    Position.Point = '(220,380)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 1
+    ModalResult = 2
+    Cancel = True
+  end
+  object TabControl1: TTabControl
+    Position.Point = '(6,0)'
+    Width = 289.000000000000000000
+    Height = 377.000000000000000000
+    TabOrder = 2
+    TabIndex = 0
+    TabHeight = 20.000000000000000000
+    object TabSheet1: TTabItem
+      Width = 144.500000000000000000
+      Height = 20.000000000000000000
+      TabOrder = 0
+      Index = 0
+      Text = 'TabSheet1'
+      WordWrap = False
+      object Label11: TGroupBox
+        Position.Point = '(4,4)'
+        Width = 277.000000000000000000
+        Height = 101.000000000000000000
+        TabOrder = 0
+        object Label1: TLabel
+          Position.Point = '(8,47)'
+          Width = 51.000000000000000000
+          Height = 16.000000000000000000
+          TabOrder = 0
+        end
+        object Label2: TLabel
+          Position.Point = '(8,72)'
+          Width = 52.000000000000000000
+          Height = 16.000000000000000000
+          TabOrder = 1
+        end
+        object UnitL1: TLabel
+          Position.Point = '(112,48)'
+          Width = 25.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 2
+        end
+        object UnitL2: TLabel
+          Position.Point = '(112,72)'
+          Width = 33.000000000000000000
+          Height = 16.000000000000000000
+          TabOrder = 3
+        end
+        object WidthE: TEdit
+          Position.Point = '(64,46)'
+          Width = 45.000000000000000000
+          Height = 21.000000000000000000
+          TabOrder = 4
+          KeyboardType = vktDefault
+          OnChange = WidthEChange
+          Password = False
+        end
+        object HeightE: TEdit
+          Position.Point = '(64,70)'
+          Width = 45.000000000000000000
+          Height = 21.000000000000000000
+          TabOrder = 5
+          KeyboardType = vktDefault
+          OnChange = WidthEChange
+          Password = False
+        end
+        object SizeCB: TComboBox
+          Position.Point = '(8,18)'
+          Width = 261.000000000000000000
+          Height = 21.000000000000000000
+          OnClick = SizeCBClick
+          TabOrder = 6
+          ItemIndex = -1
+          ItemHeight = 13.000000000000000000
+        end
+      end
+      object Label12: TGroupBox
+        Position.Point = '(4,108)'
+        Width = 277.000000000000000000
+        Height = 65.000000000000000000
+        TabOrder = 1
+        object PortraitImg: TImage
+          Position.Point = '(148,21)'
+          Width = 26.000000000000000000
+          Height = 32.000000000000000000
+        end
+        object LandscapeImg: TImage
+          Position.Point = '(145,25)'
+          Width = 32.000000000000000000
+          Height = 26.000000000000000000
+        end
+        object PortraitRB: TRadioButton
+          Position.Point = '(8,20)'
+          Width = 109.000000000000000000
+          Height = 17.000000000000000000
+          OnClick = PortraitRBClick
+          TabOrder = 2
+        end
+        object LandscapeRB: TRadioButton
+          Position.Point = '(8,40)'
+          Width = 109.000000000000000000
+          Height = 17.000000000000000000
+          OnClick = PortraitRBClick
+          TabOrder = 3
+        end
+      end
+      object Label13: TGroupBox
+        Position.Point = '(4,176)'
+        Width = 277.000000000000000000
+        Height = 73.000000000000000000
+        TabOrder = 2
+        object Label3: TLabel
+          Position.Point = '(8,20)'
+          Width = 50.000000000000000000
+          Height = 16.000000000000000000
+          TabOrder = 0
+        end
+        object Label4: TLabel
+          Position.Point = '(8,43)'
+          Width = 49.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 1
+        end
+        object Label5: TLabel
+          Position.Point = '(152,19)'
+          Width = 49.000000000000000000
+          Height = 16.000000000000000000
+          TabOrder = 2
+        end
+        object Label6: TLabel
+          Position.Point = '(152,42)'
+          Width = 52.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 3
+        end
+        object UnitL3: TLabel
+          Position.Point = '(108,20)'
+          Width = 29.000000000000000000
+          Height = 16.000000000000000000
+          TabOrder = 4
+        end
+        object UnitL4: TLabel
+          Position.Point = '(108,44)'
+          Width = 29.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 5
+        end
+        object UnitL5: TLabel
+          Position.Point = '(252,20)'
+          Width = 21.000000000000000000
+          Height = 16.000000000000000000
+          TabOrder = 6
+        end
+        object UnitL6: TLabel
+          Position.Point = '(252,44)'
+          Width = 21.000000000000000000
+          Height = 16.000000000000000000
+          TabOrder = 7
+        end
+        object MarginLeftE: TEdit
+          Position.Point = '(64,18)'
+          Width = 40.000000000000000000
+          Height = 21.000000000000000000
+          TabOrder = 8
+          KeyboardType = vktDefault
+          Password = False
+        end
+        object MarginTopE: TEdit
+          Position.Point = '(64,42)'
+          Width = 40.000000000000000000
+          Height = 21.000000000000000000
+          TabOrder = 9
+          KeyboardType = vktDefault
+          Password = False
+        end
+        object MarginRightE: TEdit
+          Position.Point = '(208,18)'
+          Width = 40.000000000000000000
+          Height = 21.000000000000000000
+          TabOrder = 10
+          KeyboardType = vktDefault
+          Password = False
+        end
+        object MarginBottomE: TEdit
+          Position.Point = '(208,42)'
+          Width = 40.000000000000000000
+          Height = 21.000000000000000000
+          TabOrder = 11
+          KeyboardType = vktDefault
+          Password = False
+        end
+      end
+      object Label14: TGroupBox
+        Position.Point = '(4,252)'
+        Width = 277.000000000000000000
+        Height = 73.000000000000000000
+        TabOrder = 3
+        object Label9: TLabel
+          Position.Point = '(8,20)'
+          Width = 89.000000000000000000
+          Height = 16.000000000000000000
+          TabOrder = 0
+        end
+        object Label10: TLabel
+          Position.Point = '(8,44)'
+          Width = 97.000000000000000000
+          Height = 15.000000000000000000
+          TabOrder = 1
+        end
+        object Tray1CB: TComboBox
+          Position.Point = '(128,18)'
+          Width = 141.000000000000000000
+          Height = 21.000000000000000000
+          TabOrder = 2
+          ItemIndex = -1
+          ItemHeight = 13.000000000000000000
+        end
+        object Tray2CB: TComboBox
+          Position.Point = '(128,42)'
+          Width = 141.000000000000000000
+          Height = 21.000000000000000000
+          TabOrder = 3
+          ItemIndex = -1
+          ItemHeight = 13.000000000000000000
+        end
+      end
+    end
+    object TabSheet3: TTabItem
+      Width = 144.500000000000000000
+      Height = 20.000000000000000000
+      TabOrder = 1
+      Index = 1
+      Text = 'TabSheet3'
+      WordWrap = False
+      object Label17: TGroupBox
+        Position.Point = '(4,156)'
+        Width = 277.000000000000000000
+        Height = 169.000000000000000000
+        TabOrder = 0
+        object Label18: TLabel
+          Position.Point = '(8,132)'
+          Width = 73.000000000000000000
+          Height = 16.000000000000000000
+          TabOrder = 0
+        end
+        object PrintOnPrevCB: TCheckBox
+          Position.Point = '(8,20)'
+          Width = 261.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 1
+        end
+        object MirrorMarginsCB: TCheckBox
+          Position.Point = '(8,40)'
+          Width = 261.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 2
+        end
+        object LargeHeightCB: TCheckBox
+          Position.Point = '(8,100)'
+          Width = 261.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 3
+        end
+        object DuplexCB: TComboBox
+          Position.Point = '(88,130)'
+          Width = 141.000000000000000000
+          Height = 21.000000000000000000
+          TabOrder = 4
+          ItemIndex = -1
+          ItemHeight = 13.000000000000000000
+        end
+        object EndlessWidthCB: TCheckBox
+          Position.Point = '(8,60)'
+          Width = 261.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 5
+        end
+        object EndlessHeightCB: TCheckBox
+          Position.Point = '(8,80)'
+          Width = 261.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 6
+        end
+      end
+      object Label7: TGroupBox
+        Position.Point = '(4,4)'
+        Width = 277.000000000000000000
+        Height = 149.000000000000000000
+        TabOrder = 1
+        object Label8: TLabel
+          Position.Point = '(8,19)'
+          Width = 73.000000000000000000
+          Height = 15.000000000000000000
+          TabOrder = 0
+        end
+        object Label15: TLabel
+          Position.Point = '(8,44)'
+          Width = 74.000000000000000000
+          Height = 16.000000000000000000
+          TabOrder = 1
+        end
+        object Label16: TLabel
+          Position.Point = '(8,68)'
+          Width = 73.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 2
+        end
+        object UnitL7: TLabel
+          Position.Point = '(136,44)'
+          Width = 13.000000000000000000
+          Height = 13.000000000000000000
+          TabOrder = 3
+        end
+        object ColumnWidthE: TEdit
+          Position.Point = '(88,42)'
+          Width = 57.000000000000000000
+          Height = 21.000000000000000000
+          TabOrder = 4
+          KeyboardType = vktDefault
+          Password = False
+        end
+        object ColumnPositionsM: TMemo
+          Position.Point = '(88,66)'
+          Width = 113.000000000000000000
+          Height = 71.000000000000000000
+          TabOrder = 5
+          KeyboardType = vktDefault
+        end
+        object ColumnsNumberS: TSpinBox
+          Position.Point = '(88,16)'
+          Width = 57.000000000000000000
+          Height = 22.000000000000000000
+          TabOrder = 6
+          KeyboardType = vktDefault
+          OnChange = ColumnsNumberSChange
+          Max = 10.000000000000000000
+          Increment = 1.000000000000000000
+        end
+      end
+    end
+  end
+end

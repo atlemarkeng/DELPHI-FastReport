@@ -1,0 +1,351 @@
+object frxPDFExportDialog: TfrxPDFExportDialog
+  Left = 0
+  Top = 0
+  Caption = 'Export to PDF'
+  ClientHeight = 321
+  ClientWidth = 292
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  StyleLookup = 'backgroundstyle'
+  object PageControl1: TTabControl
+    Position.Point = '(4,4)'
+    Width = 285.000000000000000000
+    Height = 277.000000000000000000
+    TabOrder = 0
+    TabIndex = 0
+    TabHeight = 20.000000000000000000
+    object ExportPage: TTabItem
+      Width = 71.250000000000000000
+      Height = 20.000000000000000000
+      TabOrder = 0
+      Index = 0
+      WordWrap = False
+      object OpenCB: TCheckBox
+        Position.Point = '(16,224)'
+        Width = 253.000000000000000000
+        Height = 17.000000000000000000
+        TabOrder = 0
+      end
+      object GroupQuality: TGroupBox
+        Position.Point = '(4,128)'
+        Width = 267.000000000000000000
+        Height = 89.000000000000000000
+        TabOrder = 1
+        object CompressedCB: TCheckBox
+          Position.Point = '(12,20)'
+          Width = 117.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 0
+          IsChecked = True
+        end
+        object EmbeddedCB: TCheckBox
+          Position.Point = '(12,40)'
+          Width = 117.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 1
+          IsChecked = True
+        end
+        object PrintOptCB: TCheckBox
+          Position.Point = '(136,20)'
+          Width = 126.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 2
+        end
+        object OutlineCB: TCheckBox
+          Position.Point = '(136,40)'
+          Width = 121.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 3
+        end
+        object BackgrCB: TCheckBox
+          Position.Point = '(12,60)'
+          Width = 117.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 4
+        end
+      end
+      object GroupPageRange: TGroupBox
+        Position.Point = '(4,4)'
+        Width = 267.000000000000000000
+        Height = 121.000000000000000000
+        TabOrder = 2
+        object DescrL: TLabel
+          Position.Point = '(12,82)'
+          Width = 249.000000000000000000
+          Height = 29.000000000000000000
+          TabOrder = 0
+        end
+        object AllRB: TRadioButton
+          Position.Point = '(12,20)'
+          Width = 153.000000000000000000
+          Height = 17.000000000000000000
+          HelpContext = 108
+          TabOrder = 1
+          IsChecked = True
+        end
+        object CurPageRB: TRadioButton
+          Position.Point = '(12,40)'
+          Width = 153.000000000000000000
+          Height = 17.000000000000000000
+          HelpContext = 118
+          TabOrder = 2
+        end
+        object PageNumbersRB: TRadioButton
+          Position.Point = '(12,60)'
+          Width = 77.000000000000000000
+          Height = 17.000000000000000000
+          HelpContext = 124
+          TabOrder = 3
+        end
+        object PageNumbersE: TEdit
+          Position.Point = '(92,58)'
+          Width = 165.000000000000000000
+          Height = 21.000000000000000000
+          HelpContext = 133
+          TabOrder = 4
+          KeyboardType = vktDefault
+          OnChange = PageNumbersEChange
+          Password = False
+        end
+      end
+    end
+    object InfoPage: TTabItem
+      Width = 71.250000000000000000
+      Height = 20.000000000000000000
+      TabOrder = 1
+      Index = 1
+      WordWrap = False
+      object DocInfoGB: TGroupBox
+        Position.Point = '(4,4)'
+        Width = 267.000000000000000000
+        Height = 197.000000000000000000
+        TabOrder = 0
+        object TitleL: TLabel
+          Position.Point = '(12,26)'
+          Width = 89.000000000000000000
+          Height = 16.000000000000000000
+          TabOrder = 0
+        end
+        object AuthorL: TLabel
+          Position.Point = '(12,54)'
+          Width = 89.000000000000000000
+          Height = 16.000000000000000000
+          TabOrder = 1
+        end
+        object SubjectL: TLabel
+          Position.Point = '(12,82)'
+          Width = 89.000000000000000000
+          Height = 16.000000000000000000
+          TabOrder = 2
+        end
+        object KeywordsL: TLabel
+          Position.Point = '(12,110)'
+          Width = 89.000000000000000000
+          Height = 16.000000000000000000
+          TabOrder = 3
+        end
+        object CreatorL: TLabel
+          Position.Point = '(12,138)'
+          Width = 89.000000000000000000
+          Height = 16.000000000000000000
+          TabOrder = 4
+        end
+        object ProducerL: TLabel
+          Position.Point = '(12,166)'
+          Width = 89.000000000000000000
+          Height = 16.000000000000000000
+          TabOrder = 5
+        end
+        object TitleE: TEdit
+          Position.Point = '(108,22)'
+          Width = 152.000000000000000000
+          Height = 21.000000000000000000
+          TabOrder = 6
+          KeyboardType = vktDefault
+          Password = False
+        end
+        object AuthorE: TEdit
+          Position.Point = '(108,50)'
+          Width = 152.000000000000000000
+          Height = 21.000000000000000000
+          TabOrder = 7
+          KeyboardType = vktDefault
+          Password = False
+        end
+        object SubjectE: TEdit
+          Position.Point = '(108,78)'
+          Width = 152.000000000000000000
+          Height = 21.000000000000000000
+          TabOrder = 8
+          KeyboardType = vktDefault
+          Password = False
+        end
+        object KeywordsE: TEdit
+          Position.Point = '(108,106)'
+          Width = 152.000000000000000000
+          Height = 21.000000000000000000
+          TabOrder = 9
+          KeyboardType = vktDefault
+          Password = False
+        end
+        object CreatorE: TEdit
+          Position.Point = '(108,134)'
+          Width = 152.000000000000000000
+          Height = 21.000000000000000000
+          TabOrder = 10
+          KeyboardType = vktDefault
+          Password = False
+        end
+        object ProducerE: TEdit
+          Position.Point = '(108,162)'
+          Width = 152.000000000000000000
+          Height = 21.000000000000000000
+          TabOrder = 11
+          KeyboardType = vktDefault
+          Password = False
+        end
+      end
+    end
+    object SecurityPage: TTabItem
+      Width = 71.250000000000000000
+      Height = 20.000000000000000000
+      TabOrder = 2
+      Index = 2
+      WordWrap = False
+      object SecGB: TGroupBox
+        Position.Point = '(4,4)'
+        Width = 267.000000000000000000
+        Height = 84.000000000000000000
+        TabOrder = 0
+        object OwnPassL: TLabel
+          Position.Point = '(12,26)'
+          Width = 114.000000000000000000
+          Height = 16.000000000000000000
+          TabOrder = 0
+        end
+        object UserPassL: TLabel
+          Position.Point = '(13,54)'
+          Width = 113.000000000000000000
+          Height = 16.000000000000000000
+          TabOrder = 1
+        end
+        object OwnPassE: TEdit
+          Position.Point = '(127,22)'
+          Width = 133.000000000000000000
+          Height = 21.000000000000000000
+          TabOrder = 2
+          KeyboardType = vktDefault
+          Password = False
+        end
+        object UserPassE: TEdit
+          Position.Point = '(127,50)'
+          Width = 133.000000000000000000
+          Height = 21.000000000000000000
+          TabOrder = 3
+          KeyboardType = vktDefault
+          Password = False
+        end
+      end
+      object PermGB: TGroupBox
+        Position.Point = '(4,92)'
+        Width = 265.000000000000000000
+        Height = 121.000000000000000000
+        TabOrder = 1
+        object PrintCB: TCheckBox
+          Position.Point = '(12,21)'
+          Width = 248.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 0
+        end
+        object ModCB: TCheckBox
+          Position.Point = '(12,45)'
+          Width = 248.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 1
+        end
+        object CopyCB: TCheckBox
+          Position.Point = '(12,68)'
+          Width = 248.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 2
+        end
+        object AnnotCB: TCheckBox
+          Position.Point = '(12,91)'
+          Width = 246.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 3
+        end
+      end
+    end
+    object ViewerPage: TTabItem
+      Width = 71.250000000000000000
+      Height = 20.000000000000000000
+      TabOrder = 3
+      Index = 3
+      WordWrap = False
+      object ViewerGB: TGroupBox
+        Position.Point = '(4,4)'
+        Width = 267.000000000000000000
+        Height = 177.000000000000000000
+        TabOrder = 0
+        object HideToolbarCB: TCheckBox
+          Position.Point = '(12,24)'
+          Width = 241.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 0
+        end
+        object HideMenubarCB: TCheckBox
+          Position.Point = '(12,48)'
+          Width = 241.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 1
+        end
+        object HideWindowUICB: TCheckBox
+          Position.Point = '(12,72)'
+          Width = 241.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 2
+        end
+        object FitWindowCB: TCheckBox
+          Position.Point = '(12,96)'
+          Width = 241.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 3
+        end
+        object CenterWindowCB: TCheckBox
+          Position.Point = '(12,120)'
+          Width = 241.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 4
+        end
+        object PrintScalingCB: TCheckBox
+          Position.Point = '(12,144)'
+          Width = 241.000000000000000000
+          Height = 17.000000000000000000
+          TabOrder = 5
+        end
+      end
+    end
+  end
+  object OkB: TButton
+    Position.Point = '(126,287)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 1
+    ModalResult = 1
+    Default = True
+  end
+  object CancelB: TButton
+    Position.Point = '(206,287)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 2
+    ModalResult = 2
+    Cancel = True
+  end
+  object SaveDialog1: TSaveDialog
+    Options = [ofHideReadOnly, ofNoChangeDir, ofEnableSizing]
+  end
+end

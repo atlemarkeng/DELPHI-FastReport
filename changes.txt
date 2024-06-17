@@ -1,0 +1,151 @@
+- Fixed AV in the PDF export
++ Added TfrxPreview.PageSetupDialog for C++Builder compatibility
+- Fixed export of fixed-width fonts to PDF
+Version 2.6
+---------------
++ Added support of Embarcadero RAD Studio 10.2 with compatibility fixes:
+  - Added modal dialog OSX workaround (fixed when dialog appears behind non-modal form)
+  - Fixed wrong barcode text size when printing under OSX
+  - Fixed HTML tags on OSX
+  - Fixed  variables editor
+  - Fixed general printers errors under OSX
+  - Fixed printing of HTML text
+
+General fixes:
++ Added text split for simple text render
+- Changed text alignment in PDF export
+- Fixed calcheight function for simple text render under OSX
+- Fixed Align grid in the report designer
+- Fixed text search for OSX(frxCompareText)
+- Fixed several multi-thread problems
+- Double buffered preview fix for shapes objects
+- Fixed printing from GDIP context
+- Fixed parameters editor for RAD Studio 10.1
+- Fixed TfrxDBLookupComboBox filling
+- Fixed formatting in PDF export
+- Fixed text vertical align on windows
+- Fixed scrollbars in the XE3
+- Fixed Financial series for TeeChart Pro
+- Fixed OpenAfterExport in the CSV export
+
+Version 2.5
+---------------
++ New double buffered preview. It draws only objects which appear on screen (increase preview performance)
++ New native text rendering with font caching starts with XE7 significant increase all text rendering and calculation
+* Improved rendering behavior to minimize differences between GDIP and D2D contexts (when report calculates sizes with one context and print with another)
+* Optimized rendering of report designer controls (Inspector, workspace, Rulers)
+* Optimization in the report engine
+* Improved split mechanism
++ Added new faster text comparison from Carbon framework for Mac OS
++ Added LineSpacing support for  PDF export
+- Changes Width and Height calculation for report objects
+- Bitmap preview cache is optional now (use PreviewOptions.PagesInPictureCache)
+- Fixed FireDac rtti module
+- Fixed Alias editor for RAD Studio Berlin
+- Fixed background image in HTML export
+- Fixed incorrect frames draw for report object
+- Fixed JPEG images export
+- Fixed bug with unlimited pages when preview doesn't show pages
+- Fixed visual behavior of few object editors
+- Fixed PDF export memory leaks
+- Fixed TfrxSysMemoView editor
+- Fixed report inheritance from report template in the designer
+
+Version 2.4
+---------------
++ Added support of Embarcadero RAD Studio 10.1 Berlin includes compatibility fixes for new FMX framework
++ Added support of HTML tags in Memo object for export filters (RTF)
+- Minor changes in objects draw mechanism
+- Fixed problem in PDF export with long text lines cuts off
+- Fixed bug in stretched Memo with Line spacing
+- Fixed bug with clipping of Memo object
+- Fixed bug with font scale during printing when application compiled with RAD Studio 10.1 Berlin 
+
+Version 2.3
+---------------
++ Added support of Embarcadero RAD Studio 10 Seattle includes compatibility fixes for new FMX framework
++ Added support of Embarcadero RAD Studio XE8 for both Delphi and C++Builder developing environment
++ Implemented Line spacing for Text object (LineSpacing property)
++ Added Custom realization of ProcessMessages function for cocoa(One from FMX framework doesnt work correct). Fix for freezes of preview window and slow down during report preparation
+- Fixed RAD Studio 10 Seattle memory leaks
+- Fixed export of wrap text in PDF Export 
+- Improvment FireDac components
+- Fixed Images mask in PDF Export
+- Fixed print memory leak fron GDI+ context
+- Fixed rendering of export matrix images
+- Fixed export of multiline text to PDF
+- Fixed images' export
+- Fixed Variable's editor
+- Fixed Display Format editor window
+- Fixed TfrxDesigner.Restrictions drDontSaveReport option behavior after changes in the script
+- Fixed bug with units in the preview pages settings window
+- Fixed minor issues with old XE2 framework
+- Fixed compatibility with FMX styles
+- Fixed <font color> HTML tag in TfrxMemoView
+- FMX version can read images created in VCL version
+- Fixed nested drill down repots
+- Implemented temp folders for report file cache
+- Fixed picture cache behaviour with empty images
+- Fixed TfrxMemoView.Underline property
+
+version 2.2
+---------------
++ Added support of Embarcadero RAD Studio XE7 for both Delphi and C++Builder developing environment
++ Added support of Embarcadero RAD Studio XE6 for both Delphi and C++Builder developing environment
++ Added TfrxCheckBoxView component
++ Added ability to export with trancparency to PDF
++ Improved CrossTab editor
+- Fixed performance issue with XE6 and above on OSX platform
+- Fixed problem with components registration on XE5 and above
+- Fixed embedded Fonts in PDF export on x64 platfoorm
+- Fixed CrossTab and TeeChart editors errors on XE5 and above
+- Fixed TfrxDBDataSet editor
+- Fixed printing report with different pages dimensions
+- Fixed Memo and Code editiors on XE6
+
+version 2.1
+---------------
++ Added new QR barcode
++ Added recompile utility for fast packages recompilation
++ Added TeeChart Std support
+- Fixed memory leaks
+- Fixed error when designer hangs/crashes application in OSX
+- Fixed problems with context menu in the report designer under OSX(XE5)
+- Fixed problem with XE5 update 2 for C++ Builder
+
+version 2.0
+---------------
++ Added support of Embarcadero RAD Studio XE5 (iOS not supported) for both Delphi and C++Builder developing environment
++ Added PDF export for both OSX and WIn platforms including font embedding/links/outlines
++ Added support of C++Builder for OSX platform (some properties changed to Double type from extended)
++ Added FireDac internal components
++ Added TeeChart Pro support
++ Added font editor dialog
+- Improved speed in the report designer when editing reports with many objects 
+- Fixed Styles editor in the report designer
+- Fixed export of wrapped text
+- Fixed chart printing under WIN platform
+- Fixed printing from application compiled with XE4/XE5
+- Fixed problem with TfrxPictureView with Stretched = false
+- Fixed problem with accessing some properties of object in designer menu (fast access menu)
+- Fixed problem with calculation of the memo size (cut off text in crosstab)
+- Fixed bugs with TfrxPreview component
+- Fixed minor problems in many editors dialogs
+
+version 1.1
+---------------
++ Added support of Embarcadero RAD Studio XE4 (iOS not supported)
++ Added support of internal datasets: IBX, DBX, ADO (Win)
++ Added new internal dataset TfrxClientDataset (allow to load XML tables from the report)
++ Added linear barcodes component (2_5_interleaved, 2_5_industrial, 2_5_matrix, Code39, Code39 Extended, Code128, Code93, Code93 Extended, MSI, PostNet, Codebar, EAN8, EAN13, UPC_A, UPC_E0, UPC_E1, UPC Supp2, UPC Supp5, EAN128)
++ Added Hint system in the report designer, preview and the report
++ Added 2D barcodes: PDF417, DataMatrix
++ Added TfrxDBLookupComboBox control - for compatibility with FR4VCL reports
+- Fixed error when TfrxPreview wasn't available in the component palette
+- Fixed some printing problems in XE3
+- Fixed error with toolbar buttons icons in the report designer
+- Fixed AV in some report editors
+- Fixed errors in some dialog form components
+- Fixed Font height rounding when zooming report
+- Fixed error when trying to set Color property from the report script code
+- Fixed error with text split in TfrxMemoView

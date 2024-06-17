@@ -1,0 +1,98 @@
+object frxMemoEditorForm: TfrxMemoEditorForm
+  Left = 0
+  Top = 0
+  Caption = 'Memo'
+  BorderIcons = [biSystemMenu, biMaximize]
+  ClientHeight = 404
+  ClientWidth = 458
+  Visible = False
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  StyleLookup = 'backgroundstyle'
+  object TabControl: TTabControl
+    Align = alClient
+    Width = 458.000000000000000000
+    Height = 352.000000000000000000
+    TabIndex = 0
+    TabHeight = 20.000000000000000000
+    object TextTS: TTabItem
+      Width = 66.666664123535160000
+      Height = 20.000000000000000000
+      Index = 0
+      Text = 'TextTS'
+      WordWrap = False
+      object ToolBar: TToolBar
+        Width = 458.000000000000000000
+        Height = 28.000000000000000000
+        TabOrder = 0
+        object ExprB: TfrxToolButton
+          Position.Point = '(4,2)'
+          Width = 22.000000000000000000
+          Height = 22.000000000000000000
+          OnClick = ExprBClick
+          Hint = 'Insert Expression'
+        end
+        object AggregateB: TfrxToolButton
+          Position.Point = '(27,2)'
+          Width = 22.000000000000000000
+          Height = 22.000000000000000000
+          OnClick = AggregateBClick
+        end
+        object LocalFormatB: TfrxToolButton
+          Position.Point = '(50,2)'
+          Width = 22.000000000000000000
+          Height = 22.000000000000000000
+          OnClick = LocalFormatBClick
+        end
+        object WordWrapB: TfrxToolButton
+          Position.Point = '(73,2)'
+          Width = 22.000000000000000000
+          Height = 22.000000000000000000
+          OnClick = WordWrapBClick
+          Hint = 'Word Wrap'
+        end
+      end
+    end
+    object FormatTS: TTabItem
+      Width = 66.666664123535160000
+      Height = 20.000000000000000000
+      Index = 1
+      Text = 'FormatTS'
+      WordWrap = False
+    end
+    object HighlightTS: TTabItem
+      Width = 66.666664123535160000
+      Height = 20.000000000000000000
+      Index = 2
+      Text = 'HighlightTS'
+      WordWrap = False
+    end
+  end
+  object Panel1: TPanel
+    Align = alBottom
+    Position.Point = '(0,352)'
+    Width = 458.000000000000000000
+    Height = 50.000000000000000000
+    StyleLookup = 'backgroundstyle'
+    object CancelB: TButton
+      Position.Point = '(371,12)'
+      Width = 75.000000000000000000
+      Height = 25.000000000000000000
+      TabOrder = 1
+      ModalResult = 2
+      Cancel = True
+    end
+    object OkB: TButton
+      Position.Point = '(291,12)'
+      Width = 75.000000000000000000
+      Height = 25.000000000000000000
+      TabOrder = 2
+      ModalResult = 1
+    end
+  end
+  object SaveDialog1: TSaveDialog
+    Left = 152
+    Top = 176
+  end
+end

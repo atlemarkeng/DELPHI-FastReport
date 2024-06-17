@@ -1,0 +1,94 @@
+object frxMDEditorForm: TfrxMDEditorForm
+  Left = 0
+  Top = 0
+  Caption = 'Master-Detail link'
+  BorderStyle = bsSingle
+  BorderIcons = [biSystemMenu]
+  ClientHeight = 250
+  ClientWidth = 324
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  StyleLookup = 'backgroundstyle'
+  object Label1: TLabel
+    Position.Point = '(4,8)'
+    Width = 157.000000000000000000
+    Height = 13.000000000000000000
+    TabOrder = 0
+  end
+  object Label2: TLabel
+    Position.Point = '(17,8)'
+    Width = 187.000000000000000000
+    Height = 13.000000000000000000
+    TabOrder = 1
+  end
+  object Label3: TLabel
+    Position.Point = '(4,120)'
+    Width = 237.000000000000000000
+    Height = 13.000000000000000000
+    TabOrder = 2
+  end
+  object DetailLB: TListBox
+    Position.Point = '(4,24)'
+    Width = 115.000000000000000000
+    Height = 85.000000000000000000
+    OnClick = DetailLBClick
+    HelpContext = 137
+    TabOrder = 3
+    ItemHeight = 13.000000000000000000
+  end
+  object MasterLB: TListBox
+    Position.Point = '(204,24)'
+    Width = 115.000000000000000000
+    Height = 85.000000000000000000
+    OnClick = MasterLBClick
+    HelpContext = 146
+    TabOrder = 4
+    ItemHeight = 13.000000000000000000
+  end
+  object AddB: TButton
+    Enabled = False
+    Position.Point = '(124,24)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    OnClick = AddBClick
+    HelpContext = 156
+    TabOrder = 5
+  end
+  object LinksLB: TListBox
+    Position.Point = '(4,136)'
+    Width = 235.000000000000000000
+    Height = 61.000000000000000000
+    HelpContext = 164
+    TabOrder = 6
+    ItemHeight = 13.000000000000000000
+  end
+  object ClearB: TButton
+    Position.Point = '(244,136)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    OnClick = ClearBClick
+    HelpContext = 174
+    TabOrder = 7
+  end
+  object OkB: TButton
+    Position.Point = '(164,220)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    HelpContext = 40
+    TabOrder = 8
+    ModalResult = 1
+    Default = True
+  end
+  object CancelB: TButton
+    Position.Point = '(244,220)'
+    Width = 75.000000000000000000
+    Height = 25.000000000000000000
+    HelpContext = 50
+    TabOrder = 9
+    ModalResult = 2
+    Cancel = True
+  end
+end

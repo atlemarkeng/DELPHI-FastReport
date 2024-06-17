@@ -1,0 +1,141 @@
+object frxIMGExportDialog: TfrxIMGExportDialog
+  Left = 0
+  Top = 0
+  ActiveControl = OK
+  Caption = 'Export to Images'
+  ClientHeight = 303
+  ClientWidth = 277
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  object OK: TButton
+    Default = True
+    DisableFocusEffect = False
+    Height = 25.000000000000000000
+    ModalResult = 1
+    Position.X = 116.000000000000000000
+    Position.Y = 272.000000000000000000
+    Width = 75.000000000000000000
+  end
+  object Cancel: TButton
+    Cancel = True
+    DisableFocusEffect = False
+    Height = 25.000000000000000000
+    ModalResult = 2
+    Position.X = 196.000000000000000000
+    Position.Y = 272.000000000000000000
+    Width = 75.000000000000000000
+  end
+  object GroupPageRange: TGroupBox
+    Height = 145.000000000000000000
+    Position.X = 4.000000000000000000
+    Position.Y = 4.000000000000000000
+    Width = 269.000000000000000000
+    object DescrL: TLabel
+      Height = 29.000000000000000000
+      Position.X = 12.000000000000000000
+      Position.Y = 82.000000000000000000
+      Width = 249.000000000000000000
+    end
+    object AllRB: TRadioButton
+      DisableFocusEffect = False
+      Height = 17.000000000000000000
+      HelpContext = 108
+      IsChecked = True
+      Position.X = 12.000000000000000000
+      Position.Y = 20.000000000000000000
+      Width = 153.000000000000000000
+    end
+    object CurPageRB: TRadioButton
+      DisableFocusEffect = False
+      Height = 17.000000000000000000
+      HelpContext = 118
+      Position.X = 12.000000000000000000
+      Position.Y = 40.000000000000000000
+      Width = 153.000000000000000000
+    end
+    object PageNumbersRB: TRadioButton
+      DisableFocusEffect = False
+      Height = 17.000000000000000000
+      HelpContext = 124
+      Position.X = 12.000000000000000000
+      Position.Y = 60.000000000000000000
+      Width = 77.000000000000000000
+    end
+    object PageNumbersE: TEdit
+      DisableFocusEffect = False
+      KeyboardType = vktDefault
+      Password = False
+      Position.X = 92.000000000000000000
+      Position.Y = 58.000000000000000000
+      Width = 165.000000000000000000
+      Height = 21.000000000000000000
+      HelpContext = 133
+      OnChange = PageNumbersEChange
+    end
+    object SeparateCB: TCheckBox
+      DisableFocusEffect = False
+      Height = 17.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 116.000000000000000000
+      Width = 237.000000000000000000
+    end
+  end
+  object GroupBox1: TGroupBox
+    Height = 109.000000000000000000
+    Position.X = 4.000000000000000000
+    Position.Y = 156.000000000000000000
+    Width = 269.000000000000000000
+    object Label2: TLabel
+      Height = 13.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 48.000000000000000000
+      Width = 121.000000000000000000
+    end
+    object Label1: TLabel
+      Height = 13.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 76.000000000000000000
+      Width = 113.000000000000000000
+    end
+    object CropPage: TCheckBox
+      DisableFocusEffect = False
+      Height = 17.000000000000000000
+      Position.X = 140.000000000000000000
+      Position.Y = 20.000000000000000000
+      Width = 125.000000000000000000
+    end
+    object Quality: TEdit
+      DisableFocusEffect = False
+      KeyboardType = vktDefault
+      Password = False
+      Text = '100'
+      Position.X = 140.000000000000000000
+      Position.Y = 44.000000000000000000
+      Width = 53.000000000000000000
+      Height = 21.000000000000000000
+    end
+    object Mono: TCheckBox
+      DisableFocusEffect = False
+      Height = 17.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 20.000000000000000000
+      Visible = False
+      Width = 121.000000000000000000
+    end
+    object Resolution: TEdit
+      DisableFocusEffect = False
+      KeyboardType = vktDefault
+      Password = False
+      Text = '96'
+      Position.X = 140.000000000000000000
+      Position.Y = 72.000000000000000000
+      Width = 53.000000000000000000
+      Height = 21.000000000000000000
+    end
+  end
+  object SaveDialog1: TSaveDialog
+    Options = [ofHideReadOnly, ofNoChangeDir, ofEnableSizing]
+    Left = 72
+    Top = 208
+  end
+end

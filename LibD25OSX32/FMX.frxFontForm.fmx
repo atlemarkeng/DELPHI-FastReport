@@ -1,0 +1,160 @@
+object frxFontForm: TfrxFontForm
+  Left = 0
+  Top = 0
+  Caption = 'Font selector'
+  BorderStyle = bsSingle
+  BorderIcons = [biSystemMenu]
+  ClientHeight = 293
+  ClientWidth = 328
+  Position = poOwnerFormCenter
+  Visible = False
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnActivate = FormActivate
+  OnResize = FormResize
+  StyleLookup = 'backgroundstyle'
+  object FontL: TLabel
+    Position.Point = '(8,8)'
+    Width = 153.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 0
+    Font.Family = 'Arial'
+    Text = 'Font:'
+  end
+  object SizeL: TLabel
+    Position.Point = '(168,8)'
+    Width = 57.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 1
+    Font.Family = 'Arial'
+    Text = 'Size:'
+  end
+  object GroupBox1: TGroupBox
+    Position.Point = '(232,48)'
+    Width = 89.000000000000000000
+    Height = 97.000000000000000000
+    TabOrder = 2
+    Font.Family = 'Arial'
+    Text = 'Font Type'
+    object BoldB: TfrxToolButton
+      Position.Point = '(16,24)'
+      Width = 25.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = BoldBClick
+      TabOrder = 0
+      StaysPressed = True
+    end
+    object ItalicB: TfrxToolButton
+      Position.Point = '(48,24)'
+      Width = 25.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = ItalicBClick
+      TabOrder = 1
+      StaysPressed = True
+    end
+    object UnderlineB: TfrxToolButton
+      Position.Point = '(16,56)'
+      Width = 24.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = UnderlineBClick
+      TabOrder = 2
+      StaysPressed = True
+    end
+    object StrikeoutB: TfrxToolButton
+      Position.Point = '(48,56)'
+      Width = 25.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = StrikeoutBClick
+      TabOrder = 3
+      StaysPressed = True
+      Bitmap.PNG = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        61000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+        00097048597300000EC300000EC301C76FA8640000008B49444154384FDD92E1
+        0D403010463B80052C600E83D8C00656B082192C610B93F8C7F7C497204D9AF6
+        1F2F79B9B4E5AEEE844F305EB1885EAEB23E57052C7297C3B9CAA49354270131
+        9B49B6920448C2287EA0C44D46A1BAA1B25FE04649E838CD637CD6BD986512AA
+        BFC7C61448901CA9ABBF61DFB7B87FDE83467248027EA04A02913EB06F39FF07
+        211C8BC92E31DA25457C0000000049454E44AE426082}
+    end
+  end
+  object Sample: TGroupBox
+    Position.Point = '(8,200)'
+    Width = 217.000000000000000000
+    Height = 89.000000000000000000
+    TabOrder = 3
+    Font.Family = 'Arial'
+    Text = 'Sample'
+  end
+  object FontE: TEdit
+    Position.Point = '(8,24)'
+    Width = 153.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 4
+    KeyboardType = vktDefault
+    OnChange = FontEChange
+    OnChangeTracking = FontEChange
+    Password = False
+  end
+  object SizeE: TEdit
+    Position.Point = '(168,24)'
+    Width = 57.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 5
+    KeyboardType = vktDefault
+    OnChangeTracking = SizeEChangeTracking
+    Password = False
+  end
+  object FontLB: TListBox
+    Position.Point = '(8,48)'
+    Width = 153.000000000000000000
+    Height = 145.000000000000000000
+    TabOrder = 6
+    OnChange = FontLBChange
+  end
+  object SizeLB: TListBox
+    Position.Point = '(168,48)'
+    Width = 57.000000000000000000
+    Height = 145.000000000000000000
+    TabOrder = 7
+    OnChange = SizeLBChange
+  end
+  object CancelBtn: TButton
+    Position.Point = '(236,258)'
+    Width = 80.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 8
+    ModalResult = 2
+    Text = 'Cancel'
+  end
+  object OkBtn: TButton
+    Position.Point = '(236,216)'
+    Width = 80.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 9
+    ModalResult = 1
+    Text = 'Ok'
+  end
+  object ComboColorBox1: TComboColorBox
+    Position.Point = '(232,24)'
+    Width = 89.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 10
+    Color = claWhite
+    OnChange = ComboColorBox1Change
+  end
+  object ColorL: TLabel
+    Position.Point = '(232,8)'
+    Width = 120.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 11
+    Font.Family = 'Arial'
+    Text = 'Color:'
+  end
+  object PaintBox1: TPaintBox
+    Position.Point = '(16,224)'
+    Width = 201.000000000000000000
+    Height = 50.000000000000000000
+    OnPaint = PaintBox1Paint
+  end
+end

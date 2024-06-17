@@ -1,0 +1,130 @@
+// Package file for Rad Studio XE4
+
+package FMXfrx18;
+{$I frx.inc}
+{$R *.res}
+{$R *.otares}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  FMX,
+  FMXfs18;
+
+contains
+  FMX.frxAggregate in 'FMX.frxAggregate.pas',
+  FMX.frxClass in 'FMX.frxClass.pas',
+  FMX.frxClassRTTI in 'FMX.frxClassRTTI.pas',
+  FMX.frxCtrls in 'FMX.frxCtrls.pas',
+  FMX.frxDialogForm in 'FMX.frxDialogForm.pas',
+  FMX.frxDMPClass in 'FMX.frxDMPClass.pas',
+  FMX.frxEngine in 'FMX.frxEngine.pas',
+  FMX.frxFMX in 'FMX.frxFMX.pas',
+  FMX.frxGraphicUtils in 'FMX.frxGraphicUtils.pas',
+  FMX.frxPassw in 'FMX.frxPassw.pas',
+  FMX.frxPictureCache in 'FMX.frxPictureCache.pas',
+  FMX.frxPreview in 'FMX.frxPreview.pas',
+  FMX.frxPreviewPages in 'FMX.frxPreviewPages.pas',
+  FMX.frxPreviewPageSettings in 'FMX.frxPreviewPageSettings.pas',
+  FMX.frxPrintDialog in 'FMX.frxPrintDialog.pas',
+  FMX.frxPrinter in 'FMX.frxPrinter.pas',
+{$IFDEF MSWINDOWS}
+  FMX.Win.frxPrinter in 'FMX.Win.frxPrinter.pas',
+{$ELSE}
+  FMX.Mac.frxPrinter in 'FMX.Mac.frxPrinter.pas',
+{$ENDIF}
+  FMX.frxProgress in 'FMX.frxProgress.pas',
+  FMX.frxrcClass in 'FMX.frxrcClass.pas',
+  FMX.frxRes in 'FMX.frxRes.pas',
+  FMX.frxSearchDialog in 'FMX.frxSearchDialog.pas',
+  FMX.frxUnicodeUtils in 'FMX.frxUnicodeUtils.pas',
+  FMX.frxUtils in 'FMX.frxUtils.pas',
+  FMX.frxVariables in 'FMX.frxVariables.pas',
+  FMX.frxXML in 'FMX.frxXML.pas',
+  FMX.frxXMLSerializer in 'FMX.frxXMLSerializer.pas',
+  FMX.frxAbout in 'FMX.frxAbout.pas',
+  FMX.frxCodeUtils in 'FMX.frxCodeUtils.pas',
+  FMX.frxCustomEditors in 'FMX.frxCustomEditors.pas',
+  FMX.frxDataTree in 'FMX.frxDataTree.pas',
+  FMX.frxDesgn in 'FMX.frxDesgn.pas',
+  FMX.frxDesgnEditors in 'FMX.frxDesgnEditors.pas',
+  FMX.frxDesgnWorkspace in 'FMX.frxDesgnWorkspace.pas',
+  FMX.frxDesgnWorkspace1 in 'FMX.frxDesgnWorkspace1.pas',
+  FMX.frxDsgnIntf in 'FMX.frxDsgnIntf.pas',
+  FMX.frxEditDataBand in 'FMX.frxEditDataBand.pas',
+  FMX.frxEditExpr in 'FMX.frxEditExpr.pas',
+  FMX.frxEditFormat in 'FMX.frxEditFormat.pas',
+  FMX.frxEditFrame in 'FMX.frxEditFrame.pas',
+  FMX.frxEditGroup in 'FMX.frxEditGroup.pas',
+  FMX.frxEditHighlight in 'FMX.frxEditHighlight.pas',
+  FMX.frxEditMemo in 'FMX.frxEditMemo.pas',
+  FMX.frxEditOptions in 'FMX.frxEditOptions.pas',
+  FMX.frxEditPage in 'FMX.frxEditPage.pas',
+  FMX.frxEditPicture in 'FMX.frxEditPicture.pas',
+  FMX.frxEditReport in 'FMX.frxEditReport.pas',
+  FMX.frxEditReportData in 'FMX.frxEditReportData.pas',
+  FMX.frxEditStrings in 'FMX.frxEditStrings.pas',
+  FMX.frxEditStyle in 'FMX.frxEditStyle.pas',
+  FMX.frxEditSysMemo in 'FMX.frxEditSysMemo.pas',
+  FMX.frxEditTabOrder in 'FMX.frxEditTabOrder.pas',
+  FMX.frxEditVar in 'FMX.frxEditVar.pas',
+  FMX.frxEvaluateForm in 'FMX.frxEvaluateForm.pas',
+  FMX.frxInheritError in 'FMX.frxInheritError.pas',
+  FMX.frxInsp in 'FMX.frxInsp.pas',
+  FMX.frxPopupForm in 'FMX.frxPopupForm.pas',
+  FMX.frxrcDesgn in 'FMX.frxrcDesgn.pas',
+  FMX.frxrcInsp in 'FMX.frxrcInsp.pas',
+  FMX.frxReportTree in 'FMX.frxReportTree.pas',
+  FMX.frxWatchForm in 'FMX.frxWatchForm.pas',
+  FMX.frxFontForm in 'FMX.frxFontForm.pas',
+{$IFNDEF RAD_ED}
+  FMX.frxCross in 'FMX.frxCross.pas',
+  FMX.frxCrossEditor in 'FMX.frxCrossEditor.pas',
+  FMX.frxCrossRTTI in 'FMX.frxCrossRTTI.pas',
+  FMX.frxDCtrl in 'FMX.frxDCtrl.pas',
+  FMX.frxDCtrlRTTI in 'FMX.frxDCtrlRTTI.pas',
+  FMX.frxGradient in 'FMX.frxGradient.pas',
+  FMX.frxGradientRTTI in 'FMX.frxGradientRTTI.pas',
+  FMX.frxGZip in 'FMX.frxGZip.pas',
+  FMX.frxDesgnCtrls in 'FMX.frxDesgnCtrls.pas',
+  FMX.frxBarcode2DView in 'FMX.frxBarcode2DView.pas',
+  FMX.frxBarcode2DBase in 'FMX.frxBarcode2DBase.pas',
+  FMX.frxBarcode in 'FMX.frxBarcode.pas',
+  FMX.frxBarcod in 'FMX.frxBarcod.pas',
+  FMX.frxBarcodeEditor in 'FMX.frxBarcodeEditor.pas' {frxBarcodeEditorForm},
+  FMX.frxBarcodeProperties in 'FMX.frxBarcodeProperties.pas',
+  FMX.frxBarcodeDataMatrix in 'FMX.frxBarcodeDataMatrix.pas',
+  FMX.frxBarcodePDF417 in 'FMX.frxBarcodePDF417.pas',
+  FMX.frxBarcodeRTTI in 'FMX.frxBarcodeRTTI.pas',
+  FMX.frxChBox in 'FMX.frxChBox.pas',
+  FMX.frxChBoxRTTI in 'FMX.frxChBoxRTTI.pas',
+{$ENDIF}
+  
+  FMX.frxEditAliases in 'FMX.frxEditAliases.pas' {frxAliasesEditorForm};
+
+end.
+

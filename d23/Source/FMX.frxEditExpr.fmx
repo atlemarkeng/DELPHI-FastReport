@@ -1,0 +1,75 @@
+object frxExprEditorForm: TfrxExprEditorForm
+  Left = 0
+  Top = 0
+  Caption = 'Expression Editor'
+  BorderIcons = [biSystemMenu, biMinimize, biMaximize, biHelp]
+  ClientHeight = 546
+  ClientWidth = 640
+  Visible = False
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnResize = FormResize
+  ActiveControl = ExprMemo
+  StyleLookup = 'backgroundstyle'
+  object Splitter1: TSplitter
+    Align = alBottom
+    Cursor = crVSplit
+    Position.Point = '(0,450)'
+    Width = 640.000000000000000000
+    Height = 3.000000000000000000
+    TabOrder = 0
+    MinSize = 20.000000000000000000
+  end
+  object ExprMemo: TMemo
+    Align = alBottom
+    Position.Point = '(0,453)'
+    Width = 640.000000000000000000
+    Height = 56.000000000000000000
+    OnDragOver = ExprMemoDragOver
+    OnDragDrop = ExprMemoDragDrop
+    TabOrder = 1
+    KeyboardType = vktDefault
+  end
+  object Panel1: TPanel
+    Align = alBottom
+    Position.Point = '(0,509)'
+    Width = 640.000000000000000000
+    Height = 37.000000000000000000
+    TabOrder = 2
+    StyleLookup = 'backgroundstyle'
+    object OkB: TButton
+      Position.Point = '(4,8)'
+      Width = 75.000000000000000000
+      Height = 25.000000000000000000
+      TabOrder = 0
+      ModalResult = 1
+    end
+    object CancelB: TButton
+      Position.Point = '(84,8)'
+      Width = 75.000000000000000000
+      Height = 25.000000000000000000
+      TabOrder = 1
+      ModalResult = 2
+      Cancel = True
+    end
+  end
+  object Panel2: TPanel
+    Align = alBottom
+    Position.Point = '(0,431)'
+    Width = 640.000000000000000000
+    Height = 19.000000000000000000
+    TabOrder = 3
+    object ExprL: TLabel
+      Position.Point = '(4,2)'
+      Width = 141.000000000000000000
+      Height = 13.000000000000000000
+      TabOrder = 0
+    end
+  end
+  object Panel: TPanel
+    Align = alClient
+    Width = 640.000000000000000000
+    Height = 431.000000000000000000
+    TabOrder = 4
+  end
+end

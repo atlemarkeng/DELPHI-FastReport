@@ -1,0 +1,68 @@
+// Package file for Rad Studio 10 Seattle
+
+package FMXfrxe26;
+
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  FMX,
+  FMXfrx26;
+
+contains
+  FMX.frxExportHTML in 'FMX.frxExportHTML.pas',
+  FMX.frxExportImage in 'FMX.frxExportImage.pas',
+  FMX.frxImageConverter in 'FMX.frxImageConverter.pas',
+  FMX.frxExportMatrix in 'FMX.frxExportMatrix.pas',
+  FMX.frxExportRTF in 'FMX.frxExportRTF.pas',
+  FMX.frxExportText in 'FMX.frxExportText.pas',
+  FMX.frxExportXML in 'FMX.frxExportXML.pas',
+  FMX.frxRC4 in 'FMX.frxRC4.pas',
+  FMX.frxCmapTableClass in 'FMX.frxCmapTableClass.pas',
+  FMX.frxGlyphTableClass in 'FMX.frxGlyphTableClass.pas',
+  FMX.frxGlyphSubstitutionClass in 'FMX.frxGlyphSubstitutionClass.pas',
+  FMX.frxHorizontalHeaderClass in 'FMX.frxHorizontalHeaderClass.pas',
+  FMX.frxHorizontalMetrixClass in 'FMX.frxHorizontalMetrixClass.pas',
+  FMX.frxIndexToLocationClass in 'FMX.frxIndexToLocationClass.pas',
+  FMX.frxKerningTableClass in 'FMX.frxKerningTableClass.pas',
+  FMX.frxPostScriptClass in 'FMX.frxPostScriptClass.pas',
+  FMX.frxMaximumProfileClass in 'FMX.frxMaximumProfileClass.pas',
+  FMX.frxOS2WindowsMetricsClass in 'FMX.frxOS2WindowsMetricsClass.pas',
+  FMX.frxPreProgramClass in 'FMX.frxPreProgramClass.pas',
+  FMX.frxTrueTypeFont in 'FMX.frxTrueTypeFont.pas',
+  FMX.frxFontHeaderClass in 'FMX.frxFontHeaderClass.pas',
+  FMX.TTFHelpers in 'FMX.TTFHelpers.pas',
+  FMX.frxTrueTypeTable in 'FMX.frxTrueTypeTable.pas',
+  FMX.frxNameTableClass in 'FMX.frxNameTableClass.pas',
+  FMX.frxmd5 in 'FMX.frxmd5.pas',
+  FMX.frxCrypto in 'FMX.frxCrypto.pas',
+  FMX.frxTrueTypeCollection in 'FMX.frxTrueTypeCollection.pas',
+  FMX.frxExportPDF in 'FMX.frxExportPDF.pas',
+  FMX.frxExportCSV in 'FMX.frxExportCSV.pas',
+  FMX.frxrcExports in 'FMX.frxrcExports.pas';
+
+end.

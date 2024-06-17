@@ -1,0 +1,352 @@
+object frxPreviewForm: TfrxPreviewForm
+  Left = 0
+  Top = 0
+  Caption = 'Preview'
+  ClientHeight = 584
+  ClientWidth = 803
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnKeyDown = FormKeyDown
+  OnMouseUp = FormMouseUp
+  OnMouseWheel = FormMouseWheel
+  object ToolBar: TToolBar
+    Height = 31.000000000000000000
+    Width = 803.000000000000000000
+    object PrintB: TfrxToolButton
+      Height = 25.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 3.000000000000000000
+      Text = ' '
+      Width = 25.000000000000000000
+      OnClick = PrintBClick
+      OnMouseEnter = PrintBMouseEnter
+      OnMouseLeave = PrintBMouseLeave
+      Hint = ''
+    end
+    object OpenB: TfrxToolButton
+      Height = 25.000000000000000000
+      Position.X = 31.000000000000000000
+      Position.Y = 3.000000000000000000
+      Text = ' '
+      Width = 25.000000000000000000
+      OnClick = OpenBClick
+      OnMouseEnter = PrintBMouseEnter
+      OnMouseLeave = PrintBMouseLeave
+      Hint = ''
+    end
+    object SaveB: TfrxToolButton
+      Height = 25.000000000000000000
+      Position.X = 57.000000000000000000
+      Position.Y = 3.000000000000000000
+      Width = 25.000000000000000000
+      OnClick = SaveBClick
+      OnMouseEnter = PrintBMouseEnter
+      OnMouseLeave = PrintBMouseLeave
+      Hint = ''
+    end
+    object ExportB: TfrxToolButton
+      Height = 25.000000000000000000
+      PopupMenu = ExportPopup
+      Position.X = 83.000000000000000000
+      Position.Y = 3.000000000000000000
+      Width = 25.000000000000000000
+      OnClick = ExportBClick
+      OnMouseEnter = PrintBMouseEnter
+      OnMouseLeave = PrintBMouseLeave
+      Hint = ''
+    end
+    object Line1: TfrxToolSeparator
+      Position.X = 111.000000000000000000
+      Position.Y = 7.000000000000000000
+      Width = 5.000000000000000000
+      Height = 16.000000000000000000
+    end
+    object PageWidthB: TfrxToolButton
+      Height = 25.000000000000000000
+      Position.X = 192.000000000000000000
+      Position.Y = 3.000000000000000000
+      Width = 25.000000000000000000
+      OnClick = PageWidthBClick
+      OnMouseEnter = PrintBMouseEnter
+      OnMouseLeave = PrintBMouseLeave
+      Hint = ''
+    end
+    object WholePageB: TfrxToolButton
+      Height = 25.000000000000000000
+      Position.X = 218.000000000000000000
+      Position.Y = 3.000000000000000000
+      Width = 25.000000000000000000
+      OnClick = WholePageBClick
+      OnMouseEnter = PrintBMouseEnter
+      OnMouseLeave = PrintBMouseLeave
+      Hint = ''
+    end
+    object FullScreenBtn: TfrxToolButton
+      Height = 25.000000000000000000
+      Position.X = 244.000000000000000000
+      Position.Y = 3.000000000000000000
+      Width = 25.000000000000000000
+      OnClick = FullScreenBtnClick
+      OnMouseEnter = PrintBMouseEnter
+      OnMouseLeave = PrintBMouseLeave
+      Hint = ''
+    end
+    object Line2: TfrxToolSeparator
+      Position.X = 272.000000000000000000
+      Position.Y = 7.000000000000000000
+      Width = 5.000000000000000000
+      Height = 16.000000000000000000
+    end
+    object OutlineB: TfrxToolButton
+      Height = 25.000000000000000000
+      Position.X = 278.000000000000000000
+      Position.Y = 3.000000000000000000
+      Width = 25.000000000000000000
+      OnClick = OutlineBClick
+      OnMouseEnter = PrintBMouseEnter
+      OnMouseLeave = PrintBMouseLeave
+      Hint = ''
+    end
+    object ThumbB: TfrxToolButton
+      Height = 25.000000000000000000
+      Position.X = 304.000000000000000000
+      Position.Y = 3.000000000000000000
+      Width = 25.000000000000000000
+      OnClick = ThumbBClick
+      OnMouseEnter = PrintBMouseEnter
+      OnMouseLeave = PrintBMouseLeave
+      Hint = ''
+    end
+    object PageSettingsB: TfrxToolButton
+      Height = 25.000000000000000000
+      Position.X = 330.000000000000000000
+      Position.Y = 3.000000000000000000
+      Width = 25.000000000000000000
+      OnClick = PageSettingsBClick
+      OnMouseEnter = PrintBMouseEnter
+      OnMouseLeave = PrintBMouseLeave
+      Hint = ''
+    end
+    object DesignerB: TfrxToolButton
+      Height = 25.000000000000000000
+      Position.X = 356.000000000000000000
+      Position.Y = 3.000000000000000000
+      Width = 25.000000000000000000
+      OnClick = DesignerBClick
+      OnMouseEnter = PrintBMouseEnter
+      OnMouseLeave = PrintBMouseLeave
+      Hint = ''
+    end
+    object Line3: TfrxToolSeparator
+      Position.X = 384.000000000000000000
+      Position.Y = 7.000000000000000000
+      Width = 5.000000000000000000
+      Height = 16.000000000000000000
+    end
+    object FirstB: TfrxToolButton
+      Height = 25.000000000000000000
+      Position.X = 390.000000000000000000
+      Position.Y = 3.000000000000000000
+      Width = 25.000000000000000000
+      OnClick = FirstBClick
+      OnMouseEnter = PrintBMouseEnter
+      OnMouseLeave = PrintBMouseLeave
+      Hint = ''
+    end
+    object PriorB: TfrxToolButton
+      Height = 25.000000000000000000
+      Position.X = 416.000000000000000000
+      Position.Y = 3.000000000000000000
+      Width = 25.000000000000000000
+      OnClick = PriorBClick
+      OnMouseEnter = PrintBMouseEnter
+      OnMouseLeave = PrintBMouseLeave
+      Hint = ''
+    end
+    object PageE: TEdit
+      DisableFocusEffect = False
+      KeyboardType = vktDefault
+      Password = False
+      Position.X = 443.000000000000000000
+      Position.Y = 4.000000000000000000
+      Width = 49.000000000000000000
+      Height = 22.000000000000000000
+      OnKeyDown = FormKeyDown
+    end
+    object NextB: TfrxToolButton
+      Height = 25.000000000000000000
+      Position.X = 494.000000000000000000
+      Position.Y = 3.000000000000000000
+      Width = 25.000000000000000000
+      OnClick = NextBClick
+      OnMouseEnter = PrintBMouseEnter
+      OnMouseLeave = PrintBMouseLeave
+      Hint = ''
+    end
+    object LastB: TfrxToolButton
+      Height = 25.000000000000000000
+      Position.X = 520.000000000000000000
+      Position.Y = 3.000000000000000000
+      Width = 25.000000000000000000
+      OnClick = LastBClick
+      OnMouseEnter = PrintBMouseEnter
+      OnMouseLeave = PrintBMouseLeave
+      Hint = ''
+    end
+    object CancelB: TSpeedButton
+      Height = 23.000000000000000000
+      Position.X = 568.000000000000000000
+      Position.Y = 4.000000000000000000
+      Text = 'Cancel'
+      Width = 68.000000000000000000
+      OnClick = CancelBClick
+    end
+    object ZoomCB: TComboEdit
+      Cursor = crIBeam
+      DisableFocusEffect = False
+      KeyboardType = vktDefault
+      ItemHeight = 19.000000000000000000
+      ItemIndex = -1
+      Position.X = 116.000000000000000000
+      Position.Y = 4.000000000000000000
+      Width = 69.000000000000000000
+      Height = 22.000000000000000000
+      OnChange = ZoomCBChange
+      OnChangeTracking = ZoomCBClick
+      OnClick = ZoomCBClick
+    end
+  end
+  object StatusBar: TStatusBar
+    Height = 24.000000000000000000
+    Position.Y = 560.000000000000000000
+    ShowSizeGrip = True
+    Width = 803.000000000000000000
+    object Panel0: TText
+      Align = alLeft
+      Height = 24.000000000000000000
+      Width = 249.000000000000000000
+    end
+    object Panel1: TText
+      Align = alLeft
+      Height = 24.000000000000000000
+      Position.X = 249.000000000000000000
+      Width = 265.000000000000000000
+    end
+    object Panel2: TText
+      Align = alLeft
+      Height = 24.000000000000000000
+      Position.X = 514.000000000000000000
+      Width = 273.000000000000000000
+    end
+  end
+  object ExportPopup: TPopupMenu
+    Left = 208
+    Top = 128
+  end
+  object HiddenMenu: TPopupMenu
+    Left = 112
+    Top = 128
+    object Showtemplate1: TMenuItem
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = Showtemplate1Click
+    end
+  end
+  object RightMenu: TPopupMenu
+    Left = 56
+    Top = 128
+    object CollapseMI: TMenuItem
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = CollapseAllClick
+    end
+    object ExpandMI: TMenuItem
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+      OnClick = ExpandAllClick
+    end
+    object N1: TMenuItem
+      Height = 50.000000000000000000
+      Width = 50.000000000000000000
+    end
+    object OpenMI: TMenuItem
+      Height = 50.000000000000000000
+      Text = 'OpenMI'
+      Width = 50.000000000000000000
+      OnClick = OpenBClick
+    end
+    object SaveMI: TMenuItem
+      Height = 50.000000000000000000
+      Text = 'SaveMI'
+      Width = 50.000000000000000000
+      OnClick = SaveBClick
+    end
+    object PrintMI: TMenuItem
+      Height = 50.000000000000000000
+      Text = 'PrintMI'
+      Width = 50.000000000000000000
+      OnClick = PrintBClick
+    end
+    object ExportMI: TMenuItem
+      Height = 50.000000000000000000
+      Text = 'ExportMI'
+      Width = 50.000000000000000000
+    end
+    object ExportPDFMI: TMenuItem
+      Height = 50.000000000000000000
+      Text = 'ExportPDFMI'
+      Width = 50.000000000000000000
+      OnClick = PdfBClick
+    end
+    object ExportMailMI: TMenuItem
+      Height = 50.000000000000000000
+      Text = 'Export'
+      Width = 50.000000000000000000
+      OnClick = EmailBClick
+    end
+    object FindMI: TMenuItem
+      Height = 50.000000000000000000
+      Text = 'FindMI'
+      Width = 50.000000000000000000
+    end
+    object FullScrMI: TMenuItem
+      Height = 50.000000000000000000
+      Text = 'FullScrMI'
+      Width = 50.000000000000000000
+      OnClick = FullScreenBtnClick
+    end
+    object ZoomInMI: TMenuItem
+      Height = 50.000000000000000000
+      Text = 'ZoomInMI'
+      Width = 50.000000000000000000
+      OnClick = ZoomPlusBClick
+    end
+    object ZoomOutMI: TMenuItem
+      Height = 50.000000000000000000
+      Text = 'ZoomOutMI'
+      Width = 50.000000000000000000
+      OnClick = ZoomMinusBClick
+    end
+  end
+  object HintPanel: TCalloutPanel
+    Height = 45.000000000000000000
+    Margins.Top = 11.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 492.000000000000000000
+    StyleLookup = 'HintPanelStyle1'
+    Visible = False
+    Width = 97.000000000000000000
+    CalloutWidth = 23.000000000000000000
+    CalloutLength = 11.000000000000000000
+    object Label1: TLabel
+      Align = alClient
+      Height = 34.000000000000000000
+      Position.Y = 11.000000000000000000
+      Text = 'Label1'
+      TextAlign = taCenter
+      Width = 97.000000000000000000
+    end
+  end
+end

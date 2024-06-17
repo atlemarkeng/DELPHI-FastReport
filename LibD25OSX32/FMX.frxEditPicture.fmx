@@ -1,0 +1,78 @@
+object frxPictureEditorForm: TfrxPictureEditorForm
+  Left = 0
+  Top = 0
+  Caption = 'Picture'
+  ClientHeight = 307
+  ClientWidth = 336
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  OnActivate = FormActivate
+  OnKeyDown = FormKeyDown
+  StyleLookup = 'backgroundstyle'
+  object ToolBar: TToolBar
+    Width = 336.000000000000000000
+    Height = 31.000000000000000000
+    TabOrder = 0
+    object LoadB: TfrxToolButton
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = LoadBClick
+      TabOrder = 0
+    end
+    object CopyB: TfrxToolButton
+      Position.Point = '(23,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = CopyBClick
+      TabOrder = 1
+    end
+    object PasteB: TfrxToolButton
+      Position.Point = '(46,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = PasteBClick
+      TabOrder = 2
+    end
+    object ClearB: TfrxToolButton
+      Position.Point = '(69,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = ClearBClick
+      TabOrder = 3
+    end
+    object CancelB: TfrxToolButton
+      Position.Point = '(102,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = CancelBClick
+      TabOrder = 4
+    end
+    object OkB: TfrxToolButton
+      Position.Point = '(125,0)'
+      Width = 22.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = OkBClick
+      TabOrder = 5
+    end
+  end
+  object Box: TScrollBox
+    Align = alClient
+    Position.Point = '(0,31)'
+    Width = 336.000000000000000000
+    Height = 257.000000000000000000
+    TabOrder = 1
+    object Image: TImage
+      Position.Point = '(4,4)'
+      Width = 325.000000000000000000
+      Height = 241.000000000000000000
+    end
+  end
+  object StatusBar: TStatusBar
+    Position.Point = '(0,288)'
+    Width = 336.000000000000000000
+    Height = 19.000000000000000000
+    TabOrder = 2
+    ShowSizeGrip = True
+  end
+end
